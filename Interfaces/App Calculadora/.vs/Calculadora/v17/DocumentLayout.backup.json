@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\diego\\Documents\\2\u00BA DAM\\Interfaces\\Calculadora\\",
+  "WorkspaceRootPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\App Calculadora\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Documents\\2\u00BA DAM\\Interfaces\\Calculadora\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3DDB4A2-140A-4D32-8583-BB0B062714F6}|Calculadora.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\app calculadora\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D3DDB4A2-140A-4D32-8583-BB0B062714F6}|Calculadora.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Documents\\2\u00BA DAM\\Interfaces\\Calculadora\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D3DDB4A2-140A-4D32-8583-BB0B062714F6}|Calculadora.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\app calculadora\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3DDB4A2-140A-4D32-8583-BB0B062714F6}|Calculadora.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,28 +18,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2\u00BA DAM\\Interfaces\\Calculadora\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\App Calculadora\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\diego\\Documents\\2\u00BA DAM\\Interfaces\\Calculadora\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\App Calculadora\\MainWindow.xaml*",
+              "RelativeToolTip": "MainWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-09-14T07:35:46.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2\u00BA DAM\\Interfaces\\Calculadora\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\App Calculadora\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\diego\\Documents\\2\u00BA DAM\\Interfaces\\Calculadora\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\App Calculadora\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAswBMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

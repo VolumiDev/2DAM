@@ -8,24 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\diego\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Diego\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diego\\Documents\\2º DAM\\Interfaces\\WpfApp1\\Calculadora.csproj",
+      "projectUniqueName": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\App Calculadora\\Calculadora.csproj",
       "projectName": "Calculadora",
-      "projectPath": "C:\\Users\\diego\\Documents\\2º DAM\\Interfaces\\WpfApp1\\Calculadora.csproj",
-      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diego\\Documents\\2º DAM\\Interfaces\\WpfApp1\\obj\\",
+      "projectPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\App Calculadora\\Calculadora.csproj",
+      "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\App Calculadora\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

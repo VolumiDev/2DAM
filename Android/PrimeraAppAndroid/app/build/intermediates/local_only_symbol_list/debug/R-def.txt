@@ -1,0 +1,19 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btn_pulsame
+id et_editableText
+id tv_text
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+string app_name
+string pulsame
+style Base.Theme.MyApplication
+style Theme.MyApplication
+xml backup_rules
+xml data_extraction_rules

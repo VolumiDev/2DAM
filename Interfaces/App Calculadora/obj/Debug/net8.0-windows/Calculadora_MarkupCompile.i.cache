@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\diego\Documents\2º DAM\Interfaces\WpfApp1\obj\Debug\net8.0-windows\
+C:\Users\Diego\Documents\2DAM\Interfaces\App Calculadora\obj\Debug\net8.0-windows\
 Calculadora
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\diego\Documents\2º DAM\Interfaces\WpfApp1\App.xaml
+C:\Users\Diego\Documents\2DAM\Interfaces\App Calculadora\App.xaml
 11407045341
 
 6629868390
 198-556154604
 MainWindow.xaml;
 
-True
+False
 
