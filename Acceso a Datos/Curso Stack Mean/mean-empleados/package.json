@@ -1,0 +1,20 @@
+{
+  "name": "mean-empleados",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon back/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongoose": "^8.6.2",
+    "morgan": "^1.10.0"
+  }
+}
