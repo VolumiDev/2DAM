@@ -1,0 +1,15 @@
+import javax.swing.*;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		JFrame f = new JFrame("Ventana 1"); // Usamos el contructor que recibe una cadena que será el titulo de la ventana
+//		f.setSize(500, 200); seteamos el tamaño
+//		f.setLocation(500, 200);  este metodo setea la posicion en pixeles 
+		f.setBounds(500, 200, 500, 350); // Este metodo setea la pos y el tamaño
+		f.setVisible(true);  // Con este metodo hacemos que se haga visible
+	}
+
+}

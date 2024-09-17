@@ -1,0 +1,12 @@
+import javax.swing.*;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		JFrame f = new JFrame("Ventana 1"); // Usamos el contructor que recibe una cadena que será el titulo de la ventana
+		f.setBounds(100, 100, 300, 150);   // Este metodo setea la pos y el tamaño
+	}
+
+}
