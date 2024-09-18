@@ -6,6 +6,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 id btn_pulsame
 id et_editableText
+id tv_textshow
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_foreground

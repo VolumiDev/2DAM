@@ -4,7 +4,7 @@
             "outputFile": "com.example.myapplication.app-mergeDebugResources-29:/values-ro/values-ro.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Diego\\.gradle\\caches\\transforms-4\\04f0e52ccfa4d4301dd93580ec50984b\\transformed\\material-1.11.0\\res\\values-ro\\values-ro.xml",
+                    "source": "C:\\Users\\Alumno\\.gradle\\caches\\transforms-4\\04f0e52ccfa4d4301dd93580ec50984b\\transformed\\material-1.11.0\\res\\values-ro\\values-ro.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Diego\\.gradle\\caches\\transforms-4\\d5358ff117d3ebeb3f0b3fe2093068e3\\transformed\\appcompat-1.6.1\\res\\values-ro\\values-ro.xml",
+                    "source": "C:\\Users\\Alumno\\.gradle\\caches\\transforms-4\\d5358ff117d3ebeb3f0b3fe2093068e3\\transformed\\appcompat-1.6.1\\res\\values-ro\\values-ro.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Diego\\.gradle\\caches\\transforms-4\\dcb02eb193405f966960c5ae6676088e\\transformed\\core-1.9.0\\res\\values-ro\\values-ro.xml",
+                    "source": "C:\\Users\\Alumno\\.gradle\\caches\\transforms-4\\dcb02eb193405f966960c5ae6676088e\\transformed\\core-1.9.0\\res\\values-ro\\values-ro.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

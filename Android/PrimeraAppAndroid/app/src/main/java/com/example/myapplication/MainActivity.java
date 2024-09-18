@@ -17,13 +17,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EditText et_editable = findViewById(R.id.et_editableText);
+        TextView tv_textBox = findViewById(R.id.tv_textshow);
         Button btn_pulsame = findViewById(R.id.btn_pulsame);
         //pulsaBtn(btn_pulsame, et_editable);
 
         btn_pulsame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btn_pulsame.setText(et_editable.getText());
+                String name = et_editable.getText().toString();
+                tv_textBox.setText("Hello " + name + "!!");
             }
         });
 
