@@ -20,7 +20,7 @@ public class mainWindow extends JFrame{
 		//devuelve el interior del jFrame (espacio donde vamos a insertar componentes)
 		
 		// antes de añadir componentes tenemos que asignar un layout
-		this.setLayout(null);
+		this.getContentPane().setLayout(null);
 		
 		name_label = new JLabel("Introduce tu nombre");
 		name_input = new JTextField(10);
