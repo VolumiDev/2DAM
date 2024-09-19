@@ -1,0 +1,10 @@
+.cont{
+  background-color: orange;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+}
+.botones{
+  text-align: center;
+}

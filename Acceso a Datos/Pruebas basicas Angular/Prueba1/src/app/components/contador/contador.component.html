@@ -1,0 +1,8 @@
+<div>
+  <h1 class="cont">{{ cont }}</h1>
+  <p class="botones">
+    <app-incremento (eventoIncrementar)="actualizarCont($event)"></app-incremento> 
+    <app-decremento (eventoDecrementar)="actualizarCont($event)"></app-decremento>
+  </p>
+
+</div>
