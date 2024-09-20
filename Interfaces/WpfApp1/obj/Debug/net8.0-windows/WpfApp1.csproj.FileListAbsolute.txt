@@ -19,3 +19,5 @@ C:\Users\Alumno\Documents\2DAM\Interfaces\WpfApp1\obj\Debug\net8.0-windows\refin
 C:\Users\Alumno\Documents\2DAM\Interfaces\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.pdb
 C:\Users\Alumno\Documents\2DAM\Interfaces\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 C:\Users\Alumno\Documents\2DAM\Interfaces\WpfApp1\obj\Debug\net8.0-windows\ref\WpfApp1.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\WpfApp1\obj\Debug\net8.0-windows\Window1.g.cs
+C:\Users\Alumno\Documents\2DAM\Interfaces\WpfApp1\obj\Debug\net8.0-windows\Window1.baml

@@ -67,5 +67,12 @@ namespace WpfApp1
         {
             Application.Current.Shutdown();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            var w = new Window1();
+            w.Owner = this;
+            w.Show();
+        }
     }
 }

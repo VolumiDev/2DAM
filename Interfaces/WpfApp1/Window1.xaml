@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        
+        <!-- STACK PANEL -->
+        <StackPanel Name="mainStack" Panel.ZIndex="1">
+            <TextBox Text="1" Background="Red" Height="25"/>
+            <TextBox Text="2" Background="Yellow" Height="25"/>
+            <TextBox Text="3" Background="Green" Height="25"/>
+            <TextBox Text="4" Background="Blue" Height="25"/>
+            <TextBox Text="5" Background="Brown" Height="25"/>
+            <TextBox Text="6" Background="Turquoise" Height="25"/>
+            <TextBox Text="7" Background="Orange" Height="25"/>
+            <TextBox Text="8" Background="Purple" Height="25"/>
+        </StackPanel>
+        
+        <!--Dock panel-->
+        
+        <DockPanel Panel.ZIndex="0" Height="230" VerticalAlignment="Bottom" >
+            <Label Content="Label 1 (TOP)" DockPanel.Dock="Top" Background="LightBlue" Height="70" />
+            <Label Content="Label 1 (BOTTON)" DockPanel.Dock="Bottom" Background="Orange" Height="70" />
+            <Label Content="Label 1 (LEFT)" DockPanel.Dock="Left" Background="red"  />
+            <Label Content="Label 1 (RGTH)" DockPanel.Dock="Right" Background="blue"  />
+            <Label Content="Label 1 (CENTER)" DockPanel.Dock="Bottom" Background="Brown"  />
+        </DockPanel>
+    </Grid>
+</Window>
