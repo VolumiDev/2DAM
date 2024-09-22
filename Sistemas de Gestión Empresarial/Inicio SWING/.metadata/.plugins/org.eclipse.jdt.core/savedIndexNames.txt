@@ -1,7 +1,0 @@
-INDEX VERSION 1.134+C:\Users\Diego\Documents\2DAM\Sistemas de Gestión Empresarial\Inicio SWING\.metadata\.plugins\org.eclipse.jdt.core
-2805988354.index
-1865797976.index
-2016765527.index
-1786825145.index
-3959137331.index
-275483031.index
