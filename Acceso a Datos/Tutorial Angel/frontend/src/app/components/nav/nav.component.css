@@ -1,0 +1,25 @@
+.nav-bar{
+    display: flex;
+    gap: 1rem;
+    width: 95%;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: consolas;
+    height: 40px;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+li{
+    list-style: none;
+    background-color: #474b4e;
+    height: 25px;
+    vertical-align: middle;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+a{
+    vertical-align: middle;
+}
