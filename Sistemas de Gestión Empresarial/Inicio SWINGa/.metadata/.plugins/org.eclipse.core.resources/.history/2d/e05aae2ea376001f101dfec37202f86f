@@ -1,0 +1,23 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class mainWindow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame mainW = new JFrame("FlowLayout");
+		mainW.setSize(300, 150);
+		mainW.getContentPane().setLayout(new FlowLayout());
+		JLabel label_1 = new JLabel("Introduce tu nombre");
+		JTextField txt_1 = new JTextField(10);
+		
+		mainW.getContentPane().add(label_1);
+		mainW.getContentPane().add(txt_1);
+		mainW.setVisible(true);
+		
+	}
+
+}
