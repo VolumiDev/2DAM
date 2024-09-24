@@ -1,0 +1,24 @@
+Directorios compilados
+target/
+build/
+
+# Archivos de configuración de IDEs
+.idea/
+.metadata/.plugins/
+.settings/
+
+# Archivos temporales
+*.tmp
+*.swp
+*.bak
+
+# Archivos de caché
+.cache/
+
+# Archivos de logs
+logs/
+
+# Archivos generados por herramientas
+*.class
+*.jar
+*.war

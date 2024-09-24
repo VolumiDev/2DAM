@@ -71,7 +71,7 @@ public class WCtrl extends JFrame{
 		txtArea.replaceRange("este es el texto que va a ser cambiado/", 0, 2);
 		//inserta el texto indicado en la posicion indicada
 		txtArea.insert("este texto se a introducido con con la funcion insert/", 0);
-		//aÃ±ade el texto indicado al final
+		//añade el texto indicado al final
 		txtArea.append("este txt se ha introducido con el metodo append/");
 		//Determina que numero de lineas contenido en el textarea
 		txtArea.getLineCount();
