@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Tarea1")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("AñadirCursoClases")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6659c88e7e98a92ef3dfcc18fabe72d466c760c")]
-[assembly: System.Reflection.AssemblyProductAttribute("Tarea1")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Tarea1")]
+[assembly: System.Reflection.AssemblyProductAttribute("AñadirCursoClases")]
+[assembly: System.Reflection.AssemblyTitleAttribute("AñadirCursoClases")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

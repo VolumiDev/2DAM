@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\alumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\alumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Alumno.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\Alumno.cs",
+              "RelativeDocumentMoniker": "A\u00F1adirCursoClases\\Alumno.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\Alumno.cs",
+              "RelativeToolTip": "A\u00F1adirCursoClases\\Alumno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T19:05:04.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Curso.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\Curso.cs",
+              "RelativeDocumentMoniker": "A\u00F1adirCursoClases\\Curso.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\Curso.cs",
+              "RelativeToolTip": "A\u00F1adirCursoClases\\Curso.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAWwBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T19:01:27.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "A\u00F1adirCursoClases\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\MainWindow.xaml.cs",
+              "RelativeToolTip": "A\u00F1adirCursoClases\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T18:35:11.57Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
