@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\WpfApp1\\WpfApp1.csproj",
-      "projectName": "WpfApp1",
-      "projectPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\WpfApp1\\WpfApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Tarea3\\Tarea3.csproj",
+      "projectName": "Tarea3",
+      "projectPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Tarea3\\Tarea3.csproj",
       "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\WpfApp1\\obj\\",
+      "outputPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Tarea3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
