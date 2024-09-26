@@ -9,22 +9,24 @@ import javax.swing.JScrollPane;
 public class TopPanel extends JPanel{
 
 	private JLabel lbl; 
-	private JList<String> items;
+	private JList<String> list;
 	
 	public TopPanel() {
 		// TODO Auto-generated constructor stub
 		super();
 		lbl = new JLabel("Selecciona tus estudios");
-		lbl.setPreferredSize(new Dimension(150, 20));
 		this.add(lbl);
 		
 		
 		String[] carreras = {"Ing. Informatica", "Ing. Mecanica", "Derecho", "Magisterio", "Telecomunicaciones","Ing. Mecanica", "Derecho", "Magisterio", "Telecomunicaciones"};
-		items = new JList<String>(carreras);
+		list = new JList<String>(carreras);
+		list.setPreferredSize(new Dimension());
 		
-		JScrollPane scroll = new JScrollPane(items);
+		JScrollPane scroll = new JScrollPane(list, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+//		scroll.setPreferredSize(new Dimension(150, 140));
 		
 		this.add(scroll);
 		
 	}
 }
+ 

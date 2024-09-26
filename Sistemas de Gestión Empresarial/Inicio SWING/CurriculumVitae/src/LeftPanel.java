@@ -13,13 +13,14 @@ public class LeftPanel extends JPanel{
 
 	private Component[] comp;
 	private JTextArea text_area;
+	private JScrollPane p_scroll;
 	
 	
 	public LeftPanel() {
 		// TODO Auto-generated constructor stub
 		super();
 		//set layout
-		this.setLayout(new FlowLayout());
+		this.setLayout(new FlowLayout(FlowLayout.LEFT));
 		
 		//generate elements
 		String[] textos = {"Nombre", "Direccion", "Telefono", "Otros datos de interes"};
@@ -37,8 +38,8 @@ public class LeftPanel extends JPanel{
 			}
 		}
 		
-		text_area = new JTextArea(150, 240);
-		JScrollPane scroll = new JScrollPane(text_area);
-		this.add(text_area);
+		text_area = new JTextArea(7, 15);
+		p_scroll = new JScrollPane(text_area, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		this.add(p_scroll);
 	}
 }
