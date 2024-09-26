@@ -6,59 +6,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AñadirCursoClases"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="700">
-    <Grid>
+        Title="MainWindow" Height="550" Width="400">
+    <Grid Margin="10,10,10,33">
         <Grid.RowDefinitions>
-            <RowDefinition Height="400"/>
-            <RowDefinition Height="400"/>
+            <RowDefinition Height="145"/>
+            <RowDefinition Height="405"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
-            <Grid>
+            <Grid Height="150">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="90"/>
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" Content="Añadir Alumno" FontWeight="Bold" FontSize="20" Foreground="White"/>
+                <StackPanel Grid.Row="0" Margin="-10,-4,268,0">
+                    <Label Content="Añadir Alumno:" FontWeight="Bold" FontSize="12" Foreground="White" RenderTransformOrigin="0.5,0.5" Height="24" Width="100"/>
+                </StackPanel>
                 <StackPanel Grid.Row="1">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="Nombre de los alumnos" FontWeight="Bold" FontSize="20" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,551,0" />
-                        <TextBox x:Name="txt_nombre" Grid.Column="1" Height="20" Margin="104,8,136,9"/>
+                        <Label Grid.Column="0" Content="Nombre de los alumnos:" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,-7,49,53" />
+                        <TextBox x:Name="txt_nombre" FontFamily="12" Height="15" Margin="166,0,441,57" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackPanel>
-                <StackPanel Grid.Row="2">
-                    <Button Content="Añadir Alumno" Width="200" FontSize="20" Height="29" Click="Button_Click"/>
+                <StackPanel Grid.Row="2" Margin="143,5,160,0">
+                    <Button Content="Añadir Alumno" FontSize="10" Click="Button_Click" Height="15" FontStretch="Condensed" RenderTransformOrigin="0.5,0.5" Width="77">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                    </Button>
                 </StackPanel>
-                <StackPanel Grid.Row="3">
-                    <ListBox FontSize="20" x:Name="lb_alumnos" Width="640" Height="200"/>
+                <StackPanel Grid.Row="3" Margin="21,0,21,0" VerticalAlignment="Center" Height="71">
+                    <ListBox FontSize="20" x:Name="lb_alumnos" Width="312" Height="70"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
-        <StackPanel Grid.Row="2">
-            <Grid>
+        <StackPanel Margin="0,141,0,78" Grid.RowSpan="2">
+            <Grid Height="300">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="220"/>
+                    <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" Content="Añadir Alumno" FontWeight="Bold" FontSize="20" Foreground="White"/>
+                <StackPanel Grid.Row="0" Margin="0,0,10,3">
+                    <Label Content="Añadir Alumno:" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,6,276,10" Height="24" Width="100"/>
+                </StackPanel>
                 <StackPanel Grid.Row="1">
                     <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="200"/>
-                            <ColumnDefinition Width="600"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="Codigo" FontWeight="Bold" FontSize="20" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,551,0" />
-                        <TextBox x:Name="txt_cod" Grid.Column="1" Height="20" Margin="104,8,300,9"/>
+                        <Label Grid.Column="0" Content="Codigo" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,8,24,11"/>
+                        <TextBox Grid.Column="1" x:Name="txt_cod" Height="20" Margin="32,12,21,13" />
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="2">
@@ -67,8 +84,8 @@
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="Nombre del curso" FontWeight="Bold" FontSize="20" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,551,0" />
-                        <TextBox x:Name="txt_nombrecurso" Grid.Column="1" Height="20" Margin="104,8,166,9"/>
+                        <Label Grid.Column="0" Content="Nombre del curso" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,0,90,0" />
+                        <TextBox x:Name="txt_nombrecurso" Height="20" Margin="125,8,440,9" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="3">
@@ -77,9 +94,9 @@
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="Turno" FontWeight="Bold" FontSize="20" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,551,0" />
-                        <RadioButton Content="Mañana" Grid.Column="1" Margin="104,8,372,0" FontSize="20" GroupName="turno"/>
-                        <RadioButton Content="Tarde" Grid.Column="1" Margin="300,8,204,0" FontSize="20" GroupName="turno"/>
+                        <Label Grid.Column="0" Content="Turno" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,-5,158,5" />
+                        <RadioButton Content="Mañana" Margin="124,4,0,4" FontSize="12" GroupName="turno"/>
+                        <RadioButton Content="Tarde" Grid.Column="1" Margin="52,4,452,4" FontSize="12" GroupName="turno"/>
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="4">
@@ -88,8 +105,8 @@
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="Categoria" FontWeight="Bold" FontSize="20" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,551,0" />
-                        <ComboBox x:Name="cb_categoriacurso" Grid.Column="1" Height="20" Margin="104,8,192,9"/>
+                        <Label Grid.Column="0" Content="Categoria" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,-2,100,1" />
+                        <ComboBox x:Name="cb_categoriacurso" Height="20" Margin="124,3,440,14" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="5">
@@ -98,14 +115,15 @@
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="Modalidad" FontWeight="Bold" FontSize="20" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,551,0" />
-                        <ComboBox x:Name="cb_modalidad" Grid.Column="1" Height="20" Margin="104,8,196,9"/>
+                        <Label Grid.Column="0" Content="Modalidad" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,0,128,19" />
+                        <ComboBox x:Name="cb_modalidad" Height="20" Margin="125,12,440,13" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackPanel>
-                <StackPanel Grid.Row="6">
-                    <ListBox FontSize="20" x:Name="lb_cursos" Width="648" Height="114"/>
+                <StackPanel Grid.Row="6" Margin="0,10,0,19">
+                    <ListBox FontSize="20" x:Name="lb_cursos" Width="340" Height="59"/>
                 </StackPanel>
             </Grid>
+            <Button Content="Añadir Curso" FontSize="12" Height="29" Width="100"/>
         </StackPanel>
     </Grid>
 </Window>

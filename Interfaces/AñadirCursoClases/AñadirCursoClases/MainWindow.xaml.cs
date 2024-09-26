@@ -36,6 +36,7 @@ namespace AñadirCursoClases
             {
                 Alumno alum = new Alumno(txt_nombre.Text);
                 lb_alumnos.Items.Add(alum.Nombre);
+                txt_nombre.Text = "";
             }
         }
     }
