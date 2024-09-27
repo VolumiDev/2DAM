@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace AñadirCursoClases
 {
@@ -13,16 +15,21 @@ namespace AñadirCursoClases
         private String turno;
         private String modalidad;
         private String categoria;
-        private List<Alumno> alumno;
+        private List<Alumno> alumnos;
 
-        public Curso(int codigo, string titulo, string turno, string modalidad, string categoria, List<Alumno> alumno)
+        public Curso(string tit, RadioButton rButton, string cat, string mod, List<Alumno> listAlumno, List<Curso> cursos)
         {
-            this.codigo = codigo;
-            this.titulo = titulo;
-            this.turno = turno;
-            this.modalidad = modalidad;
-            this.categoria = categoria;
-            this.alumno = alumno;
+            codigo = cursos.Count + 1;
+            this.titulo = tit;
+            this.modalidad =  mod;
+            this.turno = rButton.IsChecked == true ? "Mañana" : "Tarde";
+            this.categoria = cat;
+            this.Alumnos = listAlumno;
+        }
+
+        public void AñadirLista(List<Alumno> lista)
+        {
+            alumnos = lista;
         }
 
         public int Codigo { get => codigo; set => codigo = value; }
@@ -30,6 +37,6 @@ namespace AñadirCursoClases
         public string Turno { get => turno; set => turno = value; }
         public string Modalidad { get => modalidad; set => modalidad = value; }
         public string Categoria { get => categoria; set => categoria = value; }
-        internal List<Alumno> Alumno { get => alumno; set => alumno = value; }
+        internal List<Alumno> Alumnos { get => alumnos; set => alumnos = value; }
     }
 }

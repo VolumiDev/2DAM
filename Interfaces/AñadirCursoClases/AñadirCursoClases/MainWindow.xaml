@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AñadirCursoClases"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="400">
+        Title="MainWindow" Height="527" Width="400">
     <Grid Margin="10,10,10,33">
         <Grid.RowDefinitions>
             <RowDefinition Height="145"/>
@@ -65,6 +65,7 @@
                 <StackPanel Grid.Row="0" Margin="0,0,10,3">
                     <Label Content="Añadir Alumno:" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,6,276,10" Height="24" Width="100"/>
                 </StackPanel>
+                <!--
                 <StackPanel Grid.Row="1">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -75,9 +76,10 @@
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="Codigo" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,8,24,11"/>
-                        <TextBox Grid.Column="1" x:Name="txt_cod" Height="20" Margin="32,12,21,13" />
+                        <TextBox Grid.Column="1" x:Name="txt_cod" Height="20" Margin="30,11,23,14" />
                     </Grid>
                 </StackPanel>
+                -->
                 <StackPanel Grid.Row="2">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -85,7 +87,7 @@
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="Nombre del curso" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,0,90,0" />
-                        <TextBox x:Name="txt_nombrecurso" Height="20" Margin="125,8,440,9" Grid.ColumnSpan="2"/>
+                        <TextBox Name="txt_nombrecurso" Height="20" Margin="125,8,440,9" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="3">
@@ -95,8 +97,8 @@
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="Turno" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,-5,158,5" />
-                        <RadioButton Content="Mañana" Margin="124,4,0,4" FontSize="12" GroupName="turno"/>
-                        <RadioButton Content="Tarde" Grid.Column="1" Margin="52,4,452,4" FontSize="12" GroupName="turno"/>
+                        <RadioButton Name="rb_manana" Content="Mañana" Margin="124,4,0,4" FontSize="12" GroupName="turno"/>
+                        <RadioButton Name="rb_tarde" Content="Tarde" Grid.Column="1" Margin="52,4,452,4" FontSize="12" GroupName="turno"/>
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="4">
@@ -106,7 +108,12 @@
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="Categoria" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,-2,100,1" />
-                        <ComboBox x:Name="cb_categoriacurso" Height="20" Margin="124,3,440,14" Grid.ColumnSpan="2"/>
+                        <ComboBox x:Name="cb_categoriacurso" Height="20" Margin="124,3,440,14" Grid.ColumnSpan="2">
+                            <ComboBoxItem Content="Informatica"></ComboBoxItem>
+                            <ComboBoxItem Content="Marketin"></ComboBoxItem>
+                            <ComboBoxItem Content="Administracion"></ComboBoxItem>
+                            <ComboBoxItem Content="Economia"></ComboBoxItem>
+                        </ComboBox>
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="5">
@@ -116,14 +123,26 @@
                             <ColumnDefinition Width="600"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="Modalidad" FontWeight="Bold" FontSize="12" Foreground="White" Margin="0,0,128,19" />
-                        <ComboBox x:Name="cb_modalidad" Height="20" Margin="125,12,440,13" Grid.ColumnSpan="2"/>
+                        <ComboBox x:Name="cb_modalidad" Height="20" Margin="125,12,440,13" Grid.ColumnSpan="2">
+                            <ComboBoxItem>Presencial</ComboBoxItem>
+                            <ComboBoxItem>distancia</ComboBoxItem>
+                        </ComboBox>
                     </Grid>
                 </StackPanel>
-                <StackPanel Grid.Row="6" Margin="0,10,0,19">
-                    <ListBox FontSize="20" x:Name="lb_cursos" Width="340" Height="59"/>
+                <StackPanel Grid.Row="6" Margin="0,10,0,78">
+                    <StackPanel>
+                    <ListBox FontSize="20" x:Name="lb_cursos" Width="340" Height="59" SelectionChanged="lb_cursos_SelectionChanged"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" Content="Añadir Curso" FontSize="12" Height="29" Width="100" Click="Button_Click_1"/>
+                            <Button Grid.Column="1" Name="btn_hidden" Content="Oculto" FontSize="12" Height="29" Width="100" IsEnabled="False"/>
+                        </Grid>
+                    </StackPanel>
                 </StackPanel>
             </Grid>
-            <Button Content="Añadir Curso" FontSize="12" Height="29" Width="100"/>
         </StackPanel>
     </Grid>
 </Window>
