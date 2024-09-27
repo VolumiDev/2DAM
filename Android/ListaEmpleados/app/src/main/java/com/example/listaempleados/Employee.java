@@ -2,6 +2,7 @@ package com.example.listaempleados;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 
@@ -9,6 +10,7 @@ public class Employee implements Parcelable {
     private String name;
     private String position;
     private String company;
+    private ImageView avatar;
 
     Employee(String n, String c, String p){
         name = n;
@@ -35,7 +37,7 @@ public class Employee implements Parcelable {
     };
 
     public String show(){
-        return "" + name + " - " + company + " - " + position;
+        return "Name: " + name + " - Company: " + company + " - Position: " + position;
     }
 
     public String getCompany() {

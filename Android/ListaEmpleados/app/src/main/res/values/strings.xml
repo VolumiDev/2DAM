@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ListaEmpleados</string>
+    <string-array name="animales">
+        <item>gato</item>
+        <item>Perro</item>
+        <item>Raton</item>
+        <item>Loro</item>
+        <item>Huron</item>
+    </string-array>
 </resources>

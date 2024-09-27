@@ -5,23 +5,38 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".List">
+    tools:context=".ListEmployees">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <Spinner
+        android:id="@+id/spn_lista"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="19dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="452dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_return"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Spinner
+        android:id="@+id/spn_lista1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="452dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_return"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
@@ -30,6 +45,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+        app:layout_constraintTop_toBottomOf="@+id/spn_lista" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

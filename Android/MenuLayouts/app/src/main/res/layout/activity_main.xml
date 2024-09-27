@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:width="300dp"
+        android:text="Frame Layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:width="300dp"
+        android:text="Linear Layout"
+        app:layout_constraintStart_toStartOf="@+id/btn_frame"
+        app:layout_constraintTop_toBottomOf="@+id/btn_frame" />
+
+    <Button
+        android:id="@+id/btn_relative"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:width="300dp"
+        android:text="Relative"
+        app:layout_constraintStart_toStartOf="@+id/btn_linear"
+        app:layout_constraintTop_toBottomOf="@+id/btn_linear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

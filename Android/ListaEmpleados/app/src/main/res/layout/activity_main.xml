@@ -16,10 +16,12 @@
         android:layout_marginTop="19dp"
         android:width="300dp"
         android:height="50dp"
+        android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     <EditText
+        android:textSize="25dp"
         android:id="@+id/et_position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,6 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_position" />
 
     <EditText
+        android:textSize="25dp"
         android:id="@+id/et_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,7 +86,7 @@
         android:layout_marginEnd="10dp"
         android:text="Photo:"
         android:textSize="25dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/iv_user"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_position" />
 
@@ -97,7 +100,7 @@
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_user" />
 
     <Button
         android:id="@+id/btn_show"
@@ -109,10 +112,11 @@
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_user" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:src="@drawable/marine"
+        android:id="@+id/iv_user"
         android:layout_width="0dp"
         android:layout_height="165dp"
         android:layout_marginTop="121dp"
@@ -121,7 +125,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Photo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_position"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_position"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

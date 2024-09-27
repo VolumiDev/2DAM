@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +18,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    TextView tv_name,tv_position, tv_company;
     EditText et_name, et_company, et_position;
     ImageView imgV_photo;
     Button btn_add, btn_show;
@@ -36,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et_name = findViewById(R.id.et_name);
         et_company = findViewById(R.id.et_company);
         et_position = findViewById(R.id.et_position);
+        imgV_photo = findViewById(R.id.iv_user);
 
         btn_add = findViewById(R.id.btn_add);
         btn_show = findViewById(R.id.btn_show);
@@ -66,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 et_name.setText("");
                 et_position.setText("");
                 et_company.setText("");
+                imgV_photo.setImageResource(R.drawable.marineb);
                 Log.i("volumi", "pulsa");
                 for (Employee emp :
                         employees) {
@@ -74,9 +74,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_show:
-                Intent intent = new Intent(this, List.class);
+                Intent intent = new Intent(this, ListEmployees.class);
                 intent.putParcelableArrayListExtra("employees", employees);
-                    break;
+                Log.i("Volumi", "pulsado");
+                startActivity(intent);
+
+                break;
         }
     }
 }
