@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableLayout">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="64dp"
+        android:text="TABLE LAYOUT"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/ly_table"
+        android:layout_width="match_parent"
+        android:layout_height="484dp"
+        android:layout_below="@id/tv_title">
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:text="Marine Espacial"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_column="1"
+                android:src="@drawable/marine" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:text="Angeles Sangrientos"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_column="1"
+                android:src="@drawable/marineb" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:text="Xenos"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_column="1"
+                android:src="@drawable/marinea" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="190dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/ly_table"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="111dp"
+        android:text="Volver"
+        android:textSize="20dp" />
+</RelativeLayout>

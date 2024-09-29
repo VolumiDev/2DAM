@@ -1,5 +1,8 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.util.concurrent.Flow;
 
 import javax.naming.ContextNotEmptyException;
 import javax.swing.JLabel;
@@ -8,22 +11,26 @@ import javax.swing.SwingConstants;
 
 public class LabelPanel extends JPanel{
 
-	private TitlesPanel titles;
-	private ContentPanel contens;
+	private LinePanel[] linePanels;
 	
 	public LabelPanel() {
 		// TODO Auto-generated constructor stub
 		super();
-		this.setLayout(new BorderLayout());
-		this.setPreferredSize(new Dimension(350, 150));
+		String[] titles = {"Nombre:   ", "Editor:   ", "Tipo:   ", "De:   " };
+		String[] contents = {"C:\\Users\\Diego\\Documents\\2DAMasdasdasdasdasdasdaasdas ", "Salesianos International", "Aplicacion", "C:\\Users\\Diego\\Documents\\2DAM: " };
+
+		this.setLayout(new FlowLayout(FlowLayout.LEFT));
 		
-		titles = new TitlesPanel();
-		contens = new ContentPanel();
+		linePanels = new LinePanel[4];
+		for (int i = 0; i < linePanels.length; i++) {
+			if(i == 1) {
+				linePanels[i] = new LinePanel(titles[i], "<html><a href=" + '"' + "www.salesianospizarrales.com"+ '"' + ">"+ contents[i] +"</a></htmml>");
+			}else {
+				linePanels[i] = new LinePanel(titles[i], contents[i]);				
+			}
+			linePanels[i].setPreferredSize(new Dimension(500,20));
+			this.add(linePanels[i]);
+		}
 		
-		this.add(titles, BorderLayout.WEST);
-		this.add(contens, BorderLayout.CENTER);
-		
-		
-//		}
 	}
 }

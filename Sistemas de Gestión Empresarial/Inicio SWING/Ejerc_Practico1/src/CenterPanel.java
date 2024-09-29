@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -9,17 +10,27 @@ import javax.swing.border.EmptyBorder;
 
 public class CenterPanel extends JPanel {
 
-	private TopPanel p_top;
-//	private MidPanel p_mid;
-//	private BotPanel p_bot;
+	private TopPanel pNor;
+	private MidPanel pCen;
+	private BotPanel pSou;
 	
 	
 	public CenterPanel() {
 		// TODO Auto-generated constructor stub
-		this.setLayout(new FlowLayout());
-		p_top = new TopPanel();
-		p_top.setPreferredSize(new Dimension(500, 250));
-		this.add(p_top);
+		this.setLayout(new BorderLayout());
+		
+		pNor = new TopPanel();
+		pNor.setPreferredSize(new Dimension(450, 120));
+		this.add(pNor, BorderLayout.NORTH);
+		
+		pCen = new MidPanel();
+		pCen.setPreferredSize(new Dimension(450, 20));
+		this.add(pCen, BorderLayout.CENTER);
+	
+		pSou= new BotPanel();
+		pSou.setPreferredSize(new Dimension(450, 60));
+		this.add(pSou, BorderLayout.SOUTH);
+
 	}
 	
 }

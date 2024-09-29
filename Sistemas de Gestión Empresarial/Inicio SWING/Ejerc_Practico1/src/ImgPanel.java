@@ -1,10 +1,12 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 public class ImgPanel extends JPanel{
 
@@ -13,9 +15,13 @@ public class ImgPanel extends JPanel{
 	public ImgPanel() {
 		// TODO Auto-generated constructor stub
 		super();
-		ImageIcon image = new ImageIcon("salesianos.png");
-		icon = new JLabel(image, JLabel.CENTER); 
-		icon.setPreferredSize(new Dimension(100, 100));
-		this.add(icon, BorderLayout.WEST);
+		this.setLayout(new FlowLayout());
+		ImageIcon image = new ImageIcon("salesianos1.png");
+		icon = new JLabel(image);
+//		icon.setPreferredSize(new Dimension(50, 50));
+		this.add(icon);
+		
+		
 	}
+	
 }

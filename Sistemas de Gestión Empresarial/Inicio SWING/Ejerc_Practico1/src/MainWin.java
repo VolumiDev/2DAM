@@ -20,30 +20,28 @@ public class MainWin extends JFrame{
 	public MainWin() {
 		// TODO Auto-generated constructor stub
 		super();
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setBounds(100, 100, 500, 350);
-		this.setLayout(new BorderLayout());
+		this.setBounds(100, 100, 500, 370);
+		this.setLayout(new BorderLayout(10, 10));
 		
 		//north
 		northLbl = new JLabel("¿Desea ejecutar el archivo?");
-		northLbl.setBorder(new EmptyBorder(10, 10, 10, 10));
-		northLbl.setBackground(Color.RED);
-
+		northLbl.setPreferredSize(new Dimension(350, 30));
+		northLbl.setBorder(new EmptyBorder(20, 20, 20, 20));
 		this.add(northLbl, BorderLayout.NORTH);
 		
 		//center
 		centerPanel = new CenterPanel();
-		centerPanel.setBackground(Color.BLUE);
-
+		centerPanel.setPreferredSize(new Dimension(350, 300));
 		this.add(centerPanel, BorderLayout.CENTER);
 		
 		//south
 		southPanel = new SouthPanel();
-		southPanel.setBackground(Color.YELLOW);
-		
+		centerPanel.setPreferredSize(new Dimension(350, 50));
 		this.add(southPanel, BorderLayout.SOUTH);
 		
-//		this.setResizable(false);
+		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setResizable(true);
 		this.setVisible(true);
 	}
 }
