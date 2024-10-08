@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadrado{
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+}

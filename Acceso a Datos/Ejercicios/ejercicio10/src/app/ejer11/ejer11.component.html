@@ -1,0 +1,15 @@
+<input type="text" [(ngModel)]="tipo"  placeholder="Escribe par o impar">
+
+<div *ngIf="tipo == 'impar'; else divPar">
+    <span *ngFor="let i of numeros;">
+        <span *ngIf="i%2 != 0">{{i}}</span>
+    </span>
+</div>
+
+<ng-template #divPar>
+    <div>
+        <span *ngFor="let i of numeros;">
+            <span *ngIf="i%2 == 0">{{i}}</span>
+        </span>
+    </div>
+</ng-template>

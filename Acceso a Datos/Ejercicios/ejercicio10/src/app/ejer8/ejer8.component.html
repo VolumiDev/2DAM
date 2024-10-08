@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="valor"><button (click)="comparar()">COMPARAR</button>
+<div *ngFor="let i of numeros">
+  <div *ngIf="i == valor; else sino"> {{i}}: Iguales</div>
+  <ng-template #sino>
+  <div> {{i}}: Distintos</div>
+  </ng-template>
+</div>

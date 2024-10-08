@@ -1,0 +1,14 @@
+<ul>Coche
+    <li>{{coche.marca}}</li>
+    <li>{{coche.modelo}}</li>
+    <li>{{coche.velMax}}</li>
+  </ul>
+  
+  <ul>Moto
+    <li>{{moto.marca}}</li>
+    <li>{{moto.modelo}}</li>
+    <li>{{moto.velMax}}</li>
+  </ul>
+  <div *ngIf="moto.velMax > coche.velMax"><h3>La velocidad de la moto es mayor</h3></div>
+  <div *ngIf="coche.velMax > moto.velMax"><h3>La velocidad del coche es mayor</h3></div>
+  <div *ngIf="moto.velMax === coche.velMax"><h3>Las velocidades son iguales</h3></div>
