@@ -21,9 +21,9 @@ public class Ventana extends JFrame{
 		super();
 		this.setLayout(new FlowLayout(FlowLayout.CENTER));
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setBounds(100, 100, 350, 300);
+		this.setBounds(100, 100, 450, 300);
 		JPanel marco = new JPanel();
-		marco.setPreferredSize(new Dimension(325, 255));
+		marco.setPreferredSize(new Dimension(425, 245));
 		marco.setBorder(new LineBorder(Color.BLACK, 1));
 		
 		Font fontTitulo = new Font("sans", Font.BOLD, 25);
@@ -46,19 +46,53 @@ public class Ventana extends JFrame{
 		txtInput.setFont(fontInput);
 		marco.add(txtInput);
 		
-		pRadios = new PRadios();
-		pRadios.setPreferredSize(new Dimension(300, 60));
+		pRadios = new PRadios(this);
+		pRadios.setPreferredSize(new Dimension(380, 70));
 		marco.add(pRadios);
 		
-		pCheckBtn = new PCheck();
+		pCheckBtn = new PCheck(this);
+		pCheckBtn.setPreferredSize(new Dimension(380, 40));
 		marco.add(pCheckBtn);
-		
-		
 		
 		this.getContentPane().add(marco);
 		
 		
-		
+	}
+	
+	
+	
+	
+
+	public JLabel getLblTexto() {
+		return lblTexto;
+	}
+
+	public void setLblTexto(JLabel lblTexto) {
+		this.lblTexto = lblTexto;
+	}
+
+	public JTextField getTxtInput() {
+		return txtInput;
+	}
+
+	public void setTxtInput(JTextField txtInput) {
+		this.txtInput = txtInput;
+	}
+
+	public PRadios getpRadios() {
+		return pRadios;
+	}
+
+	public void setpRadios(PRadios pRadios) {
+		this.pRadios = pRadios;
+	}
+
+	public PCheck getpCheckBtn() {
+		return pCheckBtn;
+	}
+
+	public void setpCheckBtn(PCheck pCheckBtn) {
+		this.pCheckBtn = pCheckBtn;
 	}
 	
 }
