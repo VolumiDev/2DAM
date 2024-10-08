@@ -12,13 +12,7 @@ import javax.swing.SwingConstants;
 public class ClaseEscuchadora implements ActionListener{
 
 	private static Ventana vent;
-	private  JTextField txt;
-	private  JRadioButton rojo;
-	private  JRadioButton verde;
-	private  JRadioButton izq;
-	private  JRadioButton centro;
-	private  JRadioButton der;
-	private  JCheckBox curs, negrita;
+	
 	
 	public ClaseEscuchadora(Ventana v) {
 		// TODO Auto-generated constructor stub
@@ -48,10 +42,10 @@ public class ClaseEscuchadora implements ActionListener{
 			justificacion();
 			break;
 		case "cursiva":
-			justificacion();
+			estilo();
 			break;
 		case "negrita":
-			justificacion();
+			estilo();
 			break;
 		default:
 			break;
@@ -81,20 +75,21 @@ public class ClaseEscuchadora implements ActionListener{
 		}
 	}
 	
-	public static void cursiva() {
-		if (vent.getpCheckBtn().getJchecks()[0].isSelected()){
+	public static void estilo() {
+		System.out.println("entramos");
+
+		if (vent.getpCheckBtn().getJchecks()[0].isSelected() && vent.getpCheckBtn().getJchecks()[1].isSelected()){
+			vent.getTxtInput().setFont(new Font("sans", Font.ITALIC+Font.BOLD, 15));
+			//vent.getTxtInput().setFont(new Font("sans", Font.BOLD, 15));
+		}else if(vent.getpCheckBtn().getJchecks()[0].isSelected()){
 			vent.getTxtInput().setFont(new Font("sans", Font.ITALIC, 15));
-		}else {
-			vent.getTxtInput().setFont(new Font("sans", Font.PLAIN, 15));
-		}
-	}
-	
-	public static void negrita() {
-		if (vent.getpCheckBtn().getJchecks()[1].isSelected()){
+		}else if(vent.getpCheckBtn().getJchecks()[1].isSelected()){
 			vent.getTxtInput().setFont(new Font("sans", Font.BOLD, 15));
 		}else {
 			vent.getTxtInput().setFont(new Font("sans", Font.PLAIN, 15));
 		}
 	}
+	
+	
 
 }

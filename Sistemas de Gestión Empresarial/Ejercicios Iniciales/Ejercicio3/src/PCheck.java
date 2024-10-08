@@ -38,7 +38,8 @@ public class PCheck extends JPanel {
 			jchecks[i].setPreferredSize(new Dimension(150,10));
 			jchecks[i].addActionListener(ce);
 		}
-		
+		jchecks[0].setActionCommand("cursiva");
+		jchecks[1].setActionCommand("negrita");
 		this.add(cheks);
 		
 		
