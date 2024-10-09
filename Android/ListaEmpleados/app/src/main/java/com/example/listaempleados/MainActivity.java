@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText et_name, et_company, et_position;
     ImageView imgV_photo;
     Button btn_add, btn_show;
+    Spinner spin_employees;
 
     ArrayList<Employee> employees = new ArrayList<Employee>();
 
@@ -35,12 +39,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et_company = findViewById(R.id.et_company);
         et_position = findViewById(R.id.et_position);
         imgV_photo = findViewById(R.id.iv_user);
+        spin_employees = findViewById(R.id.spn_Employees);
 
         btn_add = findViewById(R.id.btn_add);
         btn_show = findViewById(R.id.btn_show);
 
         btn_add.setOnClickListener(this);
         btn_show.setOnClickListener(this);
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -66,6 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 et_position.setText("");
                 et_company.setText("");
                 imgV_photo.setImageResource(R.drawable.marineb);
+
+                ArrayAdapter<Employee> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, employees);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spin_employees.setAdapter(adapter);
+
                 Log.i("volumi", "pulsa");
                 for (Employee emp :
                         employees) {
@@ -75,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_show:
                 Intent intent = new Intent(this, ListEmployees.class);
-                intent.putParcelableArrayListExtra("employees", employees);
+                intent.putExtra("employeesList", employees);
                 Log.i("Volumi", "pulsado");
                 startActivity(intent);
 

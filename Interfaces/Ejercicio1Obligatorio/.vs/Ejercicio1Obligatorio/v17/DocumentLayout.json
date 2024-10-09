@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\altaempleado.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\altaempleado.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AltaEmpleado.xaml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\AltaEmpleado.xaml",
+              "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\AltaEmpleado.xaml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\AltaEmpleado.xaml",
+              "RelativeToolTip": "Ejercicio1Obligatorio\\AltaEmpleado.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-09T18:49:45.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml",
+              "RelativeToolTip": "Ejercicio1Obligatorio\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-09T17:49:14.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Ejercicio1Obligatorio\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T17:49:14.49Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

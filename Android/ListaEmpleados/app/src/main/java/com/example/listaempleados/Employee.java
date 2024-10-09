@@ -6,7 +6,9 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 
-public class Employee implements Parcelable {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
     private String name;
     private String position;
     private String company;
@@ -23,18 +25,6 @@ public class Employee implements Parcelable {
         position = in.readString();
         company = in.readString();
     }
-
-    public static final Creator<Employee> CREATOR = new Creator<Employee>() {
-        @Override
-        public Employee createFromParcel(Parcel in) {
-            return new Employee(in);
-        }
-
-        @Override
-        public Employee[] newArray(int size) {
-            return new Employee[size];
-        }
-    };
 
     public String show(){
         return "Name: " + name + " - Company: " + company + " - Position: " + position;
@@ -64,15 +54,4 @@ public class Employee implements Parcelable {
         this.name = name;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(@NonNull Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeString(position);
-        dest.writeString(company);
-    }
 }

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="G8Jpr9kC_400x400.jpg" />
+    <None Remove="nondik.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="nondik.jpg" />
+  </ItemGroup>
+
+</Project>

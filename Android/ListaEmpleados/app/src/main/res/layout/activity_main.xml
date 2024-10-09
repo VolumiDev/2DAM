@@ -13,118 +13,80 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="30dp"
         android:width="300dp"
-        android:height="50dp"
-        android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
-
-    <EditText
-        android:textSize="25dp"
-        android:id="@+id/et_position"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:width="300dp"
-        android:height="50dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_position"
-        app:layout_constraintTop_toBottomOf="@+id/tv_position" />
-
-    <EditText
-        android:textSize="25dp"
-        android:id="@+id/et_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="19dp"
-        android:width="300dp"
-        android:height="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_company" />
-
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:text="Name:"
-        android:textSize="25dp"
+        android:height="40dp"
+        android:hint="Nombre"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <TextView
-        android:id="@+id/tv_position"
+    <EditText
+        android:id="@+id/et_position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="36dp"
-        android:text="Position:"
-        android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:width="300dp"
+        android:height="40dp"
+        android:hint="Position"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/et_company"
         app:layout_constraintTop_toBottomOf="@+id/et_company" />
 
-    <TextView
-        android:id="@+id/tv_company"
+    <EditText
+        android:id="@+id/et_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="22dp"
-        android:text="Company:"
-        android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:width="300dp"
+        android:height="40dp"
+        android:hint="Compañia"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/et_name"
         app:layout_constraintTop_toBottomOf="@+id/et_name" />
-
-    <TextView
-        android:id="@+id/Photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="10dp"
-        android:text="Photo:"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toStartOf="@+id/iv_user"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_position" />
 
     <Button
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginBottom="47dp"
         android:text="Add"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_user" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
         android:layout_marginEnd="65dp"
+        android:layout_marginBottom="47dp"
         android:text="Show"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_user" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:src="@drawable/marine"
         android:id="@+id/iv_user"
         android:layout_width="0dp"
-        android:layout_height="165dp"
-        android:layout_marginTop="121dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="122dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="45dp"
+        android:src="@drawable/marine"
+        app:layout_constraintBottom_toTopOf="@+id/spn_Employees"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_position" />
+
+    <Spinner
+        android:id="@+id/spn_Employees"
+        android:layout_width="184dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="306dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Photo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_position"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,16 +35,16 @@ public class ListEmployees extends AppCompatActivity implements View.OnClickList
 
         List<String> valuesList = List.of("Value1", "Value2", "Value3");
 
-        ArrayList<Employee> employeesList= getIntent().getParcelableArrayListExtra("employees");
+        //ArrayList<Employee> employeesList= getIntent().getSerializableExtra("employeesList");
         ArrayList<String> data = new ArrayList<String>();
-        for (Employee emp : employeesList) {
-            data.add(emp.show());
-        }
+        //for (Employee emp : employeesList) {
+        //     data.add(emp.show());
+        //}
         spinner = findViewById(R.id.spn_lista);
         spinner1 = findViewById(R.id.spn_lista1);
 
         //creando el array desde resourcer, en el XML
-        //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.animales, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.animales, android.R.layout.simple_spinner_item);
 
         adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, data);
         adapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, valuesList);
