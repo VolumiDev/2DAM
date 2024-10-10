@@ -13,4 +13,13 @@ public class EPanel extends JPanel{
 		lblIcon = new JLabel(image);
 		this.add(lblIcon);
 	}
+
+	public JLabel getLblIcon() {
+		return lblIcon;
+	}
+
+	public void setLblIcon(JLabel lblIcon) {
+		this.lblIcon = lblIcon;
+	}
+	
 }

@@ -40,4 +40,21 @@ public class Ventana extends JFrame{
 		
 		
 	}
+
+	public WPanel getWestPanel() {
+		return westPanel;
+	}
+
+	public void setWestPanel(WPanel westPanel) {
+		this.westPanel = westPanel;
+	}
+
+	public EPanel getEastPanel() {
+		return eastPanel;
+	}
+
+	public void setEastPanel(EPanel eastPanel) {
+		this.eastPanel = eastPanel;
+	}
+	
 }
