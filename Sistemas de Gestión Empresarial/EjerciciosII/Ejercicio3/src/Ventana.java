@@ -48,6 +48,7 @@ public class Ventana extends JFrame{
 		original.add(separador, BorderLayout.SOUTH);
 		pPadding.add(original);
 
+		
 		//COMENZAMOS CON LA COPIA
 		JPanel copia = new JPanel();
 		copia.setLayout(new BorderLayout());

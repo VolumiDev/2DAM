@@ -87,8 +87,10 @@ public class Escucha implements ActionListener {
 		}
 		
 		if(flagPalabra && intentos < 7) {
+			vent.getWestPanel().getBtnAceptar().setEnabled(false);
 			seleccion = JOptionPane.showOptionDialog(vent, "Ha ganado, quiere reiniciar partida", "Partida terminada", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, new Object[] {"Reiniciar", "No", "Cancelar"}, "Reiniciar");
 		}else if(!false && intentos >= 7) {
+			vent.getWestPanel().getBtnAceptar().setEnabled(false);
 			seleccion = JOptionPane.showOptionDialog(vent, "Ha Perdido, quiere reiniciar partida", "Partida terminada", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, new Object[] {"Reiniciar", "No", "Cancelar"}, "Reiniciar");
 		}
 		
