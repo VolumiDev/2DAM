@@ -1,11 +1,12 @@
+
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cuadrado{
-    background-color: aqua;
+.square{
     width: 50px;
     height: 50px;
+    background-color: lime;
 }

@@ -1,0 +1,6 @@
+
+<div class="container">
+    <input type="text" [(ngModel)]="color" (ngModelChange)="cambiaColor()">
+    <div #cuadrado class="square" [ngStyle]="{'background-color': 'red'}">{{mensaje}}</div>
+</div>
+
