@@ -1,0 +1,112 @@
+﻿<Window x:Class="Ejercicio1Obligatorio.Alta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio1Obligatorio"
+        WindowState="Maximized"
+        Background="LightGray"
+        mc:Ignorable="d"
+        Title="Alta" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="estiloLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="courier new"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style x:Key="lblItalic" TargetType="Label">
+            <Setter Property="FontFamily" Value="courier new"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Window.Resources>
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Style="{DynamicResource estiloLabel}" Content="Nº Empleado:" Margin="24,22,635,50"/>
+                <TextBlock Name="tb_nombre" Text="nombre empleado..." HorizontalAlignment="Left" Margin="24,50,0,0" TextWrapping="Wrap" FontSize="18" Foreground="Gray" VerticalAlignment="Top" Height="27" Width="365"/>
+                <Label Style="{DynamicResource estiloLabel}" FontSize="20" FontWeight="Bold" Content="Alta de datos personales" HorizontalAlignment="Left" Margin="389,0,0,0" VerticalAlignment="Center" Width="274" Height="35"/>
+                <Image Source="/nondik.jpg" HorizontalAlignment="Left" Height="72" Margin="688,10,0,0" VerticalAlignment="Top" Width="67"/>
+                <Rectangle HorizontalAlignment="Center" Height="3" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="712"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="397"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Style="{DynamicResource estiloLabel}" Content="Codigo Empleado:" Margin="10,10,0,-10"/>
+                    <TextBlock Name="tb_codigo" Background="White" HorizontalAlignment="Left" Margin="188,17,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="16" Width="127"/>
+                    <GroupBox Header="Datos Laborales" Margin="10,60,39,10">
+                        <StackPanel Margin="0,0,11,0" Height="184">
+                            <Grid Height="185">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="151*"/>
+                                    <ColumnDefinition Width="119*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Style="{DynamicResource estiloLabel}" Content="Alta:" Margin="10,0,69,28" Grid.RowSpan="2"/>
+                                <Label Grid.Row="1" Grid.Column="0" Style="{DynamicResource estiloLabel}" Content="Antiguedad:" Margin="10,0,16,28" Grid.RowSpan="2"/>
+                                <Label Grid.Row="2" Grid.Column="0" Style="{DynamicResource estiloLabel}" Content="Tiempo Completo:" Margin="10,0,80,28" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                <Label Grid.Row="3" Grid.Column="0" Style="{DynamicResource estiloLabel}" Content="Especialidad:" Margin="10,0,113,28" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                <Label Grid.Row="3" Grid.Column="0" Style="{DynamicResource estiloLabel}" Content="Titulación:" Margin="10,28,16,28" Grid.RowSpan="3"/>
+                                <Label Grid.Row="4" Grid.Column="0" Style="{DynamicResource estiloLabel}" Content="Categoria L:" Margin="10,29,0,0" Grid.RowSpan="2"/>
+                                <DatePicker Name="dp_alta" Grid.Row="0" Grid.ColumnSpan="2" Margin="93,2,0,3"/>
+                                <TextBlock x:Name="tb_antiguedad" Grid.Row="1" Grid.Column="1" Text="" Background="White" Margin="5,5,5,5"/>
+                                <RadioButton x:Name="rb_si" GroupName="tiempo" Grid.Row="2" Grid.Column="1" Content="Si" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,9,0,0"/>
+                                <RadioButton x:Name="rb_no" GroupName="tiempo" Grid.Row="2" Grid.Column="1" Content="No" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,10,0,0"/>
+                                <TextBlock x:Name="tb_especialidad"  Grid.Row="3" Grid.Column="1" Text="" Background="White" Margin="5,5,5,5"/>
+                                <TextBlock Name="tb_titulacion" Grid.Row="4" Grid.Column="1" Text="" Background="White" Margin="5,5,5,5"/>
+                                <TextBlock Name="tb_categoria" Grid.Row="5" Grid.Column="1" Text="" Background="White" Margin="5,5,5,5"/>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="69*"/>
+                            <RowDefinition Height="69*"/>
+                            <RowDefinition Height="67*"/>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="32*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0">
+                            <GroupBox Margin="0,10,0,0" Header="DATOS NOMINA" Height="66" Width="370">
+                                <Canvas>
+                                    <Label Style="{DynamicResource estiloLabel}" Content="Salario" Width="88" Height="34" Canvas.Left="10" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                    <TextBlock x:Name="tb_salario" Background="White" Height="16" Width="100" Canvas.Left="98" Canvas.Top="9" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    <TextBlock x:Name="tb_percentil" Height="16" Width="100" Background="White" Canvas.Left="248" Canvas.Top="10"/>
+                                    <Label Style="{DynamicResource estiloLabel}" Content="%" Width="26" Height="29" Canvas.Left="217" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                </Canvas>
+                            </GroupBox>
+                        </StackPanel>
+                        <Canvas Grid.Row="1">
+                            <Label Style="{DynamicResource lblItalic}" Content="departamento" HorizontalAlignment="Center" Canvas.Left="31" VerticalAlignment="Top" Canvas.Top="9"/>
+                            <Label Style="{DynamicResource lblItalic}" Content="grado" HorizontalAlignment="Center" Canvas.Left="236" VerticalAlignment="Top" Canvas.Top="10"/>
+                            <ComboBox Name="cb_departamento" Canvas.Left="31" Canvas.Top="31" Width="120"/>
+                            <ComboBox Name="cb_grado" Canvas.Left="236" Canvas.Top="31" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Canvas>
+                        <Canvas Grid.Row="2">
+                            <Label Style="{DynamicResource estiloLabel}" Content="Comentarios:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBox Name="tb_comentario" Canvas.Left="135" TextWrapping="Wrap" Text="" Canvas.Top="6" Width="239" Height="45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        </Canvas>
+                        <Canvas Grid.Row="3">
+                            <Label Style="{DynamicResource estiloLabel}" Content="Premios:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tb_premio" Canvas.Left="136" TextWrapping="Wrap" Text="" Width="239" Height="46" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </Canvas>
+                        <Button Name="btn_guradar" Content="Guardar Datos" HorizontalAlignment="Left" Margin="241,25,0,0" Grid.Row="4" Width="104" Click="Button_Click"/>
+                    </Grid>
+
+                </Grid>
+                <TextBlock x:Name="tb_numEmpleado" HorizontalAlignment="Left" Margin="174,29,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="74"/>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</Window>

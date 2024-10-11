@@ -20,5 +20,11 @@ namespace Ejercicio1Obligatorio
         {
             InitializeComponent();
         }
+
+        private void nuevaAlta(object sender, RoutedEventArgs e)
+        {
+            Alta alta = new Alta();
+            alta.Show();
+        }
     }
 }

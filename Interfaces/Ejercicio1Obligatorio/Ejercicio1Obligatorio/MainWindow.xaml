@@ -16,6 +16,7 @@
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
     </Window.Resources>
+    <Viewbox Stretch="Uniform">
     <Grid>
         <DockPanel x:Name="DockPanelMenu"
                    Height="30" 
@@ -27,7 +28,7 @@
                   DockPanel.Dock="Top"
                   Style="{StaticResource estiloMenu}">
                 <MenuItem Header="_Archivo" Name="archivo">
-                    <MenuItem Header="A_lta Datos" Name="alta"/>
+                    <MenuItem Header="A_lta Datos" Name="alta" Click="nuevaAlta"/>
                     <MenuItem Header="Co_nsulta Datos" Name="consulta"/>
                     <MenuItem Header="A_ctulizar Datos" Name="actualiza"/>
                     <MenuItem Header="_Salir" Name="salir"/>
@@ -48,4 +49,5 @@
         <TextBlock Style="{StaticResource estiloTitulo}" HorizontalAlignment="Left" Margin="115,231,0,0" TextWrapping="Wrap" Text="Aplicacion 1" FontSize="20" VerticalAlignment="Top" Height="31" Width="165"/>
         <TextBlock Style="{StaticResource estiloTitulo}" HorizontalAlignment="Left" Margin="144,267,0,0" TextWrapping="Wrap" Text="DAM 2024" FontSize="20" VerticalAlignment="Top" Height="31" Width="108"/>
     </Grid>
+    </Viewbox>
 </Window>
