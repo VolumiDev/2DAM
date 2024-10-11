@@ -73,18 +73,28 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="46dp"
         android:src="@drawable/marine"
         app:layout_constraintBottom_toTopOf="@+id/spn_Employees"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/et_position" />
 
+    <Button
+        android:id="@+id/bt_murloc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="30dp"
+        android:text="Murloc"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Spinner
         android:id="@+id/spn_Employees"
         android:layout_width="184dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="306dp"
+        android:layout_marginBottom="305dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

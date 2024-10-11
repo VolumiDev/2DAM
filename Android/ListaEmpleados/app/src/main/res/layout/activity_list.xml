@@ -7,33 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".ListEmployees">
 
-    <Spinner
-        android:id="@+id/spn_lista"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="452dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_return"
+    <TextView
+        android:id="@+id/tv_employee"
+        android:layout_width="308dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="128dp"
+        android:width="300dp"
+        android:height="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <Spinner
-        android:id="@+id/spn_lista1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="452dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_return"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_return"
@@ -44,7 +27,17 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spn_lista" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:text="LogIn"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

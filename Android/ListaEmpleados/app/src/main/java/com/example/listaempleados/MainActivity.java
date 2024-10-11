@@ -1,6 +1,7 @@
 package com.example.listaempleados;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText et_name, et_company, et_position;
     ImageView imgV_photo;
-    Button btn_add, btn_show;
+    Button btn_add, btn_show, btn_sonido;
     Spinner spin_employees;
 
     ArrayList<Employee> employees = new ArrayList<Employee>();
@@ -40,13 +41,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et_position = findViewById(R.id.et_position);
         imgV_photo = findViewById(R.id.iv_user);
         spin_employees = findViewById(R.id.spn_Employees);
-
+        btn_sonido = findViewById(R.id.bt_murloc);
         btn_add = findViewById(R.id.btn_add);
         btn_show = findViewById(R.id.btn_show);
 
         btn_add.setOnClickListener(this);
         btn_show.setOnClickListener(this);
-
+        btn_sonido.setOnClickListener(this);
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -74,8 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 et_company.setText("");
                 imgV_photo.setImageResource(R.drawable.marineb);
 
-                ArrayAdapter<Employee> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, employees);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                //AQUI USAMOS EL ADAPTADOR QUE PERSONALIZADO QUE HEMOS CREADO
+                MiAdaptador adapter = new MiAdaptador(this, employees);
+                //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spin_employees.setAdapter(adapter);
 
                 Log.i("volumi", "pulsa");
@@ -87,11 +89,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_show:
                 Intent intent = new Intent(this, ListEmployees.class);
-                intent.putExtra("employeesList", employees);
+                intent.putExtra("empleado",(Employee) spin_employees.getSelectedItem());
                 Log.i("Volumi", "pulsado");
                 startActivity(intent);
 
                 break;
+            case R.id.bt_murloc:
+                MediaPlayer mp = MediaPlayer.create(this,R.raw.murloc);
+                mp.start();
         }
     }
 }
