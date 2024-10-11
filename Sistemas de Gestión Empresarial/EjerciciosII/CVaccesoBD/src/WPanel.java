@@ -30,4 +30,12 @@ public class WPanel extends JPanel{
 		}
 		
 	}
+
+	public JLabel[] getLbls() {
+		return lbls;
+	}
+
+	public void setLbls(JLabel[] lbls) {
+		this.lbls = lbls;
+	}
 }
