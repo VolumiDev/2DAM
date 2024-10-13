@@ -14,4 +14,13 @@ public class nPanel extends JPanel{
 		this.add(titulo);
 		
 	}
+
+	public JLabel getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(JLabel titulo) {
+		this.titulo = titulo;
+	}
+	
 }

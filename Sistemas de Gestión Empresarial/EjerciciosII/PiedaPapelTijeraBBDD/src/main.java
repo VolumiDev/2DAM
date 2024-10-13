@@ -5,6 +5,6 @@ public class main {
 		// TODO Auto-generated method stub
 		Ventana v = new Ventana();
 		v.setVisible(true);
-		v.setResizable(false);
 	}
+
 }

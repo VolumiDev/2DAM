@@ -47,6 +47,37 @@ public class wPanel extends JPanel{
 		datosInteres.add(scroll);
 		this.add(datosInteres);
 	}
+
+	public void limpiar() {
+		for (int i = 0; i < txts.length; i++) {
+			txts[i].setText("");
+		}
+		datos.setText("");
+	}
+	
+	public JLabel[] getLbls() {
+		return lbls;
+	}
+
+	public void setLbls(JLabel[] lbls) {
+		this.lbls = lbls;
+	}
+
+	public JTextField[] getTxts() {
+		return txts;
+	}
+
+	public void setTxts(JTextField[] txts) {
+		this.txts = txts;
+	}
+
+	public JTextArea getDatos() {
+		return datos;
+	}
+
+	public void setDatos(JTextArea datos) {
+		this.datos = datos;
+	}
 	
 	
 }

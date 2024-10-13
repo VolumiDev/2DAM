@@ -28,10 +28,42 @@ public class Ventana extends JFrame{
 		eastPanel.setPreferredSize(new Dimension(250,300));
 		this.getContentPane().add(eastPanel, BorderLayout.EAST);
 		
-		southPanel = new sPanel();
+		southPanel = new sPanel(this);
 		southPanel.setPreferredSize(new Dimension(250,50));
 		this.getContentPane().add(southPanel, BorderLayout.SOUTH);
 		
+	}
+
+	public nPanel getNorthPanel() {
+		return northPanel;
+	}
+
+	public void setNorthPanel(nPanel northPanel) {
+		this.northPanel = northPanel;
+	}
+
+	public wPanel getWestPanel() {
+		return westPanel;
+	}
+
+	public void setWestPanel(wPanel westPanel) {
+		this.westPanel = westPanel;
+	}
+
+	public ePanel getEastPanel() {
+		return eastPanel;
+	}
+
+	public void setEastPanel(ePanel eastPanel) {
+		this.eastPanel = eastPanel;
+	}
+
+	public sPanel getSouthPanel() {
+		return southPanel;
+	}
+
+	public void setSouthPanel(sPanel southPanel) {
+		this.southPanel = southPanel;
 	}
 	
 }
