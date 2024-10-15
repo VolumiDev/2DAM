@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Ejercicio1Obligatorio
 {
@@ -11,7 +13,7 @@ namespace Ejercicio1Obligatorio
         private int numero, antiguedad;
         private string nombre, codigo, fechaAlta, especialidad, titulacion, catLaboral, departamento, grado, comentarios, premios;
         private bool tiempoCompleto;
-        private float salario, percentil;
+        private double salario, percentil;
 
         
 
@@ -19,6 +21,27 @@ namespace Ejercicio1Obligatorio
         {
         }
 
+        public void escribirEmpleado()
+        {
+            using (StreamWriter sw = new StreamWriter("altaEmpleados.txt")){
+                sw.WriteLine("NOMBRE: " + nombre);
+                sw.WriteLine("NUMERO: " + numero);
+                sw.WriteLine("CODIGO: " + codigo);
+                sw.WriteLine("FECHA ALTA: " + fechaAlta);
+                sw.WriteLine("ANTIGUEDAD: " + antiguedad);
+                sw.WriteLine("TIEMPO COMPLETO" + tiempoCompleto);
+                sw.WriteLine("ESPECIALIDAD: " + especialidad);
+                sw.WriteLine("TITULACION: " + titulacion);
+                sw.WriteLine("CATEGORIA LABORAL: " + catLaboral);
+                sw.WriteLine("SALARIO: " + salario);
+                sw.WriteLine("%: " + percentil);
+                sw.WriteLine("DEPARTAMENTO: " + departamento);
+                sw.WriteLine("GRADO: " + grado);
+                sw.WriteLine("COMENTARIOS: " + comentarios);
+                sw.WriteLine("PREMIOS: " + premios);
+            }
+            MessageBox.Show("añadido al fichero");
+        }
         public int Numero { get => numero; set => numero = value; }
         public int Antiguedad { get => antiguedad; set => antiguedad = value; }
         public string Nombre { get => nombre; set => nombre = value; }
@@ -32,7 +55,7 @@ namespace Ejercicio1Obligatorio
         public string Comentarios { get => comentarios; set => comentarios = value; }
         public string Premios { get => premios; set => premios = value; }
         public bool TiempoCompleto { get => tiempoCompleto; set => tiempoCompleto = value; }
-        public float Salario { get => salario; set => salario = value; }
-        public float Percentil { get => percentil; set => percentil = value; }
+        public double Salario { get => salario; set => salario = value; }
+        public double Percentil { get => percentil; set => percentil = value; }
     }
 }

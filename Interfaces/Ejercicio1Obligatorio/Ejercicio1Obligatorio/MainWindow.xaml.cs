@@ -24,7 +24,9 @@ namespace Ejercicio1Obligatorio
         private void nuevaAlta(object sender, RoutedEventArgs e)
         {
             Alta alta = new Alta();
+            alta.calcularNumero();
             alta.Show();
+
         }
     }
 }

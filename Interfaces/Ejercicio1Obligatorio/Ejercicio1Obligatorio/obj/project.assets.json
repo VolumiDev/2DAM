@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Alumno\\.nuget\\packages\\": {}
+    "C:\\Users\\Diego\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
+      "projectUniqueName": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
       "projectName": "Ejercicio1Obligatorio",
-      "projectPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
-      "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\obj\\",
+      "projectPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
+      "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

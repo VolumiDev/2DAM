@@ -29,60 +29,142 @@ namespace Ejercicio1Obligatorio
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-          
+            escribirEmpleado();
         }
 
         
         public void escribirEmpleado()
         {
-           Empleado e = new Empleado();
-            int numero;
-            if (!int.TryParse(tb_numEmpleado.Text, out numero))
+            //VALIDAMOS QUE LOS CAMPOS NUMERICOS SEAN VALIDO
+            if (validarVacios() == false)
             {
+                Empleado e = new Empleado();
 
-            }
+                int numeroTemp, antigTemp;
+                double salarioTemp, percentilTemp;
 
-            e.Nombre = tb_nombre.Text;
-            e.Codigo = tb_codigo.Text;
-            e.FechaAlta = dp_alta.Text;
-            e.Antiguedad =int.Parse(tb_antiguedad.Text);
-            if (rb_si.IsChecked == true)
-            {
-                e.TiempoCompleto = true;
-            }
-            else
-            {
-                e.TiempoCompleto = false;
-            }
-            e.Especialidad = tb_especialidad.Text;
-            e.Titulacion = tb_categoria.Text;
-            e.CatLaboral = tb_categoria.Text;
-            e.Salario = float.Parse(tb_salario.Text);
-            e.Percentil = float.Parse(tb_percentil.Text);  
-            e.Comentarios = tb_comentario.Text;
-            e.Premios = tb_premio.Text;
-        }
-        
-        
-        public int calcularNumero()
-        {
-            if (File.Exists("altaEmpleados.txt") == false)
-            {
-                numEmpleado = 0;
-            }
-            else
-            {
-                StreamReader sr = new StreamReader("altaEmpleados.txt");
-                string linea = sr.ReadLine();
-                while(linea != null)
+                bool numeroValido = int.TryParse(tb_numEmpleado.Text, out numeroTemp);
+                bool salarioValido = double.TryParse(tb_salario.Text, out salarioTemp);
+                bool antigValida = int.TryParse(tb_antiguedad.Text, out antigTemp);
+                bool percentilValido = double.TryParse(tb_percentil.Text, out percentilTemp);   
+
+                if (!numeroValido || !salarioValido || !antigValida)
                 {
-                    if()
+                    if (!numeroValido)
+                    {
+                        MessageBox.Show("Inserta un valor que sea valido");
+                        tb_numEmpleado.Background = Brushes.Red;
+                    }
+                    if (!salarioValido)
+                    {
+                        MessageBox.Show("Inserta un valor que sea valido");
+                        tb_salario.Background = Brushes.Red;
+                    }
+                    if (!antigValida)
+                    {
+                        MessageBox.Show("Inserta un valor que sea valido");
+                        tb_antiguedad.Background = Brushes.Red;
+                    }
+                    if (!percentilValido)
+                    {
+                        MessageBox.Show("Inserta un valor que sea valido");
+                        tb_percentil.Background = Brushes.Red;
+                    }
+                    return;
+                }
+                e.Antiguedad = antigTemp;
+                e.Numero= numeroTemp;
+                e.Salario= salarioTemp;
+                e.Nombre = tb_nombre.Text;
+                e.Codigo = tb_codigo.Text;
+                e.FechaAlta = dp_alta.Text;
+                if (rb_si.IsChecked == true)
+                {
+                    e.TiempoCompleto = true;
+                }
+                else
+                {
+                    e.TiempoCompleto = false;
+                }
+                e.Especialidad = tb_especialidad.Text;
+                e.Titulacion = tb_categoria.Text;
+                e.CatLaboral = tb_categoria.Text;
+                e.Percentil = percentilTemp;
+                e.Comentarios = tb_comentario.Text;
+                e.Premios = tb_premio.Text;
 
-                    linea = sr.ReadLine();
+                e.escribirEmpleado();
+            }
+            else
+            {
+                MessageBox.Show("No pueden quedar campo vacios");
+            }
+            
+        }
+
+
+        public void calcularNumero()
+        {
+            int numEmpleado = 1;
+            if (File.Exists("altaEmpleados.txt"))
+            {
+
+
+                using (StreamReader sr = new StreamReader("altaEmpleados.txt", true))
+                {
+                    MessageBox.Show("existe");
+                    string linea = sr.ReadLine();
+                    while (linea != null)
+                    {
+                        if (linea.Contains("NUMERO"))
+                        {
+                            numEmpleado = int.Parse(linea.Split(": ")[1]);
+                            numEmpleado++;
+                        }
+                        linea = sr.ReadLine();
+                    }
                 }
             }
+            tb_numEmpleado.Text = numEmpleado.ToString();   
+        }
 
-            return numEmpleado;
+        public bool validarVacios()
+        {
+            bool flag = false;
+
+            if (String.IsNullOrWhiteSpace(tb_numEmpleado.Text) || String.IsNullOrWhiteSpace(tb_nombre.Text) || String.IsNullOrWhiteSpace(tb_codigo.Text) || String.IsNullOrWhiteSpace(dp_alta.Text) || String.IsNullOrWhiteSpace(tb_antiguedad.Text) ||
+                String.IsNullOrWhiteSpace(tb_especialidad.Text) || String.IsNullOrWhiteSpace(tb_titulacion.Text) || String.IsNullOrWhiteSpace(tb_categoria.Text) || String.IsNullOrWhiteSpace(tb_salario.Text) || String.IsNullOrWhiteSpace(tb_percentil.Text) || 
+                String.IsNullOrWhiteSpace(cb_departamento.Text) || String.IsNullOrWhiteSpace(cb_grado.Text) || String.IsNullOrWhiteSpace(tb_codigo.Text))
+            {
+                flag = true;    
+            }
+            if (!flag && !(rb_si.IsChecked ?? false) && !(rb_no.IsChecked ?? false))
+            {
+                flag = true;
+            }
+            return flag;
+        }
+
+        private void focus(object sender, RoutedEventArgs e)
+        {
+            TextBox elemento = (TextBox)sender;
+            elemento.Text = "";
+        }
+
+        private void vaciarCampos()
+        {
+            tb_numEmpleado.Text = String.Empty;
+            tb_nombre.Text = String.Empty;
+            tb_codigo.Text = String.Empty;
+            dp_alta.Text = String.Empty;
+            tb_especialidad.Text = String.Empty;
+            tb_titulacion.Text = String.Empty;
+            tb_categoria.Text = String.Empty;
+            tb_salario.Text = String.Empty;
+            tb_percentil.Text = String.Empty;
+            tb_comentario.Text = String.Empty;
+            tb_premio.Text = String.Empty;
+
         }
     }
     
