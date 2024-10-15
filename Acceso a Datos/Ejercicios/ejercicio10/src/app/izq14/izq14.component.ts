@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,5 +10,17 @@ import { FormsModule } from '@angular/forms';
 })
 export class Izq14Component {
 
-  item: string="";
+  @Output() vectorEvent = new EventEmitter<String[]>();
+  item: string= "";  
+  vector: string[] = [];
+
+  insertar(){
+    alert(this.item)
+    this.vector.push(this.item);
+  }
+
+  enviarVector(){
+    this.vectorEvent.emit(this.vector);
+  }
+
 }

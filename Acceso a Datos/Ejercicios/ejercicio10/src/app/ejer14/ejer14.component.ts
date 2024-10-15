@@ -12,6 +12,7 @@ import { Der14Component } from '../der14/der14.component';
   styleUrl: './ejer14.component.css'
 })
 export class Ejer14Component {
-
-
+  vectorRecibido: string[] = []
+  
+  recibirVector()
 }

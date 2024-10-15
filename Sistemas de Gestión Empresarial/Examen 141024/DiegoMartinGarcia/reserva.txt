@@ -1,0 +1,33 @@
+NOMBRE
+TELEFONO
+TIPO DE EVENTO: Banquete
+FECHA DE EVENTO
+TIPO COCINA: Bufet
+Nº PERSONAS: 
+NOMBREasd
+TELEFONOasd
+TIPO DE EVENTO: Congreso
+FECHA DE EVENTOasd
+TIPO COCINA: Pedir cita chef
+Nº PERSONAS: asd
+NOMBREasd
+TELEFONOasd
+TIPO DE EVENTO: Banquete
+FECHA DE EVENTOasd
+TIPO COCINA: Bufet
+Nº PERSONAS: asd
+------------------------
+NOMBREasd
+TELEFONOasd
+TIPO DE EVENTO: Congreso
+FECHA DE EVENTOasd
+TIPO COCINA: Bufet
+Nº PERSONAS: asd
+------------------------
+NOMBRE: sad
+TELEFONO: sdf
+TIPO DE EVENTO: Banquete
+FECHA DE EVENTOsdf
+TIPO COCINA: Bufet
+Nº PERSONAS: sdf
+------------------------
