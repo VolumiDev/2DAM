@@ -34,5 +34,11 @@ namespace Ejercicio1Obligatorio
             ConsultaDatos consulta = new ConsultaDatos();
             consulta.Show();
         }
+
+        private void nuevaActulizar(object sender, RoutedEventArgs e)
+        {
+            Actualizar actualizar = new Actualizar();
+            actualizar.Show();
+        }
     }
 }

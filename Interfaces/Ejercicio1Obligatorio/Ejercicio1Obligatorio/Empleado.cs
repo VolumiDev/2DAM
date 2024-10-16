@@ -21,9 +21,9 @@ namespace Ejercicio1Obligatorio
         {
         }
 
-        public void escribirEmpleado()
+        public void escribirEmpleado(String ruta)
         {
-            using (StreamWriter sw = new StreamWriter("altaEmpleados.txt", true)){
+            using (StreamWriter sw = new StreamWriter(ruta, true)){
                 sw.WriteLine("NUMERO: " + numero);
                 sw.WriteLine("NOMBRE: " + nombre);
                 sw.WriteLine("CODIGO: " + codigo);
@@ -41,13 +41,14 @@ namespace Ejercicio1Obligatorio
                 sw.WriteLine("PREMIOS: " + premios);
                 sw.WriteLine("---------------------------------------");
             }
-            MessageBox.Show("Añadido al fichero");
         }
 
         public void mostrarConsultaEmpleado()
         {
 
         }
+
+
 
         public int Numero { get => numero; set => numero = value; }
         public int Antiguedad { get => antiguedad; set => antiguedad = value; }

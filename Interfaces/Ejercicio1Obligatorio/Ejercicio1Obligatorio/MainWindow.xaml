@@ -30,7 +30,7 @@
                 <MenuItem Header="_Archivo" Name="archivo">
                     <MenuItem Header="A_lta Datos" Name="alta" Click="nuevaAlta"/>
                     <MenuItem Header="Co_nsulta Datos" Name="consulta" Click="nuevaConsulta" />
-                    <MenuItem Header="A_ctulizar Datos" Name="actualiza"/>
+                    <MenuItem Header="A_ctulizar Datos" Name="actualiza" Click="nuevaActulizar"/>
                     <MenuItem Header="_Salir" Name="salir"/>
                 </MenuItem>
                 <MenuItem Header="A_yuda">

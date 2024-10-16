@@ -92,9 +92,12 @@ namespace Ejercicio1Obligatorio
                 e.Percentil = percentilTemp;
                 e.Comentarios = tb_comentario.Text;
                 e.Premios = tb_premio.Text;
+                e.Departamento = cb_departamento.Text;
+                e.Grado = cb_grado.Text;
 
-                e.escribirEmpleado();
+                e.escribirEmpleado("altaEmpleados.txt");
                 vaciarCampos();
+                MessageBox.Show("Añadido al fichero");
                 calcularNumero();
 
             }
@@ -167,6 +170,8 @@ namespace Ejercicio1Obligatorio
             tb_percentil.Text = String.Empty;
             tb_comentario.Text = String.Empty;
             tb_premio.Text = String.Empty;
+            cb_departamento.Text = String.Empty;
+            cb_grado.Text = String.Empty;
 
         }
     }

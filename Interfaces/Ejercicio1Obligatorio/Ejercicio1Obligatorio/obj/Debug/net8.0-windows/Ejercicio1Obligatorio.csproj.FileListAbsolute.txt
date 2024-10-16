@@ -69,3 +69,7 @@ D:\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-
 D:\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\ref\Ejercicio1Obligatorio.dll
 D:\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\ConsultaDatos.g.cs
 D:\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\ConsultaDatos.baml
+C:\Users\Alumno\Documents\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\ConsultaDatos.g.cs
+C:\Users\Alumno\Documents\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\ConsultaDatos.baml
+C:\Users\Alumno\Documents\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\Actualizar.g.cs
+C:\Users\Alumno\Documents\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\Actualizar.baml

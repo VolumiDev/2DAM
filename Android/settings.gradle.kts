@@ -23,4 +23,5 @@ rootProject.name = "SharedPreferencesExample"
 include(":app")
 include(":app")
 include(":app")
+include(":app")
  

@@ -87,7 +87,6 @@ namespace Ejercicio1Obligatorio
                 {   
                     if (linea.Contains("NUMERO")){
                         String id_temp = linea.Split(": ")[1];
-                MessageBox.Show("entra");
                         if (id_temp.Equals(id))
                         {
                             flag = false;
@@ -140,10 +139,8 @@ namespace Ejercicio1Obligatorio
                             //e.Premios = sr.ReadLine().Split(": ")[1];
                         }
                     }
-                    else
-                    {
-                        linea = sr.ReadLine();
-                    }
+                    linea = sr.ReadLine();
+                    
                 }
                 if (flag)
                 {
