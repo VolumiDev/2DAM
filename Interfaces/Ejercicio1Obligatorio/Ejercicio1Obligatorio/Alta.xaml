@@ -28,7 +28,7 @@
                 </Grid.RowDefinitions>
                 <Label Style="{DynamicResource estiloLabel}" Content="Nº Empleado:" Margin="24,22,635,50"/>
                 <TextBox Name="tb_nombre" Text="nombre empleado..." HorizontalAlignment="Left" Margin="24,50,0,0" TextWrapping="Wrap" FontSize="18" Foreground="Gray" VerticalAlignment="Top" Height="27" Width="365" GotFocus="focus"/>
-                <Label Style="{DynamicResource estiloLabel}" FontSize="20" FontWeight="Bold" Content="Alta de datos personales" HorizontalAlignment="Left" Margin="389,0,0,0" VerticalAlignment="Center" Width="274" Height="35"/>
+                <Label Style="{DynamicResource estiloLabel}" FontSize="20" FontWeight="Bold" Content="Alta de datos personales" HorizontalAlignment="Left" Margin="399,0,0,0" VerticalAlignment="Center" Width="274" Height="35"/>
                 <Image Source="/nondik.jpg" HorizontalAlignment="Left" Height="72" Margin="688,10,0,0" VerticalAlignment="Top" Width="67"/>
                 <Rectangle HorizontalAlignment="Center" Height="3" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="712"/>
                 <Grid Grid.Row="1">
@@ -111,11 +111,10 @@
                             <Label Style="{DynamicResource estiloLabel}" Content="Premios:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             <TextBox x:Name="tb_premio" Canvas.Left="136" TextWrapping="Wrap" Text="" Width="239" Height="46" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                         </Canvas>
-                        <Button Name="btn_guradar" Content="Guardar Datos" HorizontalAlignment="Left" Margin="241,25,0,0" Grid.Row="4" Width="104" Click="Button_Click"/>
+                        <Button Foreground="Red" FontFamily="courier new" Name="btn_guradar" Content="Guardar Datos" HorizontalAlignment="Left" Margin="241,25,0,0" Grid.Row="4" Width="104" Click="Button_Click"/>
                     </Grid>
-
                 </Grid>
-                <TextBlock x:Name="tb_numEmpleado" HorizontalAlignment="Left" Margin="174,29,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="74"/>
+                <TextBlock x:Name="tb_numEmpleado" HorizontalAlignment="Left" Margin="174,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
             </Grid>
         </Grid>
     </Viewbox>

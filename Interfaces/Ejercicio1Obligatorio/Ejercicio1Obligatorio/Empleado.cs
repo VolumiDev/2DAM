@@ -23,13 +23,13 @@ namespace Ejercicio1Obligatorio
 
         public void escribirEmpleado()
         {
-            using (StreamWriter sw = new StreamWriter("altaEmpleados.txt")){
-                sw.WriteLine("NOMBRE: " + nombre);
+            using (StreamWriter sw = new StreamWriter("altaEmpleados.txt", true)){
                 sw.WriteLine("NUMERO: " + numero);
+                sw.WriteLine("NOMBRE: " + nombre);
                 sw.WriteLine("CODIGO: " + codigo);
                 sw.WriteLine("FECHA ALTA: " + fechaAlta);
                 sw.WriteLine("ANTIGUEDAD: " + antiguedad);
-                sw.WriteLine("TIEMPO COMPLETO" + tiempoCompleto);
+                sw.WriteLine("TIEMPO COMPLETO: " + tiempoCompleto);
                 sw.WriteLine("ESPECIALIDAD: " + especialidad);
                 sw.WriteLine("TITULACION: " + titulacion);
                 sw.WriteLine("CATEGORIA LABORAL: " + catLaboral);
@@ -39,9 +39,16 @@ namespace Ejercicio1Obligatorio
                 sw.WriteLine("GRADO: " + grado);
                 sw.WriteLine("COMENTARIOS: " + comentarios);
                 sw.WriteLine("PREMIOS: " + premios);
+                sw.WriteLine("---------------------------------------");
             }
-            MessageBox.Show("añadido al fichero");
+            MessageBox.Show("Añadido al fichero");
         }
+
+        public void mostrarConsultaEmpleado()
+        {
+
+        }
+
         public int Numero { get => numero; set => numero = value; }
         public int Antiguedad { get => antiguedad; set => antiguedad = value; }
         public string Nombre { get => nombre; set => nombre = value; }

@@ -10,9 +10,15 @@
     <Compile Update="Alta.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ConsultaDatos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Alta.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ConsultaDatos.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Diego\Documents\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\
+D:\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\obj\Debug\net8.0-windows\
 Ejercicio1Obligatorio
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Diego\Documents\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\App.xaml
-2-120856436
+D:\2DAM\Interfaces\Ejercicio1Obligatorio\Ejercicio1Obligatorio\App.xaml
+3-1723701338
 
-81703329261
+91872190688
 198-556154604
-Alta.xaml;MainWindow.xaml;
+Alta.xaml;ConsultaDatos.xaml;MainWindow.xaml;
 
-False
+True
 

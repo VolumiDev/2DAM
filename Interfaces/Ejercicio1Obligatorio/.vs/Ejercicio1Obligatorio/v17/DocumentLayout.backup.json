@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\",
+  "WorkspaceRootPath": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\alta.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|d:\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\consultadatos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\consultadatos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|d:\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\consultadatos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\consultadatos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|d:\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\alta.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\alta.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\alta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|d:\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\alta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\alta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|d:\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|d:\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|d:\\2dam\\interfaces\\ejercicio1obligatorio\\ejercicio1obligatorio\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{890DA605-2D88-44DA-9588-4742B3C96293}|Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj|solutionrelative:ejercicio1obligatorio\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,28 +38,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 211,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Empleado.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Empleado.cs",
+              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Empleado.cs",
               "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\Empleado.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Empleado.cs",
+              "ToolTip": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Empleado.cs",
               "RelativeToolTip": "Ejercicio1Obligatorio\\Empleado.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T19:08:29.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml",
+              "ToolTip": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml",
               "RelativeToolTip": "Ejercicio1Obligatorio\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-09T17:49:14.544Z",
@@ -61,44 +69,63 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\MainWindow.xaml.cs",
               "RelativeToolTip": "Ejercicio1Obligatorio\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBsAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwCUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T17:49:14.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "ConsultaDatos.xaml.cs",
+              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\ConsultaDatos.xaml.cs",
+              "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\ConsultaDatos.xaml.cs",
+              "ToolTip": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\ConsultaDatos.xaml.cs",
+              "RelativeToolTip": "Ejercicio1Obligatorio\\ConsultaDatos.xaml.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAwwHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T05:15:22.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Alta.xaml",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Alta.xaml",
+              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Alta.xaml",
               "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\Alta.xaml",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Alta.xaml",
+              "ToolTip": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Alta.xaml",
               "RelativeToolTip": "Ejercicio1Obligatorio\\Alta.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-11T17:27:57.746Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 189,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Alta.xaml.cs",
+              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Alta.xaml.cs",
+              "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\Alta.xaml.cs",
+              "ToolTip": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Alta.xaml.cs",
+              "RelativeToolTip": "Ejercicio1Obligatorio\\Alta.xaml.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAIwJcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T17:37:40.126Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Alta.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Alta.xaml.cs",
-              "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\Alta.xaml.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Alta.xaml.cs",
-              "RelativeToolTip": "Ejercicio1Obligatorio\\Alta.xaml.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAUwI8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T17:37:40.126Z",
+              "Title": "ConsultaDatos.xaml",
+              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\ConsultaDatos.xaml",
+              "RelativeDocumentMoniker": "Ejercicio1Obligatorio\\ConsultaDatos.xaml",
+              "ToolTip": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\ConsultaDatos.xaml",
+              "RelativeToolTip": "Ejercicio1Obligatorio\\ConsultaDatos.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-16T05:01:26.671Z",
               "EditorCaption": ""
             }
           ]

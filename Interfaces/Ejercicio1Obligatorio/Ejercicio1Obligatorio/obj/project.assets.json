@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
+      "projectUniqueName": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
       "projectName": "Ejercicio1Obligatorio",
-      "projectPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
+      "projectPath": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
       "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\obj\\",
+      "outputPath": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",

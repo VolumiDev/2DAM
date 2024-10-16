@@ -29,7 +29,7 @@
                   Style="{StaticResource estiloMenu}">
                 <MenuItem Header="_Archivo" Name="archivo">
                     <MenuItem Header="A_lta Datos" Name="alta" Click="nuevaAlta"/>
-                    <MenuItem Header="Co_nsulta Datos" Name="consulta"/>
+                    <MenuItem Header="Co_nsulta Datos" Name="consulta" Click="nuevaConsulta" />
                     <MenuItem Header="A_ctulizar Datos" Name="actualiza"/>
                     <MenuItem Header="_Salir" Name="salir"/>
                 </MenuItem>

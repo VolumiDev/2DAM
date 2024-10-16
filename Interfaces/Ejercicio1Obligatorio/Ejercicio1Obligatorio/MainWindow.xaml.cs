@@ -28,5 +28,11 @@ namespace Ejercicio1Obligatorio
             alta.Show();
 
         }
+
+        private void nuevaConsulta(object sender, RoutedEventArgs e)
+        {
+            ConsultaDatos consulta = new ConsultaDatos();
+            consulta.Show();
+        }
     }
 }

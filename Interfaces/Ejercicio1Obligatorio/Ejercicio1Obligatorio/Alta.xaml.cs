@@ -94,6 +94,9 @@ namespace Ejercicio1Obligatorio
                 e.Premios = tb_premio.Text;
 
                 e.escribirEmpleado();
+                vaciarCampos();
+                calcularNumero();
+
             }
             else
             {
@@ -112,7 +115,6 @@ namespace Ejercicio1Obligatorio
 
                 using (StreamReader sr = new StreamReader("altaEmpleados.txt", true))
                 {
-                    MessageBox.Show("existe");
                     string linea = sr.ReadLine();
                     while (linea != null)
                     {
@@ -154,6 +156,7 @@ namespace Ejercicio1Obligatorio
         private void vaciarCampos()
         {
             tb_numEmpleado.Text = String.Empty;
+            tb_antiguedad.Text = String.Empty;
             tb_nombre.Text = String.Empty;
             tb_codigo.Text = String.Empty;
             dp_alta.Text = String.Empty;
