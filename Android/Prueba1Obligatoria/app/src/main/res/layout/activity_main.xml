@@ -5,15 +5,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/nivel">
 
     <TextView
+        android:id="@+id/tv_presentacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Elige el nivel de tu aventura Volumi"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="79dp" />
+
+    <Spinner
+        android:id="@+id/spn_nivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <Button
+        android:id="@+id/btn_comenzar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comenzar"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="517dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

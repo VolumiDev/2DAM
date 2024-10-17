@@ -10,6 +10,8 @@
         <Style x:Key="estiloTitulo" TargetType="TextBlock">
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontFamily" Value="courier new"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Center"/>
         </Style>
         <Style x:Key="estiloMenu" TargetType="Menu">
             <Setter Property="FontFamily" Value="courier new"/>
@@ -17,37 +19,35 @@
         </Style>
     </Window.Resources>
     <Viewbox Stretch="Uniform">
-    <Grid>
-        <DockPanel x:Name="DockPanelMenu"
+        <Grid>
+            <DockPanel x:Name="DockPanelMenu"
                    Height="30" 
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Top"
                    DockPanel.Dock="Top">
-            <Menu x:Name="MenuGeneral"
+                <Menu x:Name="MenuGeneral"
                   Height="23" Width="auto"
                   DockPanel.Dock="Top"
                   Style="{StaticResource estiloMenu}">
-                <MenuItem Header="_Archivo" Name="archivo">
-                    <MenuItem Header="A_lta Datos" Name="alta" Click="nuevaAlta"/>
-                    <MenuItem Header="Co_nsulta Datos" Name="consulta" Click="nuevaConsulta" />
-                    <MenuItem Header="A_ctulizar Datos" Name="actualiza" Click="nuevaActulizar"/>
-                    <MenuItem Header="_Salir" Name="salir"/>
-                </MenuItem>
-                <MenuItem Header="A_yuda">
-                    <MenuItem Header="_Ver Ayuda" Name="ayuda"/>
-                    <MenuItem Header="Ac_erca De" Name="acerca"/>
-                </MenuItem>
-            </Menu>
-        </DockPanel>
+                    <MenuItem Header="_Archivo" Name="archivo">
+                        <MenuItem Header="A_lta Datos" Name="alta" Click="nuevaAlta"/>
+                        <MenuItem Header="Co_nsulta Datos" Name="consulta" Click="nuevaConsulta" />
+                        <MenuItem Header="A_ctulizar Datos" Name="actualiza" Click="nuevaActulizar"/>
+                        <MenuItem Header="_Salir" Name="salir" Click="cerrarApp" />
+                    </MenuItem>
+                    <MenuItem Header="A_yuda">
+                        <MenuItem Header="_Ver Ayuda" Name="ayuda" Click="nuevaAyuda" />
+                        <MenuItem Header="Ac_erca De" Name="acerca" Click="nuevaAcercaDe" />
+                    </MenuItem>
+                </Menu>
+            </DockPanel>
 
-        <DockPanel
+            <DockPanel
             Width="300" Height="300" Margin="400,67,100,67">
-            <Image Source="/nondik.jpg"></Image>
-        </DockPanel>
-        <TextBlock Style="{StaticResource estiloTitulo}" HorizontalAlignment="Left" Margin="104,101,0,0" TextWrapping="Wrap" Text="Gestion" FontSize="40" VerticalAlignment="Top" Height="62" Width="187"/>
-        <TextBlock Style="{StaticResource estiloTitulo}" HorizontalAlignment="Left" Margin="81,168,0,0" TextWrapping="Wrap" Text="Empleados" FontSize="40" VerticalAlignment="Top" Height="63" Width="233"/>
-        <TextBlock Style="{StaticResource estiloTitulo}" HorizontalAlignment="Left" Margin="115,231,0,0" TextWrapping="Wrap" Text="Aplicacion 1" FontSize="20" VerticalAlignment="Top" Height="31" Width="165"/>
-        <TextBlock Style="{StaticResource estiloTitulo}" HorizontalAlignment="Left" Margin="144,267,0,0" TextWrapping="Wrap" Text="DAM 2024" FontSize="20" VerticalAlignment="Top" Height="31" Width="108"/>
-    </Grid>
+                <Image Source="/nondik.jpg"></Image>
+            </DockPanel>
+            <TextBlock Style="{StaticResource estiloTitulo}" HorizontalAlignment="Left" Margin="68,95,0,0" TextWrapping="Wrap" Text="Gestión de empleados" FontSize="40" VerticalAlignment="Top" Height="133" Width="231"/>
+            <TextBlock Style="{StaticResource estiloTitulo}" HorizontalAlignment="Left" Margin="101,245,0,0" TextWrapping="Wrap" Text="Ejercicio obligatorio 2 DAM 2024" FontSize="20" VerticalAlignment="Top" Height="71" Width="165"/>
+        </Grid>
     </Viewbox>
 </Window>

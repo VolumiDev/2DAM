@@ -1,0 +1,24 @@
+﻿<Window x:Class="Ejercicio1Obligatorio.Ayuda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio1Obligatorio"
+        Background="LightGray"
+        mc:Ignorable="d"
+        Title="Ayuda" Height="330" Width="550">
+    <Window.Resources>
+        <Style x:Key="estiloTexto" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="courier new"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Canvas>
+            <TextBlock Style="{DynamicResource estiloTexto}" Canvas.Left="143" Canvas.Top="39" Height="176" Width="347" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="En la ventana de inicio tenemos un menú desplegables:"/><LineBreak/><Run Text="&#x9;-Archivo"/><LineBreak/><Run Text="&#x9;&#x9;-"/><Run Text=" "/><Run Text="Alta de datos: "/><Run Text="Permite insertar"/><Run Text="&#x9;"/><Run Text="&#x9;&#x9;&#x9;&#x9;"/><Run Text="los datos"/><Run Text=" "/><Run Text="de los empleados"/><Run Text=", generando "/><Run Text="&#x9;&#x9;&#x9;"/><Run Text="un"/><Run Text=" "/><Run Text="n"/><Run Text="ú"/><Run Text="mero"/><Run Text=" registro"/><Run Text=" "/><Run Text="correlativo."/><LineBreak/><Run Text="&#x9;&#x9;"/><Run Text="-"/><Run Text=" Consulta de datos"/><Run Text=":"/><Run Text=" Consultar los"/><Run Text="&#x9;&#x9;&#x9;"/><Run Text="&#x9;"/><Run Text="datos de un"/><Run Text=" "/><Run Text="empleado insertando el "/><Run Text="&#x9;&#x9;&#x9;"/><Run Text="Id único"/><Run Text="."/><LineBreak/><Run Text="&#x9;&#x9;- Actualizar datos: Actualiza los datos de"/><Run Text="&#x9;&#x9;"/><Run Text="&#x9;"/><Run Text="un empleado previament"/><Run Text="e buscado por"/><Run Language="es-es" Text="&#x9;&#x9;&#x9;"/><Run Text="su Id "/><Run Text="ú"/><Run Text="nico"/><Run Text="."/><Run Text="&#x9;&#x9;"/><LineBreak/><Run Text="&#x9;"/><Run Text="-Ayuda"/><LineBreak/><Run Text="&#x9;&#x9;-Ayuda"/><LineBreak/><Run Text="&#x9;&#x9;-Acerca de"/><LineBreak/><Run/></TextBlock>
+            <TextBlock Style="{DynamicResource estiloTexto}" Canvas.Left="16" Canvas.Top="244" Height="34" Width="468" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Text="Los empleados se alamcena en un fichero de texto. Este fichero se crea cuando se ingresa el primer "/><Run Language="es-es" Text="empleado y solamente se modifica cuando se ingresa un nuevo empleado o cuando se modifican los datos de alguno de los empleados existentes."/></TextBlock>
+        </Canvas>
+            <Image Source="/menuImage.png" Height="92" Width="117" Canvas.Left="19" Canvas.Top="26" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,42,0,0"/>
+    </Grid>
+</Window>
