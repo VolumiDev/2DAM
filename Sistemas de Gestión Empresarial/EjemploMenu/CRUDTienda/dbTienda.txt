@@ -1,0 +1,88 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 17-10-2024 a las 20:05:55
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Base de datos: `tienda`
+--
+CREATE DATABASE IF NOT EXISTS `tienda` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `tienda`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cliente`
+--
+
+CREATE TABLE `cliente` (
+  `id` int(5) NOT NULL,
+  `nombre` varchar(20) NOT NULL,
+  `ciudad` varchar(20) NOT NULL,
+  `deuda` double NOT NULL,
+  `potencial` tinyint(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `producctos`
+--
+
+CREATE TABLE `producctos` (
+  `ref` int(11) NOT NULL,
+  `articulo` varchar(40) NOT NULL,
+  `descrip` varchar(40) NOT NULL,
+  `precio` double NOT NULL,
+  `stock` int(11) NOT NULL,
+  `CodProv` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proveedores`
+--
+
+CREATE TABLE `proveedores` (
+  `codprov` int(11) NOT NULL,
+  `nombre` varchar(40) NOT NULL,
+  `tipo` varchar(40) NOT NULL,
+  `activo` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `producctos`
+--
+ALTER TABLE `producctos`
+  ADD PRIMARY KEY (`ref`),
+  ADD KEY `CodProv` (`CodProv`);
+
+--
+-- Indices de la tabla `proveedores`
+--
+ALTER TABLE `proveedores`
+  ADD PRIMARY KEY (`codprov`);
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `producctos`
+--
+ALTER TABLE `producctos`
+  ADD CONSTRAINT `producctos_ibfk_1` FOREIGN KEY (`CodProv`) REFERENCES `proveedores` (`codprov`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
