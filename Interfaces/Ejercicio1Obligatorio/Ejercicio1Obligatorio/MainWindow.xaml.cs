@@ -40,5 +40,26 @@ namespace Ejercicio1Obligatorio
             Actualizar actualizar = new Actualizar();
             actualizar.Show();
         }
+
+        private void cerrarApp(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult confirmacion = MessageBox.Show("¿Esta seguro que desea salir de la app?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if(confirmacion == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void nuevaAcercaDe(object sender, RoutedEventArgs e)
+        {
+            AcercaDe acercaDe = new AcercaDe();
+            acercaDe.Show();
+        }
+
+        private void nuevaAyuda(object sender, RoutedEventArgs e)
+        {
+            Ayuda help = new Ayuda();
+            help.Show();
+        }
     }
 }
