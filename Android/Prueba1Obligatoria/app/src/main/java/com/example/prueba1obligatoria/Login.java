@@ -94,22 +94,19 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         autenticacion();
     }
 
-
     //VALIDAMOS QUE NOS INGRESE EL USUARIO Y PASS QUE ESTAN EN SHARED PREF
     private void autenticacion(){
         preferencias = getSharedPreferences("preferencias", MODE_PRIVATE);
         if(preferencias.getString("usuario","no guardado").equalsIgnoreCase(et_txt[0].getText().toString())
         && preferencias.getString("contraseña","no guardado").equalsIgnoreCase(et_txt[1].getText().toString())){
             Intent intenMain = new Intent(this, MainActivity.class);
+            intenMain.putExtra("usuario",et_txt[0].getText().toString());
             startActivity(intenMain);
         }else {
             Log.i("Volumi","entra en el else");
             Toast.makeText(this, "Usuario o contraseña incorrecta", Toast.LENGTH_LONG).show();
         }
     }
-
-
-
 
     //METODO QUE NOS MUESTRA EL USUARIO Y PASS ALMACENADOS EN SHARED PREF SI ELIGIO RECORAR
     private void estaRecordado(){

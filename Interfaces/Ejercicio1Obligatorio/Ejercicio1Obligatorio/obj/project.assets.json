@@ -8,19 +8,24 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Diego\\.nuget\\packages\\": {}
+    "C:\\Users\\diego\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
       "projectName": "Ejercicio1Obligatorio",
-      "projectPath": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
-      "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-      "outputPath": "D:\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\obj\\",
+      "projectPath": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Ejercicio1Obligatorio\\Ejercicio1Obligatorio\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

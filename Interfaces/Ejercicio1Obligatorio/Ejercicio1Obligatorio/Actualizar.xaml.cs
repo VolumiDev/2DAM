@@ -46,6 +46,7 @@ namespace Ejercicio1Obligatorio
             }
         }
 
+        //BUSCAMOS EL EMPLEADO CON EL ID
         private void buscar_empleado(String id)
         {
             using (StreamReader sr = new StreamReader("altaEmpleados.txt", true))
@@ -98,12 +99,14 @@ namespace Ejercicio1Obligatorio
             }
         }
 
+        //VACIAMOS EL TEXT BOX CUANDO HACEMOS FOCO EN EL
         private void focus(object sender, RoutedEventArgs e)
         {
             TextBox elemento = (TextBox)sender;
             elemento.Text = "";
         }
 
+        //MODIFICAMOS EL FICHER CON LAS ACTUALIZACIONES QUE HICIMOS EN LOS CAMPOS DE EMPLEADO
         private void modificarFichero(String id)
         {
             using (StreamReader sr = new StreamReader("altaEmpleados.txt", true))
@@ -196,6 +199,8 @@ namespace Ejercicio1Obligatorio
         }
 
 
+        //VACIAMOS TODOS LOS CAMPOS AL ACTUALIZAR
+
         private void vaciarCampos()
         {
             tb_antiguedad.Text = String.Empty;
@@ -213,7 +218,7 @@ namespace Ejercicio1Obligatorio
 
         }
 
-
+        //VALIDAMOS SI LOS CAMPOS ESTAN VACIOS
         public bool validarVacios()
         {
             bool flag = false;

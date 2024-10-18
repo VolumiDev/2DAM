@@ -108,7 +108,7 @@ namespace Ejercicio1Obligatorio
             
         }
 
-
+        //CALCULAMOS LA CLAVE PRIMARIA Y LA GENERAMOS AUTOMATICAMENTE
         public void calcularNumero()
         {
             int numEmpleado = 1;
@@ -133,6 +133,7 @@ namespace Ejercicio1Obligatorio
             tb_numEmpleado.Text = numEmpleado.ToString();   
         }
 
+        //VALIDAMOS QUE LOS CAMPOS NO ESTE VACIOS
         public bool validarVacios()
         {
             bool flag = false;
@@ -150,12 +151,14 @@ namespace Ejercicio1Obligatorio
             return flag;
         }
 
+        //VACIAMOS AL HACER FOCO
         private void focus(object sender, RoutedEventArgs e)
         {
             TextBox elemento = (TextBox)sender;
             elemento.Text = "";
         }
 
+        //VACIAMOS LOS CAMPOS AL INGRESAR EL EMPLEADO
         private void vaciarCampos()
         {
             tb_numEmpleado.Text = String.Empty;

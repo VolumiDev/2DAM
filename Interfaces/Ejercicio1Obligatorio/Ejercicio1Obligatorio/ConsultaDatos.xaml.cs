@@ -77,6 +77,7 @@ namespace Ejercicio1Obligatorio
             }
         }
 
+        //BUSCAMOS UN EMPLEADO POR EL ID
         private void buscar_empleado(String id)
         {
             using (StreamReader sr = new StreamReader("altaEmpleados.txt", true))
@@ -113,30 +114,6 @@ namespace Ejercicio1Obligatorio
                             tb_comentario.Text = sr.ReadLine().Split(": ")[1];
                             tb_premio.Text = sr.ReadLine().Split(": ")[1];
 
-
-                            //Empleado e = new Empleado();
-                            //e.Numero = int.Parse(id);
-                            //e.Nombre = sr.ReadLine().Split(": ")[1];
-                            //e.Codigo = sr.ReadLine().Split(": ")[1];
-                            //e.FechaAlta = sr.ReadLine().Split(": ")[1];
-                            //e.Antiguedad = int.Parse(sr.ReadLine().Split(": ")[1]);
-                            //if(sr.ReadLine().Split(": ")[1].Equals("True"))
-                            //{
-                            //    e.TiempoCompleto = true;
-                            //}
-                            //else
-                            //{
-                            //    e.TiempoCompleto = false;
-                            //}
-                            //e.Especialidad = sr.ReadLine().Split(": ")[1];
-                            //e.Titulacion = sr.ReadLine().Split(": ")[1];
-                            //e.CatLaboral = sr.ReadLine().Split(": ")[1];
-                            //e.Salario =Double.Parse(sr.ReadLine().Split(": ")[1]);
-                            //e.Percentil = Double.Parse(sr.ReadLine().Split(": ")[1]);
-                            //e.Departamento = sr.ReadLine().Split(": ")[1];
-                            //e.Grado = sr.ReadLine().Split(": ")[1];
-                            //e.Comentarios = sr.ReadLine().Split(": ")[1];
-                            //e.Premios = sr.ReadLine().Split(": ")[1];
                         }
                     }
                     linea = sr.ReadLine();
@@ -149,6 +126,7 @@ namespace Ejercicio1Obligatorio
             }
         }
 
+        //VACIAMOS EL CAMPO AL HACER FOCO EN EL
         private void focus(object sender, RoutedEventArgs e)
         {
             TextBox elemento = (TextBox)sender;

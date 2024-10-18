@@ -46,12 +46,13 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 break;
         }
     }
-
+//HACEMOS EL REGISTRO DEL NUEVO USUARIO Y ELIMINAMOS LAS MEJOR PUNTUACION
     private void registroAcction(){
         preferencias = getSharedPreferences("preferencias", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferencias.edit();
         editor.putString("usuario", et_user.getText().toString());
         editor.putString("contraseña", et_pass.getText().toString());
+        editor.remove("mejorPuntuacion");
         editor.apply();
 
         Intent intent = new Intent(this, Login.class);
