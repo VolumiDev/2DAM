@@ -53,7 +53,7 @@ namespace Ejercicio1Obligatorio {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Ejercicio1Obligatorio;component/ayuda.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Ejercicio1Obligatorio;V1.0.0.0;component/ayuda.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Ayuda.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

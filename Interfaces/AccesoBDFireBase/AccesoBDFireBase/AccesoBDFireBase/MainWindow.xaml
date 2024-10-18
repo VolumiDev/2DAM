@@ -1,0 +1,40 @@
+﻿<Window x:Class="AccesoBDFireBase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccesoBDFireBase"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="450">
+    <Canvas>
+
+        <DockPanel x:Name="panelMenu" Height="auto" 
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            DockPanel.Dock="Top">
+            <Menu x:Name="menu_general" Width="auto" DockPanel.Dock="Top">
+                <MenuItem Header="ARchivo">
+                    <MenuItem Header="Mostrar tabla usuarios" Click="tabla" />
+                </MenuItem>
+            </Menu>
+            
+        </DockPanel>
+            <Label Name="lbl_nombre" FontSize="23" Content="Nombre" Canvas.Left="32" Canvas.Top="30"/>
+        <Label Name="lbl_telefono" FontSize="23" Content="Telefono" Canvas.Left="32" Canvas.Top="130" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Name="lbl_correo" FontSize="23" Content="Correo" Canvas.Left="32" Canvas.Top="230" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Name="lbl_rol" FontSize="23" Content="Rol" Canvas.Left="29" Canvas.Top="330" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Name="tb_nombre" Canvas.Left="32" Height="25" TextWrapping="Wrap" Text="" Canvas.Top="70" Width="370" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Name="tb_telefono" Canvas.Left="32" Height="25" TextWrapping="Wrap" Text="" Canvas.Top="170" Width="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Name="tb_correo" Canvas.Left="32" Height="25" TextWrapping="Wrap" Text="" Canvas.Top="270" Width="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ComboBox Name="cb_rol" Canvas.Left="32" Canvas.Top="370" HorizontalAlignment="Left" VerticalAlignment="Center" Width="142">
+            <ComboBoxItem>Alumno</ComboBoxItem>
+            <ComboBoxItem>Profesor</ComboBoxItem>
+            <ComboBoxItem>Padre</ComboBoxItem>
+        </ComboBox>
+            <Button Content="Registrar" Canvas.Left="316" FontSize="18" Canvas.Top="412" Height="51" Width="86" Click="Button_Click"/>
+
+
+
+    </Canvas>
+
+</Window>

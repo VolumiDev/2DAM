@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JuegoParejas">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="30dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_kiwi0"
+            android:src="@drawable/kiwi"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+
+        <ImageView
+            android:id="@+id/iv_platano0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:src="@drawable/platano" />
+
+        <ImageView
+            android:id="@+id/iv_manzana0"
+            android:src="@drawable/manzana"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        />
+        <ImageView
+            android:id="@+id/iv_manzana1"
+            android:src="@drawable/manzana"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        />
+        <ImageView
+            android:id="@+id/iv_kiwi1"
+            android:src="@drawable/kiwi"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        />
+        <ImageView
+            android:id="@+id/iv_platano1"
+            android:src="@drawable/platano"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <ImageView
+            android:id="@+id/iv_platano2"
+            android:src="@drawable/platano"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <ImageView
+            android:id="@+id/iv_manzana2"
+            android:src="@drawable/manzana"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <ImageView
+            android:id="@+id/iv_kiwi2"
+            android:src="@drawable/kiwi"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
