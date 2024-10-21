@@ -1,5 +1,6 @@
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.spi.CalendarDataProvider;
@@ -27,39 +28,74 @@ public class InternalProducto  extends JInternalFrame{
 		super();
 		this.mw = mw;
 		
-		switch(option) {
-		case 1:
-			Producto p = new Producto();
-			crearVentana("Añadir Producto");
-			tfRef.setText(String.valueOf(p.calcularPk()));
-			tfRef.setEditable(false);
-			btnAccion.addActionListener(e -> {
-				try {
-					this.AñadirProducto(p);
-				} catch (ClassNotFoundException | SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			});
-			break;
-		case 2:
-			p = new Producto();
-			crearVentana("Consultar Proveedor");
-			setearCamposConsulta();
-			btnAccion.addActionListener(e -> {
-				try {
-					this.consultarProducto(p);
-				} catch (NumberFormatException | ClassNotFoundException | SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			});
-			break;
+		if(validarSiProveedores()) {
+			JOptionPane.showMessageDialog(this, "No hay ningun proveedor dado de alta.");
+			this.dispose();
+		}else {
+			switch(option) {
+			case 1:
+				Producto p = new Producto();
+				crearVentana("Añadir Producto");
+				tfRef.setText(String.valueOf(p.calcularPk()));
+				tfRef.setEditable(false);
+				btnAccion.addActionListener(e -> {
+					try {
+						this.AñadirProducto(p);
+					} catch (ClassNotFoundException | SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				});
+				break;
+			case 2:
+				p = new Producto();
+				crearVentana("Consultar Proveedor");
+				setearCamposConsulta();
+				btnAccion.addActionListener(e -> {
+					try {
+						this.consultarProducto(p);
+					} catch (NumberFormatException | ClassNotFoundException | SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				});
+				break;
+			case 3:
+				p = new Producto();
+				crearVentana("Actualizar Proveedor");
+				btnAux = new JButton("Buscar Proveedor");
+				this.add(btnAux);
+				btnAccion.setEnabled(false);
+				btnAux.addActionListener(e -> {
+					try {
+						this.consultarProducto(p);
+						btnAccion.setEnabled(true);
+					} catch (NumberFormatException | ClassNotFoundException | SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				});
+				btnAccion.addActionListener(e -> {
+					try {
+						this.actualizarProducto(p);
+						this.limpiarCampos();
+						btnAccion.setEnabled(false);
+					} catch (NumberFormatException | ClassNotFoundException | SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				});
+				break;
+			}
+			
 		}
+		
 		
 		
 	}
 	
+	
+
 	private void crearVentana(String tituloVentana) throws ClassNotFoundException, SQLException {
 		mw.setSize(400,500);
 		Producto p = new Producto();
@@ -168,9 +204,34 @@ public class InternalProducto  extends JInternalFrame{
 		tfStock.setText(String.valueOf(p.getStock()));
 		cbProveedor.setSelectedIndex(p.getCodProveedor()-1);
 		if(p.getArticulo() == null) {
-			JOptionPane.showMessageDialog(this, "No existe el proveedor");
+			JOptionPane.showMessageDialog(this, "No existe el produto");
 			tfRef.setText("");
 		}
+	}
+	
+	private boolean validarSiProveedores() throws SQLException, ClassNotFoundException {
+		boolean flag = false;
+		Conexion con = new Conexion();
+		ResultSet rs = con.consulta("select count(*) from proveedores");
+		while(rs.next()) {
+			if(rs.getInt(1) == 0) {
+				flag = true;
+			}else {
+				flag = false;
+			}
+		}
+		con.cerrar();
+		return flag;
+	}
+	
+	private void actualizarProducto(Producto p) {
+		// TODO Auto-generated method stub
+		p.setArticulo(tfArticulo.getText());
+		p.setDescripcion(tfDescrip.getText());
+		p.setPrecio(Double.parseDouble(tfPrecio.getText()));
+		p.setStock(Integer.parseInt(tfStock.getText()));
+		p.setCodProveedor(((Proveedor) cbProveedor.getSelectedItem()).getCodProv());
+		JOptionPane.showMessageDialog(this, "Proveedor Actualizado");
 	}
 	
 	

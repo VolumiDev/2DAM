@@ -17,7 +17,7 @@ public class InternalProveedor extends JInternalFrame {
 	
 	private MainWin mw;
 	private JTextField tfCod, tfNombre, tfTipo;
-	private JLabel lblCod, lblNombre, lblTipo, lblActivo, lblTitulo;;
+	private JLabel lblCod, lblNombre, lblTipo, lblActivo, lblTitulo;
 	private JRadioButton rbSi, rbNo;
 	private JButton btnCerrar, btnAccion, btnAux;
 	private ButtonGroup radios;

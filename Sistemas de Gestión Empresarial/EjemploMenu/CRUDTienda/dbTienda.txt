@@ -23,7 +23,7 @@ USE `tienda`;
 -- Estructura de tabla para la tabla `cliente`
 --
 
-CREATE TABLE `cliente` (
+CREATE TABLE `clientes` (
   `id` int(5) NOT NULL,
   `nombre` varchar(20) NOT NULL,
   `ciudad` varchar(20) NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `cliente` (
 -- Estructura de tabla para la tabla `producctos`
 --
 
-CREATE TABLE `producctos` (
+CREATE TABLE `productos` (
   `ref` int(11) NOT NULL,
   `articulo` varchar(40) NOT NULL,
   `descrip` varchar(40) NOT NULL,

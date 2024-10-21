@@ -71,6 +71,13 @@ public class Escucha implements ActionListener {
 				e1.printStackTrace();
 			}
 			break;
+		case "Actualizar Articulo":
+			try {
+				InternalProducto crearProvFrame = new InternalProducto(v,3);
+			} catch (ClassNotFoundException | SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 	}
 
