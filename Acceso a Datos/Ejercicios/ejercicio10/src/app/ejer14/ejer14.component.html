@@ -1,4 +1,4 @@
 <div class="container">
-    <app-izq14></app-izq14>
-    <app-der14></app-der14>
+    <app-izq14 (vectorEvent)="recibirVector($event)"></app-izq14>
+    <app-der14 [recibirVector]="vectorPadre"></app-der14>
 </div>

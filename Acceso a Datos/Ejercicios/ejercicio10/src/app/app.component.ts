@@ -10,12 +10,17 @@ import { Ejer6Component } from './ejer6/ejer6.component';
 import { Ejer5Component } from './ejer5/ejer5.component';
 import { Ejer13Component } from './ejer13/ejer13.component';
 import { Ejer14Component } from './ejer14/ejer14.component';
+import { Ejer15Component } from './ejer15/ejer15.component';
+import { Ejer17Component } from './ejer17/ejer17.component';
+import { Ejer18PadreComponent } from './18/ejer18-padre/ejer18-padre.component';
+import { Ejer19padreComponent } from './19/ejer19padre/ejer19padre.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,Ejer5Component, Ejer6Component,Ejer7Component, Ejer8Component, Ejer9Component,
-     Ejer10Component, Ejer11Component, Ejer12Component, Ejer13Component, Ejer14Component],
+    Ejer10Component, Ejer11Component, Ejer12Component, Ejer13Component, Ejer14Component, Ejer15Component,
+    Ejer17Component, Ejer18PadreComponent, Ejer19padreComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

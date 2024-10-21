@@ -9,17 +9,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './izq14.component.css'
 })
 export class Izq14Component {
-
-  @Output() vectorEvent = new EventEmitter<String[]>();
+  
+  @Output() vectorEvent: EventEmitter<string[]> = new EventEmitter<string[]>();
   item: string= "";  
   vector: string[] = [];
-
+  
   insertar(){
-    alert(this.item)
-    this.vector.push(this.item);
   }
-
+  
   enviarVector(){
+    this.vector.push(this.item);
     this.vectorEvent.emit(this.vector);
   }
 

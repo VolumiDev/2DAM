@@ -1,0 +1,10 @@
+<div class="container-fluid top-space" style="background: #FFECB3">
+  <h2>Elemento padre</h2>
+  <p>
+    Todo lo que está contenido dentro de este div está declarado en el html correspondiente al elemento
+    padre.component.html. El elemento obtenido desde el hijo es: <strong>{{datoComunicarPadre}}</strong>
+  </p>
+
+  <app-ejer18-hijo (eventoComunicar)="realizaComunicacionHijo($event)"></app-ejer18-hijo>
+  <br />
+</div>

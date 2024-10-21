@@ -1,0 +1,21 @@
+<h1>Comunicación padre - hijo</h1>
+<div>
+  <div class="container-fluid top-space" style="background: #FFECB3">
+    <h2>Elemento padre</h2>
+    <p>
+      Todo lo que está contenido dentro de este div está declarado en el html correspondiente al elemento
+      padre.component.html
+    </p>
+    <div>
+      <input type="text" placeholder="Elemento a comunicar" #elemento />
+      <button type="button" class="btn btn-primary" (click)="realizarComunicacion(elemento.value)">
+        Realiza comunicación
+      </button>
+    </div>
+    <div class="alert alert-danger top-space" role="alert" *ngIf="datoComunicar.length ==0 ">
+      Estás intentando comunicar un dato vacío
+    </div>
+    <app-ejer17hijo [datoRecibido]="datoComunicar" ></app-ejer17hijo>
+    <br />
+  </div>
+</div>

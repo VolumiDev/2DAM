@@ -1,0 +1,9 @@
+<div>
+  <input type="text" [(ngModel)]="dato"><button (click)="enviar()">Enviar</button>
+  <div class="cadena" style="width: 45%; float: left;">
+    <app-izq [recibirCadena]="cadenaDelPadre" ></app-izq>
+  </div>
+  <div class="numero"  style="width: 45%; float: left;">
+    <app-der [recibirNumeros]="numerosDelPadre"></app-der>
+  </div>
+</div>

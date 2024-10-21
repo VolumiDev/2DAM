@@ -1,0 +1,21 @@
+<div class="container top-space" style="background: whitesmoke; padding: 5px">
+  <h3>Elemento hijo</h3>
+  <p>
+    Todo lo que está contenido dentro de este div está declarado en el html correspondiente al elemento
+    hijo.component.html. En este caso el siguiente elemento será comunicado gracias a un decorador &#64;Output EventEmitter
+    y recogido mediante un atributo en
+    el elemento padre.
+  </p>
+
+  <div>
+    <input type="text" placeholder="Elemento a comunicar" #elementoHijo />
+    <button type="button" class="btn btn-primary" (click)="realizarComunicacion(elementoHijo.value)">
+      Realiza comunicación
+    </button>
+  </div>
+
+  <div class="alert alert-danger top-space" role="alert" *ngIf="elementoHijo.value == '' ">
+    Estás intentando comunicar un dato vacío
+  </div>
+
+</div>

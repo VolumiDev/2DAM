@@ -6,7 +6,7 @@ public class main {
 		// TODO Auto-generated method stub
 		
 		MainWin mw = new MainWin();
-		mw.setSize(500,400);
+		mw.setSize(400,400);
 		mw.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mw.setLocationRelativeTo(null);
 		mw.setVisible(true);
