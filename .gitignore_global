@@ -4,6 +4,7 @@ build/
 
 # Archivos de configuración de IDEs
 .idea/
+.metadata
 .metadata/.plugins/
 .settings/
 
