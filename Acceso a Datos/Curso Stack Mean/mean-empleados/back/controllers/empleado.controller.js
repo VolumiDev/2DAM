@@ -1,5 +1,4 @@
 const Empleado = require('../models/empleado');   // Importamos el modelo de datos de los empleados para que se
-
 const empleadoCtrl = {};
 
 empleadoCtrl.getEmpleados = async (req, res) => {
@@ -18,7 +17,6 @@ empleadoCtrl.crearEmpleado = async (req, res) => {
 empleadoCtrl.getEmpleado = async (req, res) => {
   const empleado = await Empleado.findById(req.params.id);
   res.json(empleado);
-
 };
 
 empleadoCtrl.editEmpeleado = async (req, res) => {
