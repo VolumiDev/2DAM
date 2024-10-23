@@ -34,6 +34,7 @@ public class MainWin extends JFrame{
 			btns[i].setActionCommand(""+i);
 			btns[i].addActionListener(new Escucha(this));
 			btnPanel.add(btns[i]);
+			btns[i].setEnabled(false);
 		}
 		this.getContentPane().add(btnPanel);
 		
@@ -46,6 +47,7 @@ public class MainWin extends JFrame{
 		ButtonGroup radiosGroup = new  ButtonGroup();
 		for (int i = 0; i < modosJuego.length; i++) {
 			modosJuego[i] = new JRadioButton(titRadios[i]);
+			modosJuego[i].addActionListener(e -> this.activarBtns());
 			radiosGroup.add(modosJuego[i]);
 			radiosPanel.add(modosJuego[i]);
 		}
@@ -63,9 +65,24 @@ public class MainWin extends JFrame{
 	}
 	
 	public void tiradaComputadora() {
-		int rng = (int)(Math.random()*btns.length);
-		btns[rng].setText("O");
+		int rng = 0;
+		boolean flag = true;
+		do {
+			rng = (int)(Math.random()*btns.length);
+			if(btns[rng].getText().equalsIgnoreCase("")) {
+				btns[rng].setText("O");
+				flag= false;
+			}
+		}while(flag);
+		this.jugador=1;
 	}
+	
+	private void activarBtns() {
+		for (int i = 0; i < btns.length; i++) {
+			btns[i].setEnabled(true);
+		}
+	}
+	
 
 	
 	
