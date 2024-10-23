@@ -60,7 +60,13 @@ namespace AccesoBDFireBase
             else
             {
                 Usuario user = new Usuario(tb_nombre.Text, tb_telefono.Text, tb_correo.Text, cb_rol.Text);
+
+                //ENVIAMOS LOS DATOS A FIREBASE 
                 SetResponse response = await client.SetAsync($"usuario/{user.Nombre}", user);
+                Usuario result = response.ResultAs<Usuario>();
+                MessageBox.Show($"Usuario {result.Nombre} registrado exitosamente");
+
+                //VACIAMOS LOS CAMPOS DE RELLENAR
                 tb_correo.Text = "";
                 tb_telefono.Text = "";
                 tb_nombre.Text = "";

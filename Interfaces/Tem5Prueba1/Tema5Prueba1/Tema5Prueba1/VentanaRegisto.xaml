@@ -1,0 +1,20 @@
+﻿<Window x:Class="Tema5Prueba1.VentanaRegisto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema5Prueba1"
+        mc:Ignorable="d"
+        Title="VentanaRegisto" Height="400" Width="450">
+    <Viewbox Stretch="Uniform">
+        <Canvas Width="212" Height="203">
+            <Label Content="REGISTRO" Canvas.Left="74" Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Rectangle Width="150" Fill="Orange" Height="1" Canvas.Left="31" Canvas.Top="48" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Usuario" FontSize="8" Canvas.Left="31" Canvas.Top="54" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Width="37"/>
+            <TextBox x:Name="tb_user" Canvas.Left="31" TextWrapping="Wrap" Canvas.Top="75" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="tb_pass" Canvas.Left="31" Canvas.Top="128" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Contraseña:" FontSize="8" Canvas.Left="31" Canvas.Top="102" Height="21" Width="83" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btn_register" Content="Registrar" Canvas.Left="81" Canvas.Top="161" HorizontalAlignment="Center" VerticalAlignment="Top" Click="onClick"/>
+        </Canvas>
+    </Viewbox>
+</Window>

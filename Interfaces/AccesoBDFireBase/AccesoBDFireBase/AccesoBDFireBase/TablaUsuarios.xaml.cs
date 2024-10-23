@@ -18,11 +18,14 @@ using System.Windows.Shapes;
 
 namespace AccesoBDFireBase
 {
+
     /// <summary>
     /// Lógica de interacción para TablaUsuarios.xaml
     /// </summary>
     public partial class TablaUsuarios : Window
     {
+
+        List<Usuario> listUsuarios;
         IFirebaseConfig config = new FirebaseConfig
         {
             //CLAVE SECRETA DE TU PROYECTO
@@ -33,8 +36,8 @@ namespace AccesoBDFireBase
 
         FirebaseClient client;
 
-        
-public TablaUsuarios()
+
+        public TablaUsuarios()
         {
             InitializeComponent();
             client = new FireSharp.FirebaseClient(config);
@@ -52,14 +55,18 @@ public TablaUsuarios()
         {
             try
             {
-                //obtenemos los datos de la base de dato en formato diccionario
+
+                //OBTENEMOS LOS DATOS DE LA BASE DE DATOS EN FORMATO DICCIONARIO
                 FirebaseResponse response = await client.GetAsync("usuario");
-                //instanciamos el diccionario
+
+                //INSTANCIAMOS EL DICCIONARIO
                 Dictionary<string, Usuario> usuarios = response.ResultAs<Dictionary<string, Usuario>>();
-                //combertimos el diccionario a lista 
-                List<Usuario> listUsuario = new List<Usuario>(usuarios.Values);
-                //añadimos la lista al dataGrid
-                dataGrid_usuario.ItemsSource = listUsuario;
+
+                //COMBERTIMOS EL DICCIONARIO A LA LISTA
+                listUsuarios = new List<Usuario>(usuarios.Values);
+
+                //AÑADIMOS LA LISTA AL DATAGRID NO PODEMOS AÑADIR UN DICCIONARIO
+                dataGrid_usuario.ItemsSource = listUsuarios;
             }
             catch (Exception ex)
             {
@@ -67,11 +74,38 @@ public TablaUsuarios()
             }
         }
 
-        
 
-        private void editorTabla(object sender, DataGridCellEditEndingEventArgs e)
+
+        private async void editorTabla(object sender, DataGridCellEditEndingEventArgs e)
         {
+            try
+            {
+                // OBTENEMOS EL USUARIO QUE FUE EDITADO
+                Usuario usuarioEditado = e.Row.Item as Usuario;
 
+                //ENCONTRAMOS la clave del usuario(por ejemplo se puede utilizar el correo como identificador unico)
+                var usuarioOriginal = listUsuarios.FirstOrDefault(u => u.Nombre == usuarioEditado.Nombre);
+
+                if (usuarioOriginal != null)
+                {
+                    //ACTUALIZAMO LOS DATOS DE LA BASE DE DATO EN FIREBASE
+                    FirebaseResponse response = await client.UpdateAsync($"usuario/{usuarioEditado.Nombre}", usuarioEditado);
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        MessageBox.Show("Datos aactualizados correctamente en Firebase");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al actualizar los datos");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                {
+                    MessageBox.Show($"Hubo un error{ex.Message}");
+                }
+            }
         }
     }
 }
