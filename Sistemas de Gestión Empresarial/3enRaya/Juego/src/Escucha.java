@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Iterator;
 
 import javax.swing.JButton;
 
@@ -128,6 +129,9 @@ public class Escucha implements ActionListener {
 				validarPartida("O");
 			}
 			break;
+		case "reiniciar":
+			reiniciarPartida();
+			break;
 		}
 	}
 	
@@ -173,16 +177,11 @@ public class Escucha implements ActionListener {
 		if(victoria) {
 			if(dato.equalsIgnoreCase("X")) {
 				mw.getResultado().setText("Gana el jugador 1");
-			}else {
+			}else if(dato.equalsIgnoreCase("O")) {
 				mw.getResultado().setText("Gana el jugador 2");
 			}
 		}else {
-			for (int i = 0; i < btns.length; i++) {
-				if(!btns[i].getText().equalsIgnoreCase("")) {
-					vacios = false;
-				}
-			}
-			if(!vacios) {
+			if(buscamosVacios() == false) {
 				mw.getResultado().setText("Fue un empate");
 			}
 		}
@@ -190,5 +189,23 @@ public class Escucha implements ActionListener {
 		return victoria;
 	}
 		
+	private boolean buscamosVacios() {
+		boolean vacios = false;
+		
+		for (int i = 0; i < mw.getBtns().length; i++) {
+			if(mw.getBtns()[i].getText() == "") {
+				vacios = true;
+			}
+		}
+		
+		return vacios;
+	}
+	
+	private void reiniciarPartida() {
+		for (int i = 0; i < mw.getBtns().length; i++) {
+			mw.getBtns()[i].setText("");
+		}
+		mw.getResultado().setText("");
+	}
 	
 }

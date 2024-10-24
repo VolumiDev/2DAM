@@ -67,13 +67,16 @@ public class MainWin extends JFrame{
 	public void tiradaComputadora() {
 		int rng = 0;
 		boolean flag = true;
-		do {
-			rng = (int)(Math.random()*btns.length);
-			if(btns[rng].getText().equalsIgnoreCase("")) {
-				btns[rng].setText("O");
-				flag= false;
-			}
-		}while(flag);
+		if(hayHueco()) {
+			do {
+				rng = (int)(Math.random()*btns.length);
+				if(btns[rng].getText().equalsIgnoreCase("")) {
+					btns[rng].setText("O");
+					flag= false;
+				}
+			}while(flag);
+			
+		}
 		this.jugador=1;
 	}
 	
@@ -81,6 +84,18 @@ public class MainWin extends JFrame{
 		for (int i = 0; i < btns.length; i++) {
 			btns[i].setEnabled(true);
 		}
+	}
+	
+	private boolean hayHueco() {
+		boolean flag = false;
+		
+		for (int i = 0; i < btns.length; i++) {
+			if(btns[i].getText().equalsIgnoreCase("")) {
+				flag = true;
+			}
+		}
+		
+		return flag;
 	}
 	
 
