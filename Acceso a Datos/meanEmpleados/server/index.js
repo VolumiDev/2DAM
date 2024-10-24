@@ -22,4 +22,4 @@ app.use(express.json());  //LE INDICAMOS QUE ENTIENDA LOS JSON QUE LE LLEGARAN D
 
 //ROUTES
 app.use('/api/empleados', require('./routes/empleados.routes'));    //ESTE METODO TIENE UN PRIMER PARAMETRO CON EL QUE LE PODEMOS PASAR UNA RUTA DIFERENTE
-// app.use('/api/figuras', require('./routes/figuras.routes'));
+// app.use('/api/figuras', require('./routes/figuras.routes')); 

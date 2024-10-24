@@ -44,6 +44,8 @@ public class InternalEvaluation extends JInternalFrame{
 	
 	private JButton btnQualify;
 	
+	private JButton btnSearch;
+	
  	public InternalEvaluation() {
 		// TODO Auto-generated constructor stub
 		super();
@@ -74,7 +76,7 @@ public class InternalEvaluation extends JInternalFrame{
  		titVentana.setForeground(Color.RED);
  		this.getContentPane().add(titVentana, BorderLayout.NORTH);
  		
- 		btnQualify = new JButton("Califircar");
+ 		btnQualify = new JButton("Calificar");
  		btnQualify.addActionListener(new InternalListener(this));
  		btnQualify.setActionCommand("qualify");
  		this.getContentPane().add(btnQualify, BorderLayout.SOUTH);
@@ -119,6 +121,10 @@ public class InternalEvaluation extends JInternalFrame{
 			tfPersonalData[i] = new JTextField(15);
 		}
  		
+ 		btnSearch = new JButton("Buscar");
+ 		btnSearch.addActionListener(new InternalListener(this));
+ 		btnSearch.setActionCommand("search");
+ 		
  		//RADIOS
  		radiosGroupSex = new ButtonGroup();
  		rbMan = new JRadioButton("Hombre");
@@ -135,6 +141,7 @@ public class InternalEvaluation extends JInternalFrame{
  		subDataPanel.add(titlePersonalData[2]);
  		subDataPanel.add(rbMan);
  		subDataPanel.add(rbWomen);
+ 		subDataPanel.add(btnSearch);
  		
  		dataPanel.add(subDataPanel);
 	}

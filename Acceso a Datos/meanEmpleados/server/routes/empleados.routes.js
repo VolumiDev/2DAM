@@ -19,4 +19,4 @@ router.put('/:id', cltrEmple.editarEmpleado);
 router.delete('/:id', cltrEmple.borrarEmpleado);
 
 
-module.exports = router;
+module.exports = router;  

@@ -1,5 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.module.FindException;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -26,8 +28,11 @@ public class InternalListener implements ActionListener {
 		switch (command) {
 		case "qualify":
 			if(emptyValidate() == false && dateValidator() == false) {
-				//PROCEDEMOS CON LA CALIFICACION
+				finalScore();
 			}
+			break;
+		case "search":
+			
 			break;
 		}
 	}
@@ -109,5 +114,78 @@ public class InternalListener implements ActionListener {
 		}
 		return flag;
 	}
+	
+	//PUNTUAMOS LAS PRIMERA QUESTION 1
+	private double response1() {
+		// TODO Auto-generated method stub
+		double result=0;
+		
+		if(!iFrame.getCbQuestion1()[0].isSelected() && iFrame.getCbQuestion1()[1].isSelected() && iFrame.getCbQuestion1()[2].isSelected() &&!iFrame.getCbQuestion1()[0].isSelected()) {
+			result = 1;
+		}else {
+			result = -0.5;
+		}
+		System.out.println("1 retorna " + (result));
+
+		return result;
+	}
+	
+	//PUNTUAMOS LAS PRIMERA QUESTION 3
+	private double response3() {
+		// TODO Auto-generated method stub
+		double result = 0;
+		
+		if(iFrame.getRbQuestion3()[2].isSelected()) {
+			result = 1;
+		}else {
+			result = -0.5;
+		}
+		System.out.println("3 retorna " + result);
+
+		return result;
+	}
+	
+	//PUNTUAMOS LAS PRIMERA QUESTION 2
+		private double response2() {
+			// TODO Auto-generated method stub
+			double result = 0;
+			if(iFrame.getTaQuestion2().getText().contains("conjunto de instrucciones que permiten realizar una tarea")) {
+				result = 1;
+			}else {
+				result = -0.5;
+			}
+			System.out.println("2 retorna " + result);
+
+			return result;
+		}
+		
+		//PUNTUAMOS LAS PRIMERA QUESTION 2
+		private double response4() {
+			// TODO Auto-generated method stub
+			double result = 0;
+			if (iFrame.getJlQuestion4().getSelectedValue().equalsIgnoreCase("Un IDE para desarrollar aplicaciones")) {
+				result = 1;
+			}else {
+				result = -0.5;
+			}
+			System.out.println("4 retorna " + result);
+			return result;
+		}
+	
+		private void finalScore() {
+			// TODO Auto-generated method stub
+			double finalScore = response1() + response2() + response3() + response4();
+			JOptionPane.showMessageDialog(iFrame, "El resultado obtenido por " + iFrame.getTfPersonalData()[0].getText() + " es de " + finalScore + "."  );
+		
+		}
+		
+		//BUSCAMOS EL USUARIO EN LA BD
+		private void userQuery() throws ClassNotFoundException, SQLException {
+			// TODO Auto-generated method stub
+			String user = JOptionPane.showInputDialog(iFrame, "Introduce el nobre de Usuario");
+			
+			Conection con = new Conection();
+			String sql = "select * from encuesta where nombre like '" + user + "')";
+		}
 
 }

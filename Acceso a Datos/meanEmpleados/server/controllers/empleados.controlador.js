@@ -8,9 +8,8 @@
     res.json(leerEmppleados)
 };
 //LE PASAMOS UNA VARIABLE POR POST PARA QUE NOS DEVUELVA LA INFORMACION DEL EMPLEADO
-controladorEmpleado.mostrarEmpleado = async (req, res) => {   
-    const idEmpleado = req.params.id;            
-    const leerEmpleado = await empleadosModels.findById(idEmpleado);
+controladorEmpleado.mostrarEmpleado = async (req, res) => {           
+    const leerEmpleado = await empleadosModels.findById(req.params.id);
     res.json(leerEmpleado);
 };
  controladorEmpleado.crearEmpleado = async (req, res) => {
@@ -19,8 +18,18 @@ controladorEmpleado.mostrarEmpleado = async (req, res) => {
     res.json('Empleado guardado');
  };
 
- controladorEmpleado.editarEmpleado = () => {
-    
+ controladorEmpleado.editarEmpleado = async (req, res) => {
+    const { id } = req.params
+    const empleadoEditar = {
+        nombre : req.body.nombre,
+        cargo: req.body.cargo,
+        departamento: req.body.departamento,
+        salario: req.body.salario
+    } 
+    await empleadosModels.findByIdAndUpdate(id, { $set: empleadoEditar}, {new: true});
+    res.json({
+        status: "Empleado Editado"
+    })
  };
 
  controladorEmpleado.borrarEmpleado = () => {

@@ -12,7 +12,7 @@ empleadoCtrl.crearEmpleado = async (req, res) => {
   res.json({
     'status': 'Empleado guradado',
   });
-};
+}; 
 
 empleadoCtrl.getEmpleado = async (req, res) => {
   const empleado = await Empleado.findById(req.params.id);
