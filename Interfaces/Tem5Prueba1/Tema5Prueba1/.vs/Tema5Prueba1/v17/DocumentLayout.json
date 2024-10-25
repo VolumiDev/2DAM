@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\ventanaregisto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\ventanaregisto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\ventanaregisto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\ventanaregisto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\ventanaregisto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\ventanaregisto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 211,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Tema5Prueba1\\MainWindow.xaml",
@@ -42,15 +50,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VentanaRegisto.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml.cs",
-              "RelativeDocumentMoniker": "Tema5Prueba1\\VentanaRegisto.xaml.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml.cs",
-              "RelativeToolTip": "Tema5Prueba1\\VentanaRegisto.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAWwBwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\User.cs",
+              "RelativeDocumentMoniker": "Tema5Prueba1\\User.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\User.cs",
+              "RelativeToolTip": "Tema5Prueba1\\User.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:33:28.098Z",
+              "WhenOpened": "2024-10-25T17:22:23.754Z",
               "EditorCaption": ""
             },
             {
@@ -68,12 +76,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "VentanaRegisto.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml.cs",
+              "RelativeDocumentMoniker": "Tema5Prueba1\\VentanaRegisto.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml.cs",
+              "RelativeToolTip": "Tema5Prueba1\\VentanaRegisto.xaml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAIAxwCMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:33:28.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Mensajes.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Mensajes.cs",
+              "RelativeDocumentMoniker": "Tema5Prueba1\\Mensajes.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Mensajes.cs",
+              "RelativeToolTip": "Tema5Prueba1\\Mensajes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T17:20:23.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Tema5Prueba1\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml.cs",
               "RelativeToolTip": "Tema5Prueba1\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAD4vx4AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAIAwwBQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T19:06:49.746Z",
               "EditorCaption": ""

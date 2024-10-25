@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FireSharp.Response;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,30 @@ namespace Tema5Prueba1
 
         private void onClick(object sender, RoutedEventArgs e)
         {
+            if(String.IsNullOrEmpty(tb_user.Text) || String.IsNullOrEmpty(tb_pass.Password)){
+                MessageBox.Show("Rellena todos los campos");
+            }
+            else
+            {
+                User user = new User();
+                user.idQuery();
+                user.Name = tb_user.Text;
+                user.Password = tb_pass.Password;
+                userInsert(user);
+
+                
+            }
+        }
+        private async void userInsert(User u)
+        {
+            DataBase db = new DataBase();
+            SetResponse response = await db.Cli.SetAsync($"Users/{u.Id}", u);
+
+            if (response != null)
+            {
+                MessageBox.Show("Usuario insertado en la BD");
+                this.Close();
+            }
 
         }
     }

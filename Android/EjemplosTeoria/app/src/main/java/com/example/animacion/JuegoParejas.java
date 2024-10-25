@@ -1,9 +1,15 @@
 package com.example.animacion;
 
+import android.content.ClipData;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class JuegoParejas extends AppCompatActivity implements View.OnTouchListener{
 
-    private ImageView iv_kiwi0, iv_kiwi1, iv_kiwi2, iv_platano0, iv_platano1,iv_platano2 , iv_manzana0, iv_manzana1, iv_manzana2;
-
+    private ImageView[] arrImgV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,25 +27,8 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_juego_parejas);
 
-        iv_kiwi0=findViewById(R.id.iv_kiwi0);
-        iv_kiwi1=findViewById(R.id.iv_kiwi1);
-        iv_kiwi2=findViewById(R.id.iv_kiwi2);
-        iv_manzana0=findViewById(R.id.iv_manzana0);
-        iv_manzana1=findViewById(R.id.iv_manzana1);
-        iv_manzana2=findViewById(R.id.iv_manzana2);
-        iv_platano0 = findViewById(R.id.iv_platano0);
-        iv_platano1 = findViewById(R.id.iv_platano1);
-        iv_platano2 = findViewById(R.id.iv_platano2);
-
-        iv_kiwi0.setOnTouchListener(this);
-        iv_kiwi1.setOnTouchListener(this);
-        iv_kiwi2.setOnTouchListener(this);
-        iv_manzana0.setOnTouchListener(this);
-        iv_manzana1.setOnTouchListener(this);
-        iv_manzana2.setOnTouchListener(this);
-        iv_platano0.setOnTouchListener(this);
-        iv_platano1.setOnTouchListener(this);
-        iv_platano2.setOnTouchListener(this);
+        //INICIALIZAMOS LOS IMAGES VIEW
+        inicializarImagesView();
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -52,7 +40,69 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
+        switch (event.getAction()){
+            //EVENTO DE APRETAR Y MANTENER
+            case MotionEvent.ACTION_DOWN:
+                Toast.makeText(this, "CLIC" +v.getId(), Toast.LENGTH_SHORT).show();
+                Log.i("Volumi", "action down");
+                ClipData data = ClipData.newPlainText("","");
+                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(v);
+                v.startDragAndDrop(data, shadowBuilder, v, 0);
+                break;
+            //EVENTO DE SAOLTAR
+            case MotionEvent.ACTION_MOVE:
+                Toast.makeText(this, "CLIC", Toast.LENGTH_SHORT).show();
+                Log.i("Volumi", "action up");
+                ImageView imageViewSeleccionada = (ImageView) v;
+                ImageView target = getTargetImageView(imageViewSeleccionada);
+                if (target != null){
+                    if(compararImagesView(imageViewSeleccionada.getDrawable(), target.getDrawable())){
+                        imageViewSeleccionada.setVisibility(View.GONE);
+                        target.setVisibility(View.GONE);
+                    }else{
+                        Toast.makeText(this, "Las imagenes no coinciden", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                break;
+        }
 
         return false;
     }
+
+
+   public ImageView getTargetImageView(ImageView dragedImageView){
+       Rect dragRect = new Rect();
+       dragedImageView.getHitRect(dragRect);
+
+       for (ImageView iv : arrImgV){
+           if(iv != dragedImageView && iv.getVisibility() == View.VISIBLE){
+               Rect targetRect = new Rect();
+               iv.getHitRect(targetRect);
+               if(Rect.intersects(dragRect,targetRect)){
+                   return iv;
+               }
+           }
+       }
+       return null;
+   }
+
+   private void inicializarImagesView(){
+        arrImgV = new ImageView[9];
+       for (int i = 0; i < arrImgV.length; i++) {
+           String iv_Id = "iv_"+i;
+           int res_Id = getResources().getIdentifier(iv_Id, "id", getPackageName());
+           arrImgV[i] = findViewById(res_Id);
+           arrImgV[i].setOnTouchListener(this);
+       }
+   }
+
+   private boolean compararImagesView(Drawable drawable1, Drawable drawable2){
+       Log.i("Volumi", "drawablw 1: "+drawable1);
+       Log.i("Volumi", "drawablw 1: "+drawable2);
+        if(drawable1 == null || drawable2 == null){
+            return false;
+       }else{
+            return drawable1.getConstantState().equals(drawable2.getConstantState());
+        }
+   }
 }

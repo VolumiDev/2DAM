@@ -21,3 +21,12 @@ C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\
 C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\Tema5Prueba1.pdb
 C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\Tema5Prueba1.genruntimeconfig.cache
 C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\ref\Tema5Prueba1.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\FireSharp.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\Microsoft.Threading.Tasks.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\System.Net.Http.Extensions.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\System.Net.Http.Primitives.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\Tema5Prueba1.csproj.AssemblyReference.cache
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\Tema5Pru.ABE4A22B.Up2Date

@@ -18,61 +18,71 @@
         android:rowCount="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <ImageView
-            android:id="@+id/iv_kiwi0"
+            android:id="@+id/iv_0"
             android:src="@drawable/kiwi"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"/>
 
 
         <ImageView
-            android:id="@+id/iv_platano0"
+            android:id="@+id/iv_1"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:src="@drawable/platano" />
+            android:src="@drawable/platano"
+            android:layout_margin="10dp"/>
 
         <ImageView
-            android:id="@+id/iv_manzana0"
+            android:id="@+id/iv_2"
             android:src="@drawable/manzana"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"/>
         />
         <ImageView
-            android:id="@+id/iv_manzana1"
+            android:id="@+id/iv_3"
             android:src="@drawable/manzana"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"/>
         />
         <ImageView
-            android:id="@+id/iv_kiwi1"
+            android:id="@+id/iv_4"
             android:src="@drawable/kiwi"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"/>
         />
         <ImageView
-            android:id="@+id/iv_platano1"
+            android:id="@+id/iv_5"
             android:src="@drawable/platano"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"/>
         <ImageView
-            android:id="@+id/iv_platano2"
+            android:id="@+id/iv_6"
             android:src="@drawable/platano"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"/>
 
         <ImageView
-            android:id="@+id/iv_manzana2"
+            android:id="@+id/iv_7"
             android:src="@drawable/manzana"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"/>
 
         <ImageView
-            android:id="@+id/iv_kiwi2"
+            android:id="@+id/iv_8"
             android:src="@drawable/kiwi"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"/>
 
 
     </GridLayout>

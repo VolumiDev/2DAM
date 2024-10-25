@@ -37,7 +37,7 @@ import android.view.View;
         pincel1.setARGB(255,255,0,0);
         pincel1.setStrokeWidth(4);
         pincel1.setStyle(Paint.Style.STROKE);
-        canvas.drawCircle(corx,cory,20,pincel1);
+        //canvas.drawCircle(corx,cory,20,pincel1);
 
     }
 }
