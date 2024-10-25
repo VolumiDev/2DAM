@@ -1,10 +1,14 @@
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.module.FindException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.temporal.TemporalField;
+
 import javax.swing.JCheckBox;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
@@ -32,7 +36,12 @@ public class InternalListener implements ActionListener {
 			}
 			break;
 		case "search":
-			
+			try {
+				userQuery();
+			} catch (ClassNotFoundException | SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			break;
 		}
 	}
@@ -111,14 +120,20 @@ public class InternalListener implements ActionListener {
 			}		
 		}catch(DateTimeParseException e) {
 			JOptionPane.showMessageDialog(iFrame, "Introduce un formato de fecha valido yyyy-MM-dd");
+			flag = true;
 		}
 		return flag;
 	}
 	
-	//PUNTUAMOS LAS PRIMERA QUESTION 1
+	//PUNTUAMOS LA QUESTION 1
 	private double response1() {
 		// TODO Auto-generated method stub
 		double result=0;
+		
+		responseStyle1(iFrame.getCbQuestion1()[0], Color.RED);
+		responseStyle1(iFrame.getCbQuestion1()[1], Color.GREEN);
+		responseStyle1(iFrame.getCbQuestion1()[2], Color.GREEN);
+		responseStyle1(iFrame.getCbQuestion1()[3], Color.RED);
 		
 		if(!iFrame.getCbQuestion1()[0].isSelected() && iFrame.getCbQuestion1()[1].isSelected() && iFrame.getCbQuestion1()[2].isSelected() &&!iFrame.getCbQuestion1()[0].isSelected()) {
 			result = 1;
@@ -130,10 +145,24 @@ public class InternalListener implements ActionListener {
 		return result;
 	}
 	
-	//PUNTUAMOS LAS PRIMERA QUESTION 3
+	
+	//COLOREAMOS LAS RESPUESTAS EN FUNCION DE LA RESPUESTA 1
+	private void responseStyle1(JCheckBox cb, Color c) {
+		// TODO Auto-generated method stub
+		if(cb.isSelected()) {
+			cb.setForeground(c);
+		}
+	}
+	
+	//PUNTUAMOS LA QUESTION 3
 	private double response3() {
 		// TODO Auto-generated method stub
 		double result = 0;
+		
+		responseStyle3(iFrame.getRbQuestion3()[0], Color.RED);
+		responseStyle3(iFrame.getRbQuestion3()[1], Color.RED);
+		responseStyle3(iFrame.getRbQuestion3()[2], Color.GREEN);
+		responseStyle3(iFrame.getRbQuestion3()[3], Color.RED);
 		
 		if(iFrame.getRbQuestion3()[2].isSelected()) {
 			result = 1;
@@ -145,32 +174,51 @@ public class InternalListener implements ActionListener {
 		return result;
 	}
 	
-	//PUNTUAMOS LAS PRIMERA QUESTION 2
+	//COLOREAMOS LAS REPUESTAS DE LA PREGUNTA 3
+	private void responseStyle3(JRadioButton rb, Color c) {
+		// TODO Auto-generated method stub
+		if(rb.isSelected()) {
+			rb.setForeground(c);
+		}
+	}
+		
+	
+	//PUNTUAMOS LA QUESTION 2
 		private double response2() {
 			// TODO Auto-generated method stub
 			double result = 0;
+			
+			
 			if(iFrame.getTaQuestion2().getText().contains("conjunto de instrucciones que permiten realizar una tarea")) {
 				result = 1;
+				iFrame.getTaQuestion2().setForeground(Color.GREEN);
 			}else {
 				result = -0.5;
+				iFrame.getTaQuestion2().setForeground(Color.RED);
 			}
 			System.out.println("2 retorna " + result);
 
 			return result;
 		}
 		
-		//PUNTUAMOS LAS PRIMERA QUESTION 2
+		
+		
+		//PUNTUAMOS LA QUESTION 4
 		private double response4() {
 			// TODO Auto-generated method stub
 			double result = 0;
 			if (iFrame.getJlQuestion4().getSelectedValue().equalsIgnoreCase("Un IDE para desarrollar aplicaciones")) {
 				result = 1;
+				iFrame.getJlQuestion4().setSelectionBackground(Color.GREEN);
 			}else {
 				result = -0.5;
+				iFrame.getJlQuestion4().setSelectionBackground(Color.RED);
 			}
 			System.out.println("4 retorna " + result);
 			return result;
 		}
+		
+		
 	
 		private void finalScore() {
 			// TODO Auto-generated method stub
@@ -184,8 +232,23 @@ public class InternalListener implements ActionListener {
 			// TODO Auto-generated method stub
 			String user = JOptionPane.showInputDialog(iFrame, "Introduce el nobre de Usuario");
 			
-			Conection con = new Conection();
-			String sql = "select * from encuesta where nombre like '" + user + "')";
+			Conect con = new Conect();
+			String sql = "select * from resultados where nombre like '" + user + "'";
+			ResultSet rs =  con.query(sql);
+			if(rs.isBeforeFirst()) {
+				while(rs.next()) {
+					iFrame.getTfPersonalData()[0].setText(rs.getString(1));
+					iFrame.getTfPersonalData()[1].setText(rs.getString(2));
+				}
+			}else {
+				JOptionPane.showMessageDialog(iFrame, "No hay ningun usuario con esos datos");
+			}
+		}
+		
+		//SI EL USUARIO NO ESTA REGISTRADO INSERTAMO
+		private void newUser() {
+			// TODO Auto-generated method stub
+
 		}
 
 }

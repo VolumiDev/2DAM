@@ -107,7 +107,8 @@ public class InternalEvaluation extends JInternalFrame{
  	private void setDataControls(JPanel dataPanel) {
 		// TODO Auto-generated method stub
  		JPanel subDataPanel = new JPanel();
- 		subDataPanel.setPreferredSize(new Dimension(400,100));
+ 		subDataPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+ 		subDataPanel.setPreferredSize(new Dimension(500,90));
  		
  		//LABELS Y TEXTFIELDS
  		titlePersonalData = new JLabel[3];
@@ -115,7 +116,7 @@ public class InternalEvaluation extends JInternalFrame{
  		String[] labelTitle = {"Nomber y Apellidos", "Fecha de Nacimineto", "Sexo"};
  		for (int i = 0; i < titlePersonalData.length; i++) {
 			titlePersonalData[i] = new JLabel(labelTitle[i], SwingConstants.LEFT);
-			titlePersonalData[i].setPreferredSize(new Dimension(150,20));
+			titlePersonalData[i].setPreferredSize(new Dimension(200,20));
 		}
  		for (int i = 0; i < tfPersonalData.length; i++) {
 			tfPersonalData[i] = new JTextField(15);
@@ -136,12 +137,12 @@ public class InternalEvaluation extends JInternalFrame{
  		//AÑADIMOS
  		subDataPanel.add(titlePersonalData[0]);
  		subDataPanel.add(tfPersonalData[0]);
+ 		subDataPanel.add(btnSearch);
  		subDataPanel.add(titlePersonalData[1]);
  		subDataPanel.add(tfPersonalData[1]);
  		subDataPanel.add(titlePersonalData[2]);
  		subDataPanel.add(rbMan);
  		subDataPanel.add(rbWomen);
- 		subDataPanel.add(btnSearch);
  		
  		dataPanel.add(subDataPanel);
 	}
