@@ -33,7 +33,6 @@ namespace Tema5Prueba1
             else
             {
                 User user = new User();
-                user.idQuery();
                 user.Name = tb_user.Text;
                 user.Password = tb_pass.Password;
                 userInsert(user);

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj": {}
+    "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj": {
+    "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj",
+        "projectUniqueName": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj",
         "projectName": "Tema5Prueba1",
-        "projectPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj",
-        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\obj\\",
+        "projectPath": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj",
+        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+        "outputPath": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
