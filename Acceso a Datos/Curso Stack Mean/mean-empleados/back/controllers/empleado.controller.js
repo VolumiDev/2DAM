@@ -20,14 +20,14 @@ empleadoCtrl.getEmpleado = async (req, res) => {
 };
 
 empleadoCtrl.editEmpeleado = async (req, res) => {
-  const { id } = req.params;
-  const empleado = {
+  const {id} = req.params;
+  const empleadoEditar = {
     nombre: req.body.nombre,
-    oficina: req.body.oficina,
-    puesto: req.body.puesto,
+    cargo: req.body.cargo,
+    departamento: req.body.departamento,
     salario: req.body.salario
   }
-  await Empleado.findByIdAndUpdate(id, { $set: empleado }, {new: true});
+  await Empleado.findByIdAndUpdate(ida, { $set: empleadoEditar }, {new: true});
   res.json({
     status: 'Empleado actualizado'
   });

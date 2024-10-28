@@ -245,10 +245,35 @@ public class InternalListener implements ActionListener {
 			}
 		}
 		
-		//SI EL USUARIO NO ESTA REGISTRADO INSERTAMO
-		private void newUser() {
-			// TODO Auto-generated method stub
-
+		
+		
+		//HACEMOS LA AUTENTICACION DEL USUARIO Y SI NO EXISTE LO INSERTAMOS
+		private void autentication() throws ClassNotFoundException, SQLException {
+			Tools t = new Tools();
+			ResultSet user = t.getUser(iFrame.getTfPersonalData()[0].getText());
+			if(user == null) {
+				String name = iFrame.getTfPersonalData()[0].getText();
+				String date = iFrame.getTfPersonalData()[1].getText();
+				String sex;
+				if(iFrame.getRbMan().isSelected()==true) {
+					sex = "Hombre";
+				}else {
+					sex = "Mujer";
+				}
+				double q1 = response1();
+				double q2 = response2();
+				double q3 = response3();
+				double q4 = response4();
+				double score = q1+q2+q3+q4;
+				int tries = 0;				
+				t.insertNewUser(iFrame, name, date, sex, q1, q2, q3, q4, score, tries);;
+			}else {
+				if(t.numTries(iFrame.getTfPersonalData()[0].getText()) < 3) {
+					//TENEMOS QUE HACER LAS INSERCCIONES.
+				}
+			}
 		}
+		
+		
 
 }
