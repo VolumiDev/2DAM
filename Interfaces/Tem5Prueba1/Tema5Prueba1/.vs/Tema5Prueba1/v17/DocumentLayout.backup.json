@@ -1,29 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\",
+  "WorkspaceRootPath": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|d:\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\messagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\messagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|d:\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\ventanaregisto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\ventanaregisto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|d:\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|d:\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|d:\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\ventanaregisto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\ventanaregisto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\ventanaregisto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|d:\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\tem5prueba1\\tema5prueba1\\tema5prueba1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B21E9ED5-3EAA-4E33-83AF-682705AE0658}|Tema5Prueba1\\Tema5Prueba1.csproj|solutionrelative:tema5prueba1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -33,82 +21,43 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 211,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 252,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Tema5Prueba1\\MainWindow.xaml",
-              "ToolTip": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml",
               "RelativeToolTip": "Tema5Prueba1\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-23T19:06:53.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VentanaRegisto.xaml",
-              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml",
-              "RelativeDocumentMoniker": "Tema5Prueba1\\VentanaRegisto.xaml",
-              "ToolTip": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml",
-              "RelativeToolTip": "Tema5Prueba1\\VentanaRegisto.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-23T19:29:11.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VentanaRegisto.xaml.cs",
-              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml.cs",
-              "RelativeDocumentMoniker": "Tema5Prueba1\\VentanaRegisto.xaml.cs",
-              "ToolTip": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml.cs",
-              "RelativeToolTip": "Tema5Prueba1\\VentanaRegisto.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:33:28.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\User.cs",
-              "RelativeDocumentMoniker": "Tema5Prueba1\\User.cs",
-              "ToolTip": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\User.cs",
-              "RelativeToolTip": "Tema5Prueba1\\User.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCMAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T17:22:23.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Mensajes.cs",
-              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Mensajes.cs",
-              "RelativeDocumentMoniker": "Tema5Prueba1\\Mensajes.cs",
-              "ToolTip": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Mensajes.cs",
-              "RelativeToolTip": "Tema5Prueba1\\Mensajes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T17:20:23.475Z",
+              "WhenOpened": "2024-10-28T11:55:45.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Tema5Prueba1\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Tema5Prueba1\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:06:49.746Z",
+              "Title": "MessageWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MessageWindow.xaml",
+              "RelativeDocumentMoniker": "Tema5Prueba1\\MessageWindow.xaml",
+              "ToolTip": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\MessageWindow.xaml",
+              "RelativeToolTip": "Tema5Prueba1\\MessageWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T11:55:43.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VentanaRegisto.xaml",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml",
+              "RelativeDocumentMoniker": "Tema5Prueba1\\VentanaRegisto.xaml",
+              "ToolTip": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\VentanaRegisto.xaml",
+              "RelativeToolTip": "Tema5Prueba1\\VentanaRegisto.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T11:53:23.145Z",
               "EditorCaption": ""
             }
           ]

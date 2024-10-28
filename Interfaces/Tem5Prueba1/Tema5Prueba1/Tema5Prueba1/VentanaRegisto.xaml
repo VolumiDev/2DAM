@@ -6,14 +6,41 @@
         xmlns:local="clr-namespace:Tema5Prueba1"
         mc:Ignorable="d"
         Title="VentanaRegisto" Height="400" Width="450">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+            <GradientStop Color="Orange" Offset="0"/>
+            <GradientStop Color="Black" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="LightSlateGray" 
+                            BorderBrush="White" 
+                            BorderThickness="0.5" 
+                            CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Viewbox Stretch="Uniform">
         <Canvas Width="212" Height="203">
+            <!--TITULO-->
             <Label Content="REGISTRO" Canvas.Left="74" Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Rectangle Width="150" Fill="Orange" Height="1" Canvas.Left="31" Canvas.Top="48" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Usuario" FontSize="8" Canvas.Left="31" Canvas.Top="54" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Width="37"/>
-            <TextBox x:Name="tb_user" Canvas.Left="31" TextWrapping="Wrap" Canvas.Top="75" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <!--SEPARADOR-->
+            <Rectangle Width="150" Height="1" Canvas.Left="31" Canvas.Top="48" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <!--ETIQUETA E IMPUT DE USUARIO-->
+            <Label Style="{StaticResource labelsCustom}" Content="Usuario:" Canvas.Left="31" Canvas.Top="54" HorizontalAlignment="Left" VerticalAlignment="Center" Height="21" Width="46"/>
+            <TextBox  x:Name="tb_user" Canvas.Left="31" TextWrapping="Wrap" Canvas.Top="75" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <!--ETIQUETA A INPUT DE LA PASSWORD-->
             <PasswordBox x:Name="tb_pass" Canvas.Left="31" Canvas.Top="128" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Contraseña:" FontSize="8" Canvas.Left="31" Canvas.Top="102" Height="21" Width="83" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Style="{StaticResource labelsCustom}" Content="Contraseña:" Canvas.Left="31" Canvas.Top="102" Height="21" Width="83" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <!--BOTON DE REGISTRO-->
             <Button x:Name="btn_register" Content="Registrar" Canvas.Left="81" Canvas.Top="161" HorizontalAlignment="Center" VerticalAlignment="Top" Click="onClick"/>
         </Canvas>
     </Viewbox>

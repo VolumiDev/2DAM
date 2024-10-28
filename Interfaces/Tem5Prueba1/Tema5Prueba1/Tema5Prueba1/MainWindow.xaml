@@ -6,15 +6,27 @@
         xmlns:local="clr-namespace:Tema5Prueba1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="450">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+            <GradientStop Color="Orange" Offset="0"/>
+            <GradientStop Color="Black" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Viewbox Stretch="Uniform">
         <Canvas Width="212" Height="203">
-            <Label Content="LOGIN" Canvas.Left="84" Canvas.Top="22" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Rectangle Width="150" Fill="Orange" Height="1" Canvas.Left="31" Canvas.Top="48" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Usuario" FontSize="8" Canvas.Left="31" Canvas.Top="54" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Width="37"/>
+            <!--TITULO -->
+            <Label Content="LOGIN" Canvas.Left="79" Canvas.Top="19" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <!--SEPARADOR -->
+            <Rectangle Width="150" Height="1" Canvas.Left="31" Canvas.Top="48" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <!--LABEL Y TEXTBOX DEL USUARIO -->
+            <Label Style="{StaticResource labelsCustom}" Content="Usuario:" Canvas.Left="31" Canvas.Top="54" HorizontalAlignment="Left" VerticalAlignment="Center" Height="21" Width="46" />
             <TextBox x:Name="tb_user" Canvas.Left="31" TextWrapping="Wrap" Canvas.Top="75" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <!--LABEL Y PASWORDBOX DEL USUARIO-->
             <PasswordBox x:Name="pb_pass"  Canvas.Left="31" Canvas.Top="128" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Contraseña:" FontSize="8" Canvas.Left="31" Canvas.Top="102" Height="21" Width="83" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Style="{StaticResource labelsCustom}" Content="Contraseña:" Canvas.Left="31" Canvas.Top="102" Height="21" Width="83" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <!--BOTON DE LOGIN-->
             <Button x:Name="tb_login" Content="Entrar" Canvas.Left="49" Canvas.Top="158" HorizontalAlignment="Center" VerticalAlignment="Top" Click="tb_login_Click"/>
+            <!--BOTON DE REGISTRO-->
             <Button x:Name="tb_register" Content="Registrar" Canvas.Left="125" Canvas.Top="158" HorizontalAlignment="Left" VerticalAlignment="Top" Click="tb_register_Click"/>
         </Canvas>
     </Viewbox>

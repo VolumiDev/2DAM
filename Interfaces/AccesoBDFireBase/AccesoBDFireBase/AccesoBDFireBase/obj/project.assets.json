@@ -391,19 +391,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alumno\\.nuget\\packages\\": {}
+    "C:\\Users\\diego\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase.csproj",
       "projectName": "AccesoBDFireBase",
-      "projectPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase.csproj",
-      "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\obj\\",
+      "projectPath": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -411,7 +416,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -27,6 +27,7 @@ namespace Tema5Prueba1
 
         private void onClick(object sender, RoutedEventArgs e)
         {
+            //VALIDAMOS QUE NO ESTEN VACIOS LOS CAMPOS
             if(String.IsNullOrEmpty(tb_user.Text) || String.IsNullOrEmpty(tb_pass.Password)){
                 MessageBox.Show("Rellena todos los campos");
             }
@@ -40,6 +41,8 @@ namespace Tema5Prueba1
                 
             }
         }
+
+        //HACEMOS LA INSERCION DEL USUARIO QUE INTRODUCE LOS DATOS EN LA BASE DE DATOS DE FIREBASE
         private async void userInsert(User u)
         {
             DataBase db = new DataBase();
