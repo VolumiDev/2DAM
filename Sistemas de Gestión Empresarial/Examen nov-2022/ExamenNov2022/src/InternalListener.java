@@ -37,7 +37,7 @@ public class InternalListener implements ActionListener {
 			break;
 		case "search":
 			try {
-				userQuery();
+				setUserInfo();
 			} catch (ClassNotFoundException | SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -220,6 +220,7 @@ public class InternalListener implements ActionListener {
 		
 		
 	
+		//MOSTRAMOS LA PUNTUACION FINAL QUE HA OBTENIDO EL JUGADOR
 		private void finalScore() {
 			// TODO Auto-generated method stub
 			double finalScore = response1() + response2() + response3() + response4();
@@ -227,53 +228,52 @@ public class InternalListener implements ActionListener {
 		
 		}
 		
-		//BUSCAMOS EL USUARIO EN LA BD
-		private void userQuery() throws ClassNotFoundException, SQLException {
-			// TODO Auto-generated method stub
-			String user = JOptionPane.showInputDialog(iFrame, "Introduce el nobre de Usuario");
+		//RECOGEMOS LOS DATOS DEL USUARIO E INSTANCIAMOS UN OBJETO
+		private void setUserInfo() throws ClassNotFoundException, SQLException {
+			String sex;
+			if(iFrame.getRbMan().isSelected() == true) {
+				sex = "Hombre";
+			}else {
+				sex = "Mujer";
+			}
+			User u = new User(iFrame.getTfPersonalData()[0].getText(), 
+					iFrame.getTfPersonalData()[1].getText(), 
+					sex, 
+					response1(), 
+					response2(), 
+					response3(), 
+					response4(),
+					response1()+response2()+response3()+response4());
 			
-			Conect con = new Conect();
-			String sql = "select * from resultados where nombre like '" + user + "'";
-			ResultSet rs =  con.query(sql);
-			if(rs.isBeforeFirst()) {
-				while(rs.next()) {
-					iFrame.getTfPersonalData()[0].setText(rs.getString(1));
-					iFrame.getTfPersonalData()[1].setText(rs.getString(2));
-				}
+			
+			
+		}
+		
+		//VALIDAMOS SI EL USUARIO EXISTE YA EN LA BASE DE DATOS O NO
+		private boolean userExist(User u) throws ClassNotFoundException, SQLException {
+			boolean flag;
+			ResultSet rs = u.getUser(u.getName());
+			if(rs == null) {
+				flag = false;
 			}else {
-				JOptionPane.showMessageDialog(iFrame, "No hay ningun usuario con esos datos");
+				flag = true;
 			}
+			return flag;
+		}
+		
+		//REGISTRAMOS AL USUARIO O NO DEPENDIENDO DE SI ESTA O NO EN LA BD
+		private void userValidation() throws ClassNotFoundException, SQLException {
+			User u = new User();
+			if(userExist(u)) {
+				u.userUpdate(u.getTries(), u.getQ1(), u.getQ2(), u.getQ3(), u.getQ4(), u.getScore());					
+				JOptionPane.showMessageDialog(iFrame, "Usuario existente, actualizando datos");
+				iFrame.settingUserFields(u);
+			}else {
+				JOptionPane.showMessageDialog(iFrame, "No existe el user, lo damos de alta");
+				u.insertNewUser(iFrame);
+			}			
 		}
 		
 		
 		
-		//HACEMOS LA AUTENTICACION DEL USUARIO Y SI NO EXISTE LO INSERTAMOS
-		private void autentication() throws ClassNotFoundException, SQLException {
-			Tools t = new Tools();
-			ResultSet user = t.getUser(iFrame.getTfPersonalData()[0].getText());
-			if(user == null) {
-				String name = iFrame.getTfPersonalData()[0].getText();
-				String date = iFrame.getTfPersonalData()[1].getText();
-				String sex;
-				if(iFrame.getRbMan().isSelected()==true) {
-					sex = "Hombre";
-				}else {
-					sex = "Mujer";
-				}
-				double q1 = response1();
-				double q2 = response2();
-				double q3 = response3();
-				double q4 = response4();
-				double score = q1+q2+q3+q4;
-				int tries = 0;				
-				t.insertNewUser(iFrame, name, date, sex, q1, q2, q3, q4, score, tries);;
-			}else {
-				if(t.numTries(iFrame.getTfPersonalData()[0].getText()) < 3) {
-					//TENEMOS QUE HACER LAS INSERCCIONES.
-				}
-			}
-		}
-		
-		
-
 }

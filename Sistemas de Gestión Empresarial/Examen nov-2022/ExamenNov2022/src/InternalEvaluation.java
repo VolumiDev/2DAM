@@ -282,6 +282,17 @@ public class InternalEvaluation extends JInternalFrame{
 		jlQuestion4.setBackground(Color.PINK);
 	}
 	
+	//SETEAMOS LOS CAMPOS CON LOS DATOS DEL USER
+	public void settingUserFields(User u) {
+		tfPersonalData[0].setText(u.getName());
+		tfPersonalData[1].setText(u.getDate());
+		if(u.getSex().equalsIgnoreCase("Hombre")) {
+			rbMan.setSelected(true);
+		}else {
+			rbWomen.setSelected(true);
+		}
+	}
+	
 	
 	public JLabel getTitVentana() {
 		return titVentana;
