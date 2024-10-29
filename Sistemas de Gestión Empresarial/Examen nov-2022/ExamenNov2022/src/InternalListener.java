@@ -31,13 +31,52 @@ public class InternalListener implements ActionListener {
 		
 		switch (command) {
 		case "qualify":
-			if(emptyValidate() == false && dateValidator() == false) {
-				finalScore();
+			User u = null;
+			try {
+				u = u.getUserData(iFrame.getTfPersonalData()[0].getText());
+			} catch (ClassNotFoundException | SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			if(u.getTries() < 3) {
+				if(emptyValidate() == false && dateValidator() == false) {
+					finalScore(u);
+					try {
+						u.userUpdate();
+					} catch (ClassNotFoundException | SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				}	
+			}else {
+				JOptionPane.showMessageDialog(iFrame, "Ha alcanzado el numero maximo de intentos");
 			}
 			break;
 		case "search":
+			
+			User t = new User();
 			try {
-				setUserInfo();
+				if(searchUser(t)) {
+					//SI EEXISTE YA TIENE COMPLETO AL MENOS UN INTENTO, SETEAMOS LA INFO Y VALIDAMOS LOS INTENTOS
+					t = t.getUserData(iFrame.getTfPersonalData()[0].getText());
+					//MOSTRAMOS LA INFO EN LOS TEXTFIELD
+					showInfoTextFields(t);
+				}else {
+					//VALIDAMOS QUE NO ESTE VACIO NINGUN CAMPO DE DATOS
+					if(emptyDataValidator() == false) {
+						String sex;
+						if(iFrame.getRbMan().isSelected()) {
+							sex = "Hombre";
+						}else {
+							sex = "Mujer";
+						}
+						// GENERAMOS EL NUEVO USER CON SUS DATOS
+						t = new User(iFrame.getTfPersonalData()[0].getText(), iFrame.getTfPersonalData()[1].getText(), sex);
+						t.insertNewUser(iFrame);
+					}else {
+						JOptionPane.showMessageDialog(iFrame, "No pueden quedar campos vacio en los datos personales");
+					}
+				}
 			} catch (ClassNotFoundException | SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -46,6 +85,27 @@ public class InternalListener implements ActionListener {
 		}
 	}
 	
+	//MOSTRAMOS LA INFO DEL USUARIO EN LOS TEXT FIELD
+	private void showInfoTextFields(User u) {
+		iFrame.getTfPersonalData()[0].setText(u.getName());
+		iFrame.getTfPersonalData()[1].setText(u.getDate());
+		if(u.getSex().equalsIgnoreCase("Hombre")) {
+			iFrame.getRbMan().setSelected(true);
+		}else {
+			iFrame.getRbWomen().setSelected(true);
+		}
+	}
+	
+	//DEVUELVE UN BOOLEANO EN TRUE SI EXISTE EL USUARIO O FALSE SI NO EXISTE
+	private boolean searchUser(User t) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		t = t.getUserData(iFrame.getTfPersonalData()[0].getText());
+		if(t.getName() != null) {
+			return true;
+		}else {
+			return false;			
+		}
+	}
 	//VALIDAMOS QUE TODOS LOS CAMPOS ESTE RELLENOS CORRECTAMENTE
 	private boolean emptyValidate() {
 		// TODO Auto-generated method stub
@@ -221,39 +281,38 @@ public class InternalListener implements ActionListener {
 		
 	
 		//MOSTRAMOS LA PUNTUACION FINAL QUE HA OBTENIDO EL JUGADOR
-		private void finalScore() {
+		private void finalScore(User u) {
 			// TODO Auto-generated method stub
 			double finalScore = response1() + response2() + response3() + response4();
-			JOptionPane.showMessageDialog(iFrame, "El resultado obtenido por " + iFrame.getTfPersonalData()[0].getText() + " es de " + finalScore + "."  );
-		
+			u.setQ1(response1());
+			u.setQ2(response2());
+			u.setQ3(response3());
+			u.setQ4(response4());
+			u.setScore(finalScore);
+			u.setTries(u.getTries()+1);
+			JOptionPane.showMessageDialog(iFrame, "El resultado obtenido por " + iFrame.getTfPersonalData()[0].getText() + " es de " + finalScore + "." );
 		}
 		
 		//RECOGEMOS LOS DATOS DEL USUARIO E INSTANCIAMOS UN OBJETO
 		private void setUserInfo() throws ClassNotFoundException, SQLException {
-			String sex;
-			if(iFrame.getRbMan().isSelected() == true) {
-				sex = "Hombre";
-			}else {
-				sex = "Mujer";
+			if(emptyDataValidator() == false) {
+				String sex;
+				if(iFrame.getRbMan().isSelected() == true) {
+					sex = "Hombre";
+				}else {
+					sex = "Mujer";
+				}
+				User u = new User(iFrame.getTfPersonalData()[0].getText(), 
+						iFrame.getTfPersonalData()[1].getText(), 
+						sex);
 			}
-			User u = new User(iFrame.getTfPersonalData()[0].getText(), 
-					iFrame.getTfPersonalData()[1].getText(), 
-					sex, 
-					response1(), 
-					response2(), 
-					response3(), 
-					response4(),
-					response1()+response2()+response3()+response4());
-			
-			
-			
 		}
 		
 		//VALIDAMOS SI EL USUARIO EXISTE YA EN LA BASE DE DATOS O NO
 		private boolean userExist(User u) throws ClassNotFoundException, SQLException {
 			boolean flag;
-			ResultSet rs = u.getUser(u.getName());
-			if(rs == null) {
+			u = u.getUserData(u.getName());
+			if(u.getName() == null) {
 				flag = false;
 			}else {
 				flag = true;
@@ -261,19 +320,39 @@ public class InternalListener implements ActionListener {
 			return flag;
 		}
 		
-		//REGISTRAMOS AL USUARIO O NO DEPENDIENDO DE SI ESTA O NO EN LA BD
-		private void userValidation() throws ClassNotFoundException, SQLException {
-			User u = new User();
-			if(userExist(u)) {
-				u.userUpdate(u.getTries(), u.getQ1(), u.getQ2(), u.getQ3(), u.getQ4(), u.getScore());					
-				JOptionPane.showMessageDialog(iFrame, "Usuario existente, actualizando datos");
-				iFrame.settingUserFields(u);
-			}else {
-				JOptionPane.showMessageDialog(iFrame, "No existe el user, lo damos de alta");
-				u.insertNewUser(iFrame);
-			}			
-		}
+//		//REGISTRAMOS AL USUARIO O NO DEPENDIENDO DE SI ESTA O NO EN LA BD
+//		private void userValidation() throws ClassNotFoundException, SQLException {
+//			User u = new User();
+//			if(userExist(u)) {
+//				u.userUpdate(u.getTries(), u.getQ1(), u.getQ2(), u.getQ3(), u.getQ4(), u.getScore());					
+//				JOptionPane.showMessageDialog(iFrame, "Usuario existente, actualizando datos");
+//				iFrame.settingUserFields(u);
+//			}else {
+//				JOptionPane.showMessageDialog(iFrame, "No existe el user, lo damos de alta");
+//				u.insertNewUser(iFrame);
+//			}			
+//		}
 		
+		private boolean emptyDataValidator() {
+			// TODO Auto-generated method stub
+			boolean empty = false;
+			boolean checkFlag = false;
+			//VALIDAMOS LOS TEXTFIELD
+			JTextField[] txt = iFrame.getTfPersonalData();
+			for (int i = 0; i < txt.length && empty == false; i++) {
+				if(txt[i].getText().isBlank()) {
+					empty = true;
+				}
+			}
+			
+			//VALIDAMOS LOS RADIO BUTTON
+			if(!empty) {
+				if(!iFrame.getRbMan().isSelected() && !iFrame.getRbWomen().isSelected()) {
+					empty = true;
+				}	
+			}
+			return empty;
+		}
 		
 		
 }

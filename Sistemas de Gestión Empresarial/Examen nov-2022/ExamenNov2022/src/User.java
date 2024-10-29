@@ -21,21 +21,37 @@ public class User {
 		this.name = name;
 		this.date = date;
 		this.sex = sex;
-		this.q1 = q1;
-		this.q2 = q2;
-		this.q3 = q3;
-		this.q4 = q4;
-		this.score = score;
-		this.tries = this.numTries(name);
+		this.q1 = 0;
+		this.q2 = 0;
+		this.q3 = 0;
+		this.q4 = 0;
+		this.score = 0;
+		this.tries = 0;
 	}
 	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
 
+	public User(String name, String date, String sex) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.date = date;
+		this.sex = sex;
+		this.q1 = 0;
+		this.q2 = 0;
+		this.q3 = 0;
+		this.q4 = 0;
+		this.score = 0;
+		this.tries = 0;
+	}
+	
+	
+	
+
 	public void insertNewUser(JInternalFrame internalW) throws ClassNotFoundException, SQLException {
 		Conect con = new Conect();
-		String sql = "INSERT into resultado VALUES ('"+this.name+"', '"+this.date+"', '"+this.sex+"', "+this.q1+", "+this.q2+", "+this.q3+", "+this.q4+", "+this.score+", "+this.tries+")";
+		String sql = "INSERT into resultados VALUES ('"+this.name+"', '"+this.date+"', '"+this.sex+"', "+this.q1+", "+this.q2+", "+this.q3+", "+this.q4+", "+this.score+", "+this.tries+")";
 		if(con.update(sql) == 1) {
 			JOptionPane.showMessageDialog(internalW, "Usuario insertado");
 		}
@@ -54,7 +70,7 @@ public class User {
 		return tries;
 	}
 	
-	public void userUpdate(int tries, double q1, double q2, double q3, double q4, double score) throws ClassNotFoundException, SQLException {
+	public void userUpdate() throws ClassNotFoundException, SQLException {
 		Conect c = new  Conect();
 		
 		String sql= "update resultados set Intentos = "+tries+", Pregunta1 = "+q1+", Pregunta2 = "+q2+", Pregunta3 = "+q3+", Pregunta4 = "+q4+", Score = "+score;
@@ -62,14 +78,27 @@ public class User {
 		c.close();
 	}
 	
-	public ResultSet getUser(String name) throws ClassNotFoundException, SQLException {
-		String sql = "SELECT nombre from resultados where nombre like '"+name+"'";
-		Conect con = new Conect();
-		ResultSet rs = con.query(sql);
-		con.close();
-		return rs;
-	}
 	
+	public User getUserData(String name) throws ClassNotFoundException, SQLException {
+		
+		String sql = "SELECT * from resultados where nombre like '"+name+"'";
+		Conect con = new Conect();
+		User u = new User();
+		ResultSet rs = con.query(sql);
+		while(rs.next()) {
+			this.name = rs.getString(1);
+			this.date = rs.getString(2);
+			this.sex = rs.getString(3);
+			this.q1 = rs.getDouble(4);
+			this.q2 = rs.getDouble(5);
+			this.q3 = rs.getDouble(6);
+			this.q4 = rs.getDouble(7);
+			this.score = rs.getDouble(8);
+			this.tries = rs.getInt(9);
+		}
+		con.close();
+		return u;
+	}
 	
 	
 	
