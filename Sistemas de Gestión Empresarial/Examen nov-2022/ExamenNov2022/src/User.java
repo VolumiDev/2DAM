@@ -72,8 +72,7 @@ public class User {
 	
 	public void userUpdate() throws ClassNotFoundException, SQLException {
 		Conect c = new  Conect();
-		
-		String sql= "update resultados set Intentos = "+tries+", Pregunta1 = "+q1+", Pregunta2 = "+q2+", Pregunta3 = "+q3+", Pregunta4 = "+q4+", Score = "+score;
+		String sql= "update resultados set Intentos = "+tries+", Pregunta1 = "+q1+", Pregunta2 = "+q2+", Pregunta3 = "+q3+", Pregunta4 = "+q4+", Puntos = "+score+" where Nombre like '"+this.name+"'";
 		c.update(sql);
 		c.close();
 	}

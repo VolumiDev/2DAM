@@ -19,7 +19,6 @@ public class HiloRunnable implements Runnable{
     public void run() {
         int sum = 0;
         long initTime = System.currentTimeMillis();
-        System.out.println(initTime);
         for (int i = posInit; i < posFin ; i++) {
             sum += numArr[i];
         }

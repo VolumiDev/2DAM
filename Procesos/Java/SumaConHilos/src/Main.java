@@ -7,9 +7,9 @@ public class Main {
 
 
         HiloRunnable th1 = new HiloRunnable("primero ",arrNum, 0, 250000);
-        HiloRunnable th2 = new HiloRunnable("primero ",arrNum, 250000, 500000);
-        HiloRunnable th3 = new HiloRunnable("primero ",arrNum, 500000, 750000);
-        HiloRunnable th4 = new HiloRunnable("primero ",arrNum, 750000, 1000000);
+        HiloRunnable th2 = new HiloRunnable("segundo ",arrNum, 250000, 500000);
+        HiloRunnable th3 = new HiloRunnable("tercero ",arrNum, 500000, 750000);
+        HiloRunnable th4 = new HiloRunnable("cuarto ",arrNum, 750000, 1000000);
 
 
 
