@@ -21,6 +21,10 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
 
     private ImageView[] arrImgV;
 
+    float touchX, touchY, originX, originY;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,27 +47,65 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
         switch (event.getAction()){
             //EVENTO DE APRETAR Y MANTENER
             case MotionEvent.ACTION_DOWN:
-                Toast.makeText(this, "CLIC" +v.getId(), Toast.LENGTH_SHORT).show();
+                v.bringToFront();
                 Log.i("Volumi", "action down");
-                ClipData data = ClipData.newPlainText("","");
-                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(v);
-                v.startDragAndDrop(data, shadowBuilder, v, 0);
-                break;
-            //EVENTO DE SAOLTAR
+                touchX = event.getRawX() - v.getX();
+                touchY = event.getRawY() - v.getY();
+                originX = v.getX();
+                originY = v.getY();
+
+
+
+//                ClipData data = ClipData.newPlainText("","");
+//                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(v);
+//                v.startDragAndDrop(data, shadowBuilder, v, 0);
+            //EVENTO DE SOLTAR
             case MotionEvent.ACTION_MOVE:
-                Toast.makeText(this, "CLIC", Toast.LENGTH_SHORT).show();
-                Log.i("Volumi", "action up");
-                ImageView imageViewSeleccionada = (ImageView) v;
-                ImageView target = getTargetImageView(imageViewSeleccionada);
-                if (target != null){
-                    if(compararImagesView(imageViewSeleccionada.getDrawable(), target.getDrawable())){
-                        imageViewSeleccionada.setVisibility(View.GONE);
-                        target.setVisibility(View.GONE);
+                //CAPTURAMOS LA POSICION DE LA VISTA
+                float newX = event.getRawX() - touchX;
+                float newY = event.getRawY() - touchY;
+
+                //LIMITAMOS EL MOVIMIENTO DENTRO DEL PADRE
+                View parent = (View) v.getParent();
+                int parentWith = parent.getWidth();
+                int parentHeight = parent.getHeight();
+
+                newX = Math.max(0, Math.min(newX, parentWith - v.getWidth()));
+                newY = Math.max(0, Math.min(newY, parentHeight - v.getHeight()));
+
+                v.setX(newX);
+                v.setY(newY);
+                return true;
+            case MotionEvent.ACTION_UP:
+                ImageView targetIv = getTargetImageView((ImageView) v);
+                if(targetIv != null){
+                    if(compararImagesView(((ImageView) v).getDrawable(), targetIv.getDrawable())){
+                        v.setVisibility(View.GONE);
+                        targetIv.setVisibility(View.GONE);
                     }else{
-                        Toast.makeText(this, "Las imagenes no coinciden", Toast.LENGTH_SHORT).show();
+                        v.setX(originX);
+                        v.setY(originY);
                     }
+                } else {
+                    v.setX(originX);
+                    v.setY(originY);
                 }
-                break;
+                return true;
+
+
+//                Toast.makeText(this, "CLIC", Toast.LENGTH_SHORT).show();
+//                Log.i("Volumi", "action up");
+//                ImageView imageViewSeleccionada = (ImageView) v;
+//                ImageView target = getTargetImageView(imageViewSeleccionada);
+//                if (target != null){
+//                    if(compararImagesView(imageViewSeleccionada.getDrawable(), target.getDrawable())){
+//                        imageViewSeleccionada.setVisibility(View.GONE);
+//                        target.setVisibility(View.GONE);
+//                    }else{
+//                        Toast.makeText(this, "Las imagenes no coinciden", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//                break;
         }
 
         return false;
