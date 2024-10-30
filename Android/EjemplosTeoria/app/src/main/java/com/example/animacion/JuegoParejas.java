@@ -19,8 +19,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class JuegoParejas extends AppCompatActivity implements View.OnTouchListener{
 
+    //ARRAY CON LAS IMAGENES QUE CONTENEMOS EN LA VISTA
     private ImageView[] arrImgV;
-
+    // VARIABLES DONDE ALMACENAREMOS LAS CORDENADAS DE LA VISTA
     float touchX, touchY, originX, originY;
 
 
@@ -47,10 +48,12 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
         switch (event.getAction()){
             //EVENTO DE APRETAR Y MANTENER
             case MotionEvent.ACTION_DOWN:
+                //TRAEMOS AL FRENTE LA IMAGEN PARA QUE VAYA POR ENCIMA DE LAS DEMAS
                 v.bringToFront();
-                Log.i("Volumi", "action down");
+                //CAPTURAMOS LAS COORDENADAS DEL TOUCH, EXACTAMENTE DENTRO DE LA VISTA QUE GENERO EL EVENTO
                 touchX = event.getRawX() - v.getX();
                 touchY = event.getRawY() - v.getY();
+                //CAPTURAMOS LAS COORDENADAS DE LA IMAGEN SOBRE LA QUE HACEMOS TOUCH
                 originX = v.getX();
                 originY = v.getY();
 
@@ -59,7 +62,7 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
 //                ClipData data = ClipData.newPlainText("","");
 //                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(v);
 //                v.startDragAndDrop(data, shadowBuilder, v, 0);
-            //EVENTO DE SOLTAR
+            //EVENTO DE MOVER
             case MotionEvent.ACTION_MOVE:
                 //CAPTURAMOS LA POSICION DE LA VISTA
                 float newX = event.getRawX() - touchX;
@@ -72,17 +75,21 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
 
                 newX = Math.max(0, Math.min(newX, parentWith - v.getWidth()));
                 newY = Math.max(0, Math.min(newY, parentHeight - v.getHeight()));
-
+                //SETEAMOS LAS NUEVAS COORDENADAS DE LA IMAGEN
                 v.setX(newX);
                 v.setY(newY);
                 return true;
+                // EVENTO DE SOLTAR EL BOTON
             case MotionEvent.ACTION_UP:
+                //CONVERTIMOS EN OBJETIVO LA IMAGEN SOBRE LA QUE DEJAMOS CAER LA IMAGEN ARRASTRADA
                 ImageView targetIv = getTargetImageView((ImageView) v);
                 if(targetIv != null){
+                    //COMPARAMOS LOS DRAWABLES Y LOS HACEMOS DESPARECER SI SON IGUALES.
                     if(compararImagesView(((ImageView) v).getDrawable(), targetIv.getDrawable())){
                         v.setVisibility(View.GONE);
                         targetIv.setVisibility(View.GONE);
                     }else{
+                        //SI NO SON IGUALES DEVOLVEMOS LA IMAGEN A SU POSICION INICIAL
                         v.setX(originX);
                         v.setY(originY);
                     }
@@ -91,35 +98,25 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
                     v.setY(originY);
                 }
                 return true;
-
-
-//                Toast.makeText(this, "CLIC", Toast.LENGTH_SHORT).show();
-//                Log.i("Volumi", "action up");
-//                ImageView imageViewSeleccionada = (ImageView) v;
-//                ImageView target = getTargetImageView(imageViewSeleccionada);
-//                if (target != null){
-//                    if(compararImagesView(imageViewSeleccionada.getDrawable(), target.getDrawable())){
-//                        imageViewSeleccionada.setVisibility(View.GONE);
-//                        target.setVisibility(View.GONE);
-//                    }else{
-//                        Toast.makeText(this, "Las imagenes no coinciden", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//                break;
         }
-
         return false;
     }
 
 
    public ImageView getTargetImageView(ImageView dragedImageView){
+        //GENERAMOS UN RECTANGULO
        Rect dragRect = new Rect();
+       //ASIGNAMOS EL EL RECTANGULO DE LA IMAGEN ARRASTRADA A DICHO RECTANGULO
        dragedImageView.getHitRect(dragRect);
-
+        //RECORREMOS EL ARRAY DE IMAGENES
        for (ImageView iv : arrImgV){
+           //SI LA VISTA ES DISTINTA QUE LA QUE ARRASTRAMOS Y ESTA EN VISIBLE SERA TRUE
            if(iv != dragedImageView && iv.getVisibility() == View.VISIBLE){
+               //GENERAMOS UN NUEVO AREA
                Rect targetRect = new Rect();
+               //ASIGNAMOS EL AREA A LA IMAGEN QUE ESTAMOS COMPROBANDO
                iv.getHitRect(targetRect);
+               //SI AMBAS AREAS SE CORTAN EN ALGUN PUNTO RETORNAMOS LA VISTA PARA TRATAR CON ELLA.
                if(Rect.intersects(dragRect,targetRect)){
                    return iv;
                }
@@ -127,7 +124,7 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
        }
        return null;
    }
-
+//INICIALIZAMOS LAS IMAGENES DENTRO DEL ARRAY CON LAS ID Y LOS EVENTOS
    private void inicializarImagesView(){
         arrImgV = new ImageView[9];
        for (int i = 0; i < arrImgV.length; i++) {
@@ -137,7 +134,7 @@ public class JuegoParejas extends AppCompatActivity implements View.OnTouchListe
            arrImgV[i].setOnTouchListener(this);
        }
    }
-
+//COMPARAMOS DOS DRAWABLES SI SON DISTINTOS DE NULL
    private boolean compararImagesView(Drawable drawable1, Drawable drawable2){
        Log.i("Volumi", "drawablw 1: "+drawable1);
        Log.i("Volumi", "drawablw 1: "+drawable2);

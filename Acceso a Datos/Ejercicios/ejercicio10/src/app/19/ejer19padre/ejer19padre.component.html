@@ -1,4 +1,9 @@
-<div *ngFor="let nombre of arrayNombre; let i = index">
-  <p>{{nombre}} Precio: {{arrayPrecio[i]}} Stock: {{arrayStock [i]}}<img (click)="comprar(i)" width="20px" src="/imagen/carrito.png"> </p>
+<div style="display: flex; gap: 10px;">
+<div style="height: 150px; width: 100px; background-color: coral; text-align: center;" *ngFor="let nombre of arrayNombre; let i = index">
+  <p>{{nombre}}</p>
+  <p>Precio: {{arrayPrecio[i]}} €</p>
+  <p>Stock: {{arrayStock [i]}}</p>
+  <img (click)="comprar(i)"  width="20px" src="/imagen/carrito.png">
 </div>
-<app-ejer19hijo></app-ejer19hijo>
+</div>
+<app-ejer19hijo [total]="totalImporte" [cantidad]="totalCantidad"></app-ejer19hijo>

@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\EjemploTrabajoPDF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDEBAB1-3FE8-4FFC-8B67-99C4C96D911D}|EjemploTrabajoPDF\\EjemploTrabajoPDF.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\ejemplotrabajopdf\\ejemplotrabajopdf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDEBAB1-3FE8-4FFC-8B67-99C4C96D911D}|EjemploTrabajoPDF\\EjemploTrabajoPDF.csproj|solutionrelative:ejemplotrabajopdf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alumno\\Downloads\\tema5prueba1-firebase-adminsdk-zljlk-1d56d97aa1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDEBAB1-3FE8-4FFC-8B67-99C4C96D911D}|EjemploTrabajoPDF\\EjemploTrabajoPDF.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\ejemplotrabajopdf\\ejemplotrabajopdf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7FDEBAB1-3FE8-4FFC-8B67-99C4C96D911D}|EjemploTrabajoPDF\\EjemploTrabajoPDF.csproj|solutionrelative:ejemplotrabajopdf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 211,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "tema5prueba1-firebase-adminsdk-zljlk-1d56d97aa1.json",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\tema5prueba1-firebase-adminsdk-zljlk-1d56d97aa1.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\tema5prueba1-firebase-adminsdk-zljlk-1d56d97aa1.json",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\tema5prueba1-firebase-adminsdk-zljlk-1d56d97aa1.json",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\tema5prueba1-firebase-adminsdk-zljlk-1d56d97aa1.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-30T20:10:53.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\EjemploTrabajoPDF\\EjemploTrabajoPDF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "EjemploTrabajoPDF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\EjemploTrabajoPDF\\EjemploTrabajoPDF\\MainWindow.xaml",
+              "RelativeToolTip": "EjemploTrabajoPDF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-30T18:44:31.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\EjemploTrabajoPDF\\EjemploTrabajoPDF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EjemploTrabajoPDF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\EjemploTrabajoPDF\\EjemploTrabajoPDF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "EjemploTrabajoPDF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAEAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T18:44:29.898Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

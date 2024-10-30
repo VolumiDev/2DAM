@@ -9,14 +9,8 @@ import { ChangeDetectorRef, Component, Input, SimpleChanges } from '@angular/cor
 })
 export class Ejer19hijoComponent {
 
-  total: number = 0;
-  cantidad: number = 0;
+  @Input() total: number = 0;
+  @Input() cantidad: number = 0;
 
- 
-
-  acumular(valor: number){
-    this.total+=valor
-    this.cantidad++;
-  }
   
 }
