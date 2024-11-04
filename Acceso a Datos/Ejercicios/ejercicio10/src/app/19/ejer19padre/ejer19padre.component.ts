@@ -13,16 +13,21 @@ import { FormsModule } from '@angular/forms';
 })
 export class Ejer19padreComponent {
 
-  @Output() eventComprar: EventEmitter<number> = new EventEmitter<number>();
+  imgSrc: string = 'carrito.png';
+  totalImporte: number = 0;
+  unidades: number = 0;
 
-  imgSrc: string = 'carrito.png'
-  precioPadre: number = 0;
 
   arrayNombre: string[] = ['Cocacola', 'Fanta', 'Patatas', 'Ganchitos', 'Agua', 'Cerveza', 'Saladitos', 'Empanada', 'Sandwhich']
   arrayStock: number[] = [20,15, 10, 5, 10, 20, 40, 3, 10];
   arrayPrecio: number[] = [1.2, 1.2, 0.6, 0.5, 0.7, 1.2, 0.4, 5, 1.5];
 
-  comprar(index: number){
-    this.eventComprar.emit(this.arrayPrecio[index])
+  comprar(i: number){
+    if(this.arrayStock[i]>0){
+      this.arrayStock[i]--;
+      this.totalImporte+=this.arrayPrecio[i];
+      this.unidades++;
     }
+
+  }
 }
