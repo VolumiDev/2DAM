@@ -12,17 +12,22 @@ import { FormsModule } from '@angular/forms';
 })
 export class Ejer19padreComponent {
 
+<<<<<<< HEAD
   totalImporte: number= 0;
   totalCantidad: number = 0;
   
+=======
+  imgSrc: string = 'carrito.png';
+  totalImporte: number = 0;
+  unidades: number = 0;
+>>>>>>> 2bd398e1d85049210e48a530021f91a4f191f262
 
-  imgSrc: string = 'carrito.png'
-  precioPadre: number = 0;
 
   arrayNombre: string[] = ['Cocacola', 'Fanta', 'Patatas', 'Ganchitos', 'Agua', 'Cerveza', 'Saladitos', 'Empanada', 'Sandwhich']
   arrayStock: number[] = [20,15, 10, 5, 10, 20, 40, 3, 10];
   arrayPrecio: number[] = [1.2, 1.2, 0.6, 0.5, 0.7, 1.2, 0.4, 5, 1.5];
 
+<<<<<<< HEAD
   comprar(index: number){
     if(this.arrayStock[index] > 0){
       this.totalImporte += this.arrayPrecio[index];
@@ -31,4 +36,14 @@ export class Ejer19padreComponent {
     }
   }
  
+=======
+  comprar(i: number){
+    if(this.arrayStock[i]>0){
+      this.arrayStock[i]--;
+      this.totalImporte+=this.arrayPrecio[i];
+      this.unidades++;
+    }
+
+  }
+>>>>>>> 2bd398e1d85049210e48a530021f91a4f191f262
 }

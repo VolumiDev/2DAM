@@ -78,7 +78,7 @@ public class Escucha implements ActionListener {
 	
 	private void reservar() throws IOException {
 		
-		if(isVacios()) {
+		if(isVacios(vent.getAux1())) {
 			File res = new File("reserva.txt");
 			FileWriter fw = new FileWriter(res,true);
 			PrintWriter pw = new PrintWriter(fw);

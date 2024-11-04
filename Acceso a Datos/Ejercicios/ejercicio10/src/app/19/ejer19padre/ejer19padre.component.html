@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div style="display: flex; gap: 10px;">
 <div style="height: 150px; width: 100px; background-color: coral; text-align: center;" *ngFor="let nombre of arrayNombre; let i = index">
   <p>{{nombre}}</p>
@@ -7,3 +8,14 @@
 </div>
 </div>
 <app-ejer19hijo [total]="totalImporte" [cantidad]="totalCantidad"></app-ejer19hijo>
+=======
+<div style="display: flex; gap: 10px;text-align: center;">
+  <div  *ngFor="let nombre of arrayNombre; let i = index" style="background-color: coral;">
+    <p> {{ nombre }} </p>
+    <p>Precio: {{ arrayPrecio[i] }} €</p>
+    <p>Stock: {{ arrayStock[i] }} und.</p>
+    <img (click)="comprar(i)" width="20px" src="/imagen/carrito.png" />
+  </div>
+</div>
+<app-ejer19hijo [totalCarrito]="totalImporte" [unidadesCarrito]="unidades"></app-ejer19hijo>
+>>>>>>> 2bd398e1d85049210e48a530021f91a4f191f262
