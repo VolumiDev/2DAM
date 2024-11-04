@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './externo.component.css'
 })
 export class ExternoComponent {
-  @ViewChild('containerExterno') containerExterno!: ElementRef;
   colorActual: string = 'red';
   colorInterno: string = "";
   visible: boolean = true;

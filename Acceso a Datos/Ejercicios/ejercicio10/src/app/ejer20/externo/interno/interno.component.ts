@@ -11,7 +11,7 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
 export class InternoComponent {
   @Input() color: string ="";
   @Output() colorCambiado=new EventEmitter<string>();
-  visible: boolean = false;
+  visible: boolean = true;
 
   actualizarColor(nuevoColor: string){
     this.colorCambiado.emit(this.color);
