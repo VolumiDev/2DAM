@@ -1,6 +1,6 @@
-<div style="width: 80px; height: 80px; background-color: blue;" [style.background-color]="colorInterno">
-  <div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="width: 80px; height: 80px; background-color: blue;" [style.background-color]="color">
+  <div *ngIf="visible" style="display: flex; flex-direction: column; gap: 10px;">
     <input #inputInterno type="text" >
-    <button>Enviar</button>
+    <button (click)="actualizarColor(inputInterno.value)">Enviar</button>
   </div>
 </div>

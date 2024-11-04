@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-interno',
@@ -9,10 +9,18 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
   styleUrl: './interno.component.css'
 })
 export class InternoComponent {
-  @Input() colorRecibido="";
+  @Input() color: string ="";
+  @Output() colorCambiado=new EventEmitter<string>();
+  visible: boolean = false;
 
-  @ViewChild('inputInterno') inputExterno!: ElementRef;
-  colorInterno = 'orange'
+  actualizarColor(nuevoColor: string){
+    this.colorCambiado.emit(this.color);
+    this.color=nuevoColor;
+    this.visible=false;
+  }
 
+  ngOnChanges(){
+    this.visible = true;
+  }
 
 }

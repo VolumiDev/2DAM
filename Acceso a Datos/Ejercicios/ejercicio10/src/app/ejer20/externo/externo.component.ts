@@ -12,13 +12,17 @@ import { CommonModule } from '@angular/common';
 export class ExternoComponent {
   @ViewChild('containerExterno') containerExterno!: ElementRef;
   colorActual: string = 'red';
-  nuevoColor: string = "";
+  colorInterno: string = "";
   visible: boolean = true;
-  
-  envioPadreHijo(c: string){
-    this.colorActual = this.nuevoColor;
+
+  actualizarColor(c: string){
+    this.colorInterno = this.colorActual;
+    this.colorActual = c;
     this.visible = false;
   }
 
-
+  recibirColor(color: string){
+    this.colorActual = color;
+    this.visible = true;
+  }
 }
