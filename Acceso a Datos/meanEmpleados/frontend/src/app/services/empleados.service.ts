@@ -8,6 +8,7 @@ import { Empleado } from '../models/empleado';
 export class EmpleadosService {
 
   empleadoSeleccionado: Empleado;
+
   readonly URL = 'http://localhost:3000/api/empleados/';
   constructor(private http: HttpClient) {
     this.empleadoSeleccionado = new Empleado();

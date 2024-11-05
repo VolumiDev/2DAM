@@ -9,10 +9,12 @@ import { Component, EventEmitter, Input, Output, SimpleChange } from '@angular/c
 })
 export class HijoComponent {
 
-  @Input() numRecibido: string = "";
+  //clase : ChangeDetertorRef
+
+  @Input() numRecibido: number = 0;
   @Output() eventEmitter = new EventEmitter<number>();
 
-  numero: number = parseInt(this.numRecibido);
+  //numero: number = parseInt(this.numRecibido);
   numeroHijo: number = 0;
   isVisibleHijo: boolean = false;
   ListaNumeroHijo: number[] = [];

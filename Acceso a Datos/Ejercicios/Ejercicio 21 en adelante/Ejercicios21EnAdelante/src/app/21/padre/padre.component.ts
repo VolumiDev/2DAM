@@ -12,11 +12,11 @@ export class PadreComponent {
 
   listaNumerosPadre: number[] = [];
   isVisible: boolean = true;
-  numeroEnviamosHijo: string = "";
+  numeroEnviamosHijo: number = 0;
 
-  enviarNumeroAHijo(num: string){
-    this.numeroEnviamosHijo = num;
-    this.listaNumerosPadre.push(parseInt(num));
+  enviarNumeroAHijo(num: number){
+    this.listaNumerosPadre.push(num);
+    this.numeroEnviamosHijo = num + 1;
     this.isVisible=false;
   }
 }

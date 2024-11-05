@@ -11,4 +11,5 @@ import { EmpleadosComponent } from './components/empleados/empleados/empleados.c
 })
 export class AppComponent {
   title = 'frontend';
+  
 }

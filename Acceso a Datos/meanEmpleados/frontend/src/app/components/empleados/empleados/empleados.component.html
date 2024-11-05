@@ -1,10 +1,46 @@
 <div class="container"></div>
-    <div class="row">
-        <div class="col s5">
-            <form #empleadoForm="ngForm" (ngSubmit)="addEmployee()"></form>
-            <div class="card">
-                <div class="card-content">Conent</div>
+<div class="row">
+    <div class="col s5">
+        <div class="card">
+            <div class="card-content">
+                <form #empleadoForm="ngForm">
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="EmpleadosService.empleadoSeleccionado">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name="nombre" #nombre="ngModel"
+                                [(ngModel)]="EmpleadosService.empleadoSeleccionado.nombre"
+                                placeholder="Introduce tu nombre" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name="cargo" #cargo="ngModel"
+                                [(ngModel)]="EmpleadosService.empleadoSeleccionado.cargo"
+                                placeholder="Introduce tu cargo">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name="departamento" #departamento="ngModel"
+                                [(ngModel)]="EmpleadosService.empleadoSeleccionado.departamento"
+                                placeholder="Introduce tu departamento">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name="salario" #salario="ngModel"
+                                [(ngModel)]="EmpleadosService.empleadoSeleccionado.salario"
+                                placeholder="Introduce tu salario">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="col s7"></div>
     </div>
+</div>
+
+
+<div class="col s7"></div>
