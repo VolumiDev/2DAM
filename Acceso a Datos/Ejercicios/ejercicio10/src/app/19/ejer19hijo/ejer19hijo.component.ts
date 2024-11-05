@@ -9,7 +9,8 @@ import { ChangeDetectorRef, Component, Input, SimpleChanges } from '@angular/cor
 })
 export class Ejer19hijoComponent {
 
-@Input() totalCarrito: number = 0;
-@Input() unidadesCarrito: number = 0;
+  @Input() total: number = 0;
+  @Input() cantidad: number = 0;
 
+  
 }
