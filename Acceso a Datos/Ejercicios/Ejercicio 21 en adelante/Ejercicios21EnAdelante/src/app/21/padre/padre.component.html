@@ -1,0 +1,17 @@
+<div>
+  Padre
+  <div >
+    <input style="width: 30px;" #numeroPadre type="text" />
+    @if(isVisible){
+    }
+    <button (click)="enviarNumeroAHijo(numeroPadre.value)">Enviar</button>
+  </div>
+  <ul>
+    @for (number of listaNumerosPadre; track $index){
+    <li>{{ number }}</li>
+    }
+  </ul>
+</div>
+<div>
+  <app-hijo [numRecibido]="numeroEnviamosHijo"></app-hijo>
+</div>

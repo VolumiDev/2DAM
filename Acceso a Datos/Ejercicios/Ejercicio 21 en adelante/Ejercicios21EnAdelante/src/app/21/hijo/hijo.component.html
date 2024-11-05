@@ -1,0 +1,12 @@
+<div>
+  Hijo
+  <div >
+      <button (click)="enviarDatoAPadre(numero)">Enviar</button>
+    
+  </div>
+  <ul>
+    @for (number of ListaNumeroHijo; track $index){
+    <li>{{ number }}</li>
+    }
+  </ul>
+</div>
