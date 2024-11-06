@@ -1,0 +1,72 @@
+{
+  "Messages": {
+    "11715a1363634fcd9cd04e2bac2c21d1": {
+      "Date": "2024-10-28T00:00:00+01:00",
+      "IdMessage": "11715a1363634fcd9cd04e2bac2c21d1",
+      "Message": "es por la manañana",
+      "NameUser": "diego"
+    },
+    "528b76c2bc0c413992e34ea2f26b4fce": {
+      "Date": "2024-10-27T00:00:00+02:00",
+      "IdMessage": "528b76c2bc0c413992e34ea2f26b4fce",
+      "Message": "soy eren",
+      "NameUser": "eren"
+    },
+    "8ef4584bee264bedbad0cd21b0ff85f2": {
+      "Date": "2024-10-27T00:00:00+02:00",
+      "IdMessage": "8ef4584bee264bedbad0cd21b0ff85f2",
+      "Message": "soy Laia",
+      "NameUser": "laia"
+    },
+    "a78f5e8ab1904d019849aea2d89fd7aa": {
+      "Date": "2024-10-27T00:00:00+02:00",
+      "IdMessage": "a78f5e8ab1904d019849aea2d89fd7aa",
+      "Message": "soy Diego",
+      "NameUser": "diego"
+    },
+    "c8ba590220784525a5e9f1862604e69a": {
+      "Date": "2024-10-27T00:00:00+02:00",
+      "IdMessage": "c8ba590220784525a5e9f1862604e69a",
+      "Message": "Soy Laura",
+      "NameUser": "laura"
+    },
+    "f9826cb742184d238aaab5a0621a05de": {
+      "Date": "2024-10-28T00:00:00+01:00",
+      "IdMessage": "f9826cb742184d238aaab5a0621a05de",
+      "Message": "se ve ahora",
+      "NameUser": "diego"
+    }
+  },
+  "Users": {
+    "083e9a4b37d8439fadcd1768fc313201": {
+      "Id": "083e9a4b37d8439fadcd1768fc313201",
+      "Name": "q",
+      "Password": "q"
+    },
+    "2da01d3e5af442418fbbc5698648c529": {
+      "Id": "2da01d3e5af442418fbbc5698648c529",
+      "Name": "laura",
+      "Password": "1"
+    },
+    "3f83255b0855412e8750d16425e812a8": {
+      "Id": "3f83255b0855412e8750d16425e812a8",
+      "Name": "diego",
+      "Password": "1"
+    },
+    "96bcccf26e9a440bb1743d4622293e7a": {
+      "Id": "96bcccf26e9a440bb1743d4622293e7a",
+      "Name": "eren",
+      "Password": "1"
+    },
+    "aad1e122a66f44d5ae7ed6ea40be7c4b": {
+      "Id": "aad1e122a66f44d5ae7ed6ea40be7c4b",
+      "Name": "w",
+      "Password": "w"
+    },
+    "ffef1337e73c4702b8e533c838221a6f": {
+      "Id": "ffef1337e73c4702b8e533c838221a6f",
+      "Name": "laia",
+      "Password": "1"
+    }
+  }
+}

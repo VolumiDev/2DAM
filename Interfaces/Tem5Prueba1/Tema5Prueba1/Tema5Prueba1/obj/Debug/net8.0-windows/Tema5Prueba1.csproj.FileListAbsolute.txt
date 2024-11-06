@@ -97,3 +97,8 @@ C:\Users\diego\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\o
 C:\Users\diego\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\Tema5Prueba1.genruntimeconfig.cache
 C:\Users\diego\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\ref\Tema5Prueba1.dll
 C:\Users\diego\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\App.baml
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\bin\Debug\net8.0-windows\itextsharp.dll
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\MessageWindow.g.cs
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\App.baml
+C:\Users\Alumno\Documents\2DAM\Interfaces\Tem5Prueba1\Tema5Prueba1\Tema5Prueba1\obj\Debug\net8.0-windows\MessageWindow.baml

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\alumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\alumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\a\u00F1adircursoclases\\a\u00F1adircursoclases\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2178D7F9-A3BD-48D9-BBEA-AB89A664F94A}|A\u00F1adirCursoClases\\A\u00F1adirCursoClases.csproj|solutionrelative:a\u00F1adircursoclases\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Alumno.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\Alumno.cs",
               "RelativeDocumentMoniker": "A\u00F1adirCursoClases\\Alumno.cs",
@@ -43,7 +43,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Curso.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\Curso.cs",
               "RelativeDocumentMoniker": "A\u00F1adirCursoClases\\Curso.cs",
@@ -56,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "A\u00F1adirCursoClases\\MainWindow.xaml.cs",
@@ -69,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\A\u00F1adirCursoClases\\A\u00F1adirCursoClases\\MainWindow.xaml",
               "RelativeDocumentMoniker": "A\u00F1adirCursoClases\\MainWindow.xaml",

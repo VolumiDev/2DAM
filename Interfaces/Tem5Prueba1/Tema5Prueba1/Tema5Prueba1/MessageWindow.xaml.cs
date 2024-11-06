@@ -13,6 +13,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Paragraph = iTextSharp.text.Paragraph;
 
 namespace Tema5Prueba1
 {
@@ -80,6 +83,7 @@ namespace Tema5Prueba1
        
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            bool isTxt = false, isPdf=false;
             //VALIDAMOS SI ESTA SELECCIONADO LA OPCION DE MOSTRAR MENSAJES DE TODOS LOS USUARIOS
             if (cbGetMessaage != null && cbGetMessaage.IsChecked == true)
             {
@@ -103,6 +107,26 @@ namespace Tema5Prueba1
             if (cbSave != null && cbSave.IsChecked == true)
             {
                 SaveMessTxt();
+                isTxt = true;
+            }
+            if (cbSavePDF != null && cbSavePDF.IsChecked == true)
+            {
+                string path = setPathPDF();
+                savePDF(path);
+                isPdf = true; 
+            }
+            if (isPdf && isTxt)
+            {
+                MessageBox.Show("Fichero txt y pdf creados");
+            }
+            else if (isPdf)
+            {
+                MessageBox.Show("Fichero pdf creado");
+
+            }else if (isTxt)
+            {
+                MessageBox.Show("Fichero txt creado");
+
             }
         }
 
@@ -117,9 +141,38 @@ namespace Tema5Prueba1
             {
                 String path = saveFileDialog.FileName;
                 File.WriteAllText(path, showMessages.Text);
-                MessageBox.Show("Fichero Guradado.");
             }
         }
+        //METODO QUE RETORNA LA RUTA EN LA QUE QUEREMOS GUARDAR EL PDF
+        private string setPathPDF()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF files (*.pdf) | *.pdf | All Files (*.*)|*.*";
+            saveFileDialog.Title = "Guardar Mensajes en PdF";
+            String path = null;  
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                path = saveFileDialog.FileName;
+            }
+            return path;
+        }
+
+        //METODO QUE GUARDA EL PDF CON LOS MENSAJES
+        private void savePDF(string pathPDF)
+        {
+            using( FileStream fs = new FileStream(pathPDF, FileMode.Create))
+            {
+                Document doc = new Document();
+                PdfWriter.GetInstance(doc, fs);
+
+                doc.Open();
+                doc.NewPage();
+                doc.Add(new Paragraph(showMessages.Text));
+                doc.Close();
+            }
+        }
+
 
         //MOSTRAMOS TODOS LOS MENSAJES DE TODOS LOS USUARIOS
         private async void showAllMessAndUSers()

@@ -19,7 +19,9 @@
             <!--BOTON PARA HACER LA BUSQUEDA SEGUN LOS CRITERIOS ELEGIDOS-->
             <Button Name="btnSearch" Content="Buscar mensajes de esa fecha" Canvas.Left="183" Height="36" Width="217" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnSearch_Click" Canvas.Top="4"/>
             <!--SELECCIONABLE PARA GURADAR EN FICHERO-->
-            <CheckBox x:Name="cbSave" Content="Guardar Mensaje" Canvas.Left="624" Canvas.Top="77"/>
+            <CheckBox x:Name="cbSave" Content="Guardar Mensajes txt" Canvas.Left="624" Canvas.Top="77"/>
+
+            <CheckBox x:Name="cbSavePDF" Content="Guardar Mensajes pdf" Canvas.Left="624" Canvas.Top="55" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <!--SELECCIONABLE PARA MOSTRAR TODOS LOS MENSAJES Y USUARIOS-->
             <CheckBox x:Name="cbGetMessaage" Content="Ver Mensajes" Canvas.Left="624" Canvas.Top="99" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.538,0.196"/>
             <!--ETIQUETA Y COMBO BOX QUE MOSTRARA TODOS LOS USUARIOS QUE ENVIAN MENSAJES SI TENEMOS ELEGIDA LA OPCION ANTERIOR-->

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj": {}
+    "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj": {
+    "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj",
+        "projectUniqueName": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj",
         "projectName": "Tema5Prueba1",
-        "projectPath": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\obj\\",
+        "projectPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\Tema5Prueba1.csproj",
+        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\Tem5Prueba1\\Tema5Prueba1\\Tema5Prueba1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,6 +49,10 @@
             "FireSharp": {
               "target": "Package",
               "version": "[2.0.4, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.4, )"
             }
           },
           "imports": [
