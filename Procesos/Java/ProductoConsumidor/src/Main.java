@@ -9,9 +9,12 @@ public class Main {
 
 
         Thread hiloConsumidor = new Thread(new Consumidor(cesta), "consumidor");
+        Thread hiloConsumidor1 = new Thread(new Consumidor(cesta), "consumidor1");
         Thread hiloProductor = new Thread(new Productor(cesta), "productor");
+
 
         hiloProductor.start();
         hiloConsumidor.start();
+        hiloConsumidor1.start();
     }
 }
