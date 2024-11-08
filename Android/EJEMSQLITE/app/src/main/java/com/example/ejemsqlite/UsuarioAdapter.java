@@ -3,6 +3,7 @@ package com.example.ejemsqlite;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,12 @@ import java.util.List;
 
 public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder> {
     private final List<Usuario> usuariosList;
+    //ATRIBUTO EN EL QUE ASIGNAREMOS LA INTERFACE  EN LA QUE IMPLEMENTAMOS EL METODO
+    private OnItemClickListener onItemClickListener;
+
+    public interface OnItemClickListener{
+        void onItemClick(Usuario usuario);
+    }
 
     public UsuarioAdapter(List<Usuario> usuariosList) {
         this.usuariosList = usuariosList;
@@ -28,9 +35,10 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioV
 
     @Override
     public void onBindViewHolder(@NonNull UsuarioViewHolder holder, int position) {
-        Usuario user = usuariosList.get(position);
-        holder.tv_nombre.setText(user.getNombre());
-        holder.tv_telefono.setText(user.getTelefono());
+        Usuario usuario = usuariosList.get(position);
+        holder.tv_nombre.setText(usuario.getNombre());
+        holder.tv_telefono.setText(usuario.getTelefono());
+        holder.bind(usuario, onItemClickListener);
     }
 
 
@@ -38,6 +46,10 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioV
     @Override
     public int getItemCount() {
         return usuariosList.size();
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.onItemClickListener= listener;
     }
 
     // ES LA CLASE ENCARGADA DE PINTAR CADA ITEM CARD. LE TENEMOS QUE PASAR CADA UNO DE LOS ELEMENTOS
@@ -48,6 +60,12 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioV
             super(itemView);
             tv_nombre = itemView.findViewById(R.id.tvCard_nombre);
             tv_telefono = itemView.findViewById(R.id.tvCard_telefono);
+        }
+
+        public void bind(final Usuario usuario, final OnItemClickListener listener){
+            tv_nombre.setText(usuario.getNombre());
+            tv_telefono.setText(usuario.getTelefono());
+            itemView.setOnClickListener(v -> listener.onItemClick(usuario));
         }
     }
 }
