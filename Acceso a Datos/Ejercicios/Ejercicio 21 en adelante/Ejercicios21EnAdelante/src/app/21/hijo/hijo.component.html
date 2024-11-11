@@ -1,12 +1,13 @@
 <div>
   Hijo
   <div >
-      <button (click)="enviarDatoAPadre(numero)">Enviar</button>
-    
+      <button
+        (click)="enviamosAlPadre()">Enviar</button>
   </div>
   <ul>
-    @for (number of ListaNumeroHijo; track $index){
-    <li>{{ number }}</li>
-    }
+    <li 
+      *ngFor="let item of numerosHijo">
+      {{ item }}
+    </li>
   </ul>
 </div>

@@ -1,17 +1,26 @@
 <div>
   Padre
-  <div >
-    <input style="width: 30px;" #numeroPadre type="number" />
-    @if(isVisible){
-    }
-    <button (click)="enviarNumeroAHijo(numeroPadre.value)">Enviar</button>
+  <div>
+    <form action="">
+      <input
+        *ngIf="numerosPadre.length === 0"
+        [(ngModel)]="cadNumero"
+        name="name"
+        style="width: 30px"
+        #numeroPadre
+        type="text"
+      />
+      <button (click)="mandarDato()">Enviar</button>
+    </form>
   </div>
   <ul>
-    @for (number of listaNumerosPadre; track $index){
-    <li>{{ number }}</li>
-    }
+    <li *ngFor="let item of numerosPadre">
+      {{ item }}
+    </li>
   </ul>
 </div>
 <div>
-  <app-hijo [numRecibido]="numeroEnviamosHijo"></app-hijo>
+  <app-hijo 
+  [numRecibido]="numMandado"
+  (mandarPadre)="recibiendoDato($event)"></app-hijo>
 </div>

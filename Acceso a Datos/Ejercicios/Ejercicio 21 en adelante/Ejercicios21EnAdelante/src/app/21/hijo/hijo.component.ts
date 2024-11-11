@@ -1,40 +1,31 @@
-import { Component, EventEmitter, Input, Output, SimpleChange } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './hijo.component.html',
   styleUrl: './hijo.component.css'
 })
 export class HijoComponent {
 
   //clase : ChangeDetertorRef
+  @Input()
+  numRecibido: number = 0
+  numMostrado: number = 0;
+  numerosHijo: number[] = [];
+  @Output() 
+  public mandarPadre: EventEmitter<number> = new EventEmitter();
 
-  @Input() numRecibido: number = 0;
-  @Output() eventEmitter = new EventEmitter<number>();
-
-  //numero: number = parseInt(this.numRecibido);
-  numeroHijo: number = 0;
-  isVisibleHijo: boolean = false;
-  ListaNumeroHijo: number[] = [];
-  
-  enviarDatoAPadre(num: number){
-    this.eventEmitter.emit(this.numeroHijo);
-    this.isVisibleHijo=true;
-    this.ListaNumeroHijo.push(this.numeroHijo + 1);
+  enviamosAlPadre(){
+    this.numerosHijo.push(this.numRecibido);
+    this.numRecibido++;
+    this.mandarPadre.emit(this.numRecibido);
   }
 
-
-
-  ngOnChanges(changes: SimpleChange){
-    this. numeroHijo = parseInt(this.numRecibido);
-    if(this.numeroHijo == 0){
-      this.isVisibleHijo = false;
-    }else{
-      this.isVisibleHijo = true;
-    }
+  ngOnChanges(){
+    console.log(`Hijo: ${this.numRecibido}`)
   }
-
 
 }
