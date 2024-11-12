@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, NgForm} from '@angular/forms';
 
 //PARA EL TRATAMIENTO DE FORMULARIOS
 //IMPORTAMOS EL SERVICIO DE EMPLEADO
@@ -17,7 +17,20 @@ import { Empleado } from '../../../models/empleado';
 })
 export class EmpleadosComponent {
 
-  constructor(public EmpleadosService:EmpleadosService){}
+  constructor(public EmpleadosService: EmpleadosService){}
 
-  addEmployee(){}
+  addEmpleado(form: NgForm):void{
+    this.EmpleadosService.crearEmpleado(form.value)
+      .subscribe(res => {
+        console.log(res)
+      });
+      console.log(form.value);
+    
+  }
+
+  resetForm(form: NgForm):void{
+    form.reset()
+  }
+
+
 }

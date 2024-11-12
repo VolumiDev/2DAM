@@ -35,6 +35,20 @@
                                 [(ngModel)]="EmpleadosService.empleadoSeleccionado.salario"
                                 placeholder="Introduce tu salario">
                         </div>
+
+                        <div class="cardaction">
+                            <div class="input-field col s12">
+                                <button class="btn rigth" (click)="resetForm(empleadoForm)">
+                                    RESET
+                                </button>
+                                <button class="btn rigth" (click)="addEmpleado(empleadoForm)">
+                                    ENVIAR
+                                </button>
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </form>
             </div>

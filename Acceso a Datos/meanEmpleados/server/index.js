@@ -4,9 +4,16 @@ const  router  = require("./routes/empleados.routes");
 const routerFiguras = require('./routes/figuras.routes');
 const { mongoose } = require('./database');
 const { Empleados } = require('./models/empleados');
+const cors = require('cors');
 
 const morgan = require('morgan');     //NOS  DA INFORMACION POR CONSOLA DE LAS PETICIONES GET 
 app.use(morgan('dev'));
+
+
+//MIDDELWARES
+app.use(cors({origin: 'http://localhost:4200'}));
+app.use(express.json());  //LE INDICAMOS QUE ENTIENDA LOS JSON QUE LE LLEGARAN DESDE LA PETICION GET
+
 
 
 
@@ -17,8 +24,8 @@ app.listen(app.get('port'), () => {                             //HACEMOS QUE LA
 }); 
 
 
-//MIDDELWARES
-app.use(express.json());  //LE INDICAMOS QUE ENTIENDA LOS JSON QUE LE LLEGARAN DESDE LA PETICION GET
+
+
 
 //ROUTES
 app.use('/api/empleados', require('./routes/empleados.routes'));    //ESTE METODO TIENE UN PRIMER PARAMETRO CON EL QUE LE PODEMOS PASAR UNA RUTA DIFERENTE
