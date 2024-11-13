@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\",
+  "WorkspaceRootPath": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\tablausuarios.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|solutionrelative:accesobdfirebase\\tablausuarios.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|solutionrelative:accesobdfirebase\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\tablausuarios.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|solutionrelative:accesobdfirebase\\tablausuarios.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|solutionrelative:accesobdfirebase\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\tablausuarios.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\tablausuarios.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|solutionrelative:accesobdfirebase\\tablausuarios.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\alumno\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|c:\\users\\diego\\documents\\2dam\\interfaces\\accesobdfirebase\\accesobdfirebase\\accesobdfirebase\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E44291B2-FD63-4A10-8543-DB830BB46AA9}|AccesoBDFireBase\\AccesoBDFireBase.csproj|solutionrelative:accesobdfirebase\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,15 +30,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 211,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TablaUsuarios.xaml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\TablaUsuarios.xaml",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\TablaUsuarios.xaml",
               "RelativeDocumentMoniker": "AccesoBDFireBase\\TablaUsuarios.xaml",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\TablaUsuarios.xaml",
+              "ToolTip": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\TablaUsuarios.xaml",
               "RelativeToolTip": "AccesoBDFireBase\\TablaUsuarios.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-18T18:56:01.231Z",
@@ -46,13 +46,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "AccesoBDFireBase\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\MainWindow.xaml.cs",
               "RelativeToolTip": "AccesoBDFireBase\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAtwEIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T17:36:57.513Z",
               "EditorCaption": ""
@@ -61,39 +61,36 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "TablaUsuarios.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\TablaUsuarios.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\TablaUsuarios.xaml.cs",
               "RelativeDocumentMoniker": "AccesoBDFireBase\\TablaUsuarios.xaml.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\TablaUsuarios.xaml.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\TablaUsuarios.xaml.cs",
               "RelativeToolTip": "AccesoBDFireBase\\TablaUsuarios.xaml.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAiwEEAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T19:16:15.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T19:16:15.033Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\MainWindow.xaml",
               "RelativeDocumentMoniker": "AccesoBDFireBase\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\MainWindow.xaml",
               "RelativeToolTip": "AccesoBDFireBase\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-18T17:37:01.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T17:37:01.088Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\Usuario.cs",
               "RelativeDocumentMoniker": "AccesoBDFireBase\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\Usuario.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\2DAM\\Interfaces\\AccesoBDFireBase\\AccesoBDFireBase\\AccesoBDFireBase\\Usuario.cs",
               "RelativeToolTip": "AccesoBDFireBase\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T18:25:18.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T18:25:18.968Z"
             }
           ]
         }
