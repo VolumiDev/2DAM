@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.prueba1obligatoria"
+    namespace = "com.volumidev.videogameslib"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.prueba1obligatoria"
+        applicationId = "com.volumidev.videogameslib"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -32,8 +32,6 @@ android {
 }
 
 dependencies {
-
-    implementation ("com.github.bumptech.glide:glide:4.12.0")
 
     implementation(libs.appcompat)
     implementation(libs.material)
