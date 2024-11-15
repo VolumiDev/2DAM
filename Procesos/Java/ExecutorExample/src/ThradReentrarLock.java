@@ -1,6 +1,8 @@
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ThradReentrarLock implements Runnable{
+
+
     /**
      * Runs this operation.
      */
@@ -15,7 +17,7 @@ public class ThradReentrarLock implements Runnable{
 
     @Override
     public void run() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             lock.lock();
             try {
                 count++;
@@ -24,5 +26,9 @@ public class ThradReentrarLock implements Runnable{
                 lock.unlock();
             }
         }
+    }
+
+    public int getCount() {
+        return count;
     }
 }
