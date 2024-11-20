@@ -1,26 +1,18 @@
 <div>
-  Padre
-  <div>
-    <form action="">
-      <input
-        *ngIf="numerosPadre.length === 0"
-        [(ngModel)]="cadNumero"
-        name="name"
-        style="width: 30px"
-        #numeroPadre
-        type="text"
-      />
-      <button (click)="mandarDato()">Enviar</button>
-    </form>
-  </div>
+  <input type="number" [(ngModel)]="numeroInput" *ngIf="mostrarInput" />
+  <button (click)="enviarAlHijo()" *ngIf="mostrarBoton">Enviar al Hijo</button>
+
   <ul>
-    <li *ngFor="let item of numerosPadre">
-      {{ item }}
-    </li>
+    Componente padre:
+    <li *ngFor="let numero of numerosPadre">{{ numero }}</li>
   </ul>
+
 </div>
+
 <div>
-  <app-hijo 
-  [numRecibido]="numMandado"
-  (mandarPadre)="recibiendoDato($event)"></app-hijo>
+  <app-hijo
+    [mostrarBoton]="mostrarBoton"
+    [numeroDelPadre]="numeroActual"
+    (numeroAlPadre)="recibirDelHijo($event)"
+  ></app-hijo>
 </div>
