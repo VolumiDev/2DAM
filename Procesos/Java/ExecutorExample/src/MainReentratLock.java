@@ -13,7 +13,19 @@ public class MainReentratLock {
         Thread th2 = new Thread(runnable, "Hilo 2");
         Thread th3 = new Thread(runnable, "Hilo 3");
 
+        th1.start();
+        th2.start();
+        th3.start();
 
+        try{
+            th1.join();
+            th2.join();
+            th3.join();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        System.out.println("Valor final: " + runnable.getCount());
 
     }
 }

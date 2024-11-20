@@ -10,8 +10,11 @@ export class EmpleadosService {
   empleadoSeleccionado: Empleado;
 
   readonly URL = 'http://localhost:3000/api/empleados/';
+
+  empleados: Empleado[];
   constructor(private http: HttpClient) {
     this.empleadoSeleccionado = new Empleado();
+    this.empleados = [];
   }
 
   mostrarEmpleados() {
@@ -19,8 +22,9 @@ export class EmpleadosService {
   }
 
   mostrarEmpleado(id: string) {
-    return this.http.get(this.URL + id);
-  }
+    return this.http.get(this.URL + id)
+  };
+  
   crearEmpleado(empleado: Empleado) {
     return this.http.post(this.URL, empleado); //hace una peticion post con el empleado que le pasamos para hacer la insercion
   }

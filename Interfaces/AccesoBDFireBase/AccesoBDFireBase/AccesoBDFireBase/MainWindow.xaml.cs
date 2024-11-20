@@ -31,6 +31,7 @@ namespace AccesoBDFireBase
 
         //CREAMOS EL CLIENTE QUE USAREMOS.
         FirebaseClient client;
+        public FirebaseClient Client { get => client; set => client = value; }
 
 
 
@@ -39,8 +40,8 @@ namespace AccesoBDFireBase
             InitializeComponent();
             //INICIALIZAMOS LOS COMPONENTESS
 
-            client = new FireSharp.FirebaseClient(config);
-            if(client == null)
+            Client = new FireSharp.FirebaseClient(config);
+            if(Client == null)
             {
                 MessageBox.Show("Error de conexion");
             }
@@ -49,6 +50,7 @@ namespace AccesoBDFireBase
                 MessageBox.Show("Conectado a la bsae de datos");
             }
         }
+
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -62,7 +64,7 @@ namespace AccesoBDFireBase
                 Usuario user = new Usuario(tb_nombre.Text, tb_telefono.Text, tb_correo.Text, cb_rol.Text);
 
                 //ENVIAMOS LOS DATOS A FIREBASE 
-                SetResponse response = await client.SetAsync($"usuario/{user.Nombre}", user);
+                SetResponse response = await Client.SetAsync($"usuario/{user.Nombre}", user);
                 Usuario result = response.ResultAs<Usuario>();
                 MessageBox.Show($"Usuario {result.Nombre} registrado exitosamente");
 

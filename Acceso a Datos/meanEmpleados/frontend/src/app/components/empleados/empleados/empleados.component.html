@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-content">
                 <form #empleadoForm="ngForm">
-                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="EmpleadosService.empleadoSeleccionado">
+                    <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="EmpleadosService.empleadoSeleccionado"> -->
                     <div class="row">
                         <div class="input-field col s12">
                             <input type="text" name="nombre" #nombre="ngModel"
@@ -46,15 +46,34 @@
                                 </button>
                             </div>
                         </div>
-
-
-
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <div class="col s7">
+        <table>
+            <thead>
+                <th>NOMBRE:</th>
+                <th>CARGO:</th>
+                <th>DEPARTAMENTO:</th>
+                <th>SALARIO:</th>
+                <th>ACCIONES:</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleado of EmpleadosService.empleados">
+                    <td>{{ empleado.nombre }}</td>
+                    <td>{{ empleado.cargo }}</td>
+                    <td>{{ empleado.departamento }}</td>
+                    <td>{{ empleado.salario }}</td>
+                    <a style="margin:10px" (click)="editarEmpleado(empleado)">
+                        <i class="material-icons">delete</i>
+                    </a>
+                    <a (click)="editarEmpleado(empleado)">
+                        <i class="material-icons">edit</i>
+                    </a>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-
-
-<div class="col s7"></div>

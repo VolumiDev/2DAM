@@ -1,6 +1,7 @@
 package com.volumidev.videogameslib;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -34,6 +35,17 @@ public class InitialSplas extends AppCompatActivity {
                 .load(R.drawable.loadinggif)
                 .into(gifImageView);
 
+        Thread th1 = new Thread(() -> {
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+                MediaPlayer eaSport = MediaPlayer.create(InitialSplas.this, R.raw.easound);
+                eaSport.start();
+        });
+
         /**
          * Asignamos un temporizador antes de pasar a la siguiente pantalla
          */
@@ -45,7 +57,7 @@ public class InitialSplas extends AppCompatActivity {
                 finish();
             }
         };
-
+        th1.start();
         Timer timer = new Timer();
         timer.schedule(splash, 6000);
 
