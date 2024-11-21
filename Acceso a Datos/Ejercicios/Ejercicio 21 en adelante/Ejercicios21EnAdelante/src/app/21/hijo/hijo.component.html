@@ -1,13 +1,7 @@
 <div>
-  Hijo
-  <div >
-      <button
-        (click)="enviamosAlPadre()">Enviar</button>
-  </div>
   <ul>
-    <li 
-      *ngFor="let item of numerosHijo">
-      {{ item }}
-    </li>
+    Componente Hijo
+    <li *ngFor="let numero of numerosHijo">{{ numero }}</li>
   </ul>
+  <button (click)="enviarAlPadre()" *ngIf="mostrarBoton === false">Enviar al Padre</button>
 </div>

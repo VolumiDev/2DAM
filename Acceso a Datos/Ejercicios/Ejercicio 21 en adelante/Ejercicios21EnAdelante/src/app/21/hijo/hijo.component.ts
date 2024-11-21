@@ -1,31 +1,35 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChange } from '@angular/core';
+import { E21Service } from '../e21.service';
 
 @Component({
   selector: 'app-hijo',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './hijo.component.html',
-  styleUrl: './hijo.component.css'
+  styleUrl: './hijo.component.css',
+  providers: [E21Service]
 })
 export class HijoComponent {
-
-  //clase : ChangeDetertorRef
-  @Input()
-  numRecibido: number = 0
-  numMostrado: number = 0;
+  @Input() numeroDelPadre: number = 0;
+  @Input() mostrarBoton: boolean = false;
+  @Output() numeroAlPadre = new EventEmitter<number>();
+  numeroActual: number = 0;
   numerosHijo: number[] = [];
-  @Output() 
-  public mandarPadre: EventEmitter<number> = new EventEmitter();
+  mostrarBotonHijo: boolean = true;
 
-  enviamosAlPadre(){
-    this.numerosHijo.push(this.numRecibido);
-    this.numRecibido++;
-    this.mandarPadre.emit(this.numRecibido);
+  ngOnChanges(change: SimpleChange) {
+    console.log("On init del hijo")
+    if(changes(this.numeroDelPadre)){
+
+    }
+    this.numeroActual = this.numeroDelPadre + 1;
   }
 
-  ngOnChanges(){
-    console.log(`Hijo: ${this.numRecibido}`)
+  enviarAlPadre() {
+    this.numeroAlPadre.emit(this.numeroActual);
+    this.numerosHijo.push(this.numeroActual);
+    this.mostrarBotonHijo = false;
   }
 
 }
