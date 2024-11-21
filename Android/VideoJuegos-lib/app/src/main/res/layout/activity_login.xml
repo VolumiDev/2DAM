@@ -55,6 +55,7 @@
             tools:layout_editor_absoluteY="388dp" />
 
         <CheckBox
+            android:id="@+id/checkbox_recordarUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"

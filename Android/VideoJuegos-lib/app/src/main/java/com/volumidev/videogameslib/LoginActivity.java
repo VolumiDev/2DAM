@@ -1,9 +1,13 @@
 package com.volumidev.videogameslib;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -18,8 +22,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText input_user, input_pass;
+    EditText login_input_user, login_input_pass;
     Button btn_login, btn_register;
+    CheckBox login_recordarUser;
+    SharedPreferences preferencias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +33,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+        //Precargamos la info del SharedPreferences si tiene la opcion.
+        precargamosInput();
         //Inicializamos los elementos de la vista
         inputsSettings();
         //Asignamos los colores a los botones
         buttonsSettings();
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -43,25 +52,30 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     /**
      * Asiganmos los colores de los botones
      */
-    private void buttonsSettings(){
-        btn_login.setBackgroundColor(this.getResources().getColor(R.color.yellow_500));
+    private void buttonsSettings() {
+        btn_login.setBackgroundColor(this.getResources().getColor(R.color.green_500));
         btn_register.setBackgroundColor(this.getResources().getColor(R.color.yellow_500));
     }
 
     /**
      * Capturamos los elementos de la vista
      */
-    private void inputsSettings(){
-        input_user = findViewById(R.id.editText_username);
-        input_pass = findViewById(R.id.editText_password);
+    private void inputsSettings() {
+        login_input_user = findViewById(R.id.editText_username);
+        login_input_pass = findViewById(R.id.editText_password);
 
         btn_login = findViewById(R.id.btn_login);
         btn_register = findViewById(R.id.btn_register);
         btn_login.setOnClickListener(this);
         btn_register.setOnClickListener(this);
+
+        login_recordarUser = findViewById(R.id.checkbox_recordarUsuario);
     }
 
-    private void showRegisterDialog(){
+    /**
+     * MOSTRAMOS EL ALERTDIALOG SOBRE EL QUE NOS VAMOS A REGISTRAR
+     */
+    private void showRegisterDialog() {
         //Objeto constructor de la ventana de dialogo
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         //builder.setTitle("Registro de usuario");
@@ -75,32 +89,88 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         Button register_btn_register = dialogView.findViewById(R.id.register_btn_register);
         Button register_btn_return = dialogView.findViewById(R.id.register_btn_return);
+        register_btn_register.setBackgroundColor(this.getResources().getColor(R.color.green_500));
+        register_btn_return.setBackgroundColor(this.getResources().getColor(R.color.yellow_500));
+
+
+        // CREAR Y MOSTRAR EL ALERTDIALOG
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        //CONFIGURAMOS LOS DOS BONOTES
         register_btn_register.setOnClickListener(v -> {
-            Usuario nuevoUsuario = new Usuario(register_et_usuario.getText().toString(), register_et_pass.getText().toString());
-            nuevoUsuario.insertar(this);
+            if (register_et_usuario.getText().toString().trim().isEmpty() || register_et_pass.getText().toString().trim().isEmpty()) {
+                Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show();
+            } else {
+                Usuario nuevoUsuario = new Usuario(register_et_usuario.getText().toString(), register_et_pass.getText().toString());
+                nuevoUsuario.insertar(this);
+                alertDialog.dismiss();
+            }
         });
+
         register_btn_return.setOnClickListener(v -> {
-            builder.create().dismiss();
+            alertDialog.dismiss();
         });
+    }
 
-        /*
-        builder.setPositiveButton("Registrarse", (dialog, which) -> {
-            Usuario nuevoUsuario = new Usuario(register_et_usuario.getText().toString(), register_et_pass.getText().toString());
-            nuevoUsuario.insertar(this);
-        });
+    /**
+     * Realizamos la autenticacion del usuario.
+     */
+    private void userAutentication() {
+        Usuario user = new Usuario();
 
-        builder.setNegativeButton("Volver", (dialog, which) -> {
-            dialog.dismiss();
-        });
-*/
-        builder.create().show();
+        String username = login_input_user.getText().toString();
+        String password = login_input_pass.getText().toString();
+
+        user.getUsuarioFromDB(this, username);
+
+        String hashingPass = user.encriptarPass(password);
+
+        if (user.getNombre().equals(username) && user.getContraseña().equals(hashingPass) ) {
+            validamosRecordarUsuario();
+            Toast.makeText(this, "GUUUUUCCCHIIII", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
+    /**
+     * Comprobamos el estado del chek para ver si tenemos que almacenar los datos de usuario en el SharedPreferences
+     */
+    private void validamosRecordarUsuario(){
+        //Inicializamos el sharePreferences
+        preferencias = getSharedPreferences("preferencias", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
+        if(login_recordarUser.isChecked()){
+            editor.putString("usuario", login_input_user.getText().toString());
+            editor.putString("contraseña", login_input_pass.getText().toString());
+            editor.putBoolean("recordar", true);
+        }else {
+            editor.putBoolean("recordar", false);
+        }
+    }
+
+    /**
+     * Precargamos los input con los valores si tiene opcion de recordar
+     */
+    private void precargamosInput(){
+        //Inicializamos el sharePreferences
+        preferencias = getSharedPreferences("preferencias", MODE_PRIVATE);
+        if(preferencias.getBoolean("recodar",false)){
+            login_input_user.setText(preferencias.getString("usuario", "no existe"));
+            login_input_pass.setText(preferencias.getString("contraseña", "no existe"));
+            login_recordarUser.setSelected(true);
+        }
+    }
+
+
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
+        switch (v.getId()) {
             case R.id.btn_login:
+                userAutentication();
                 break;
             case R.id.btn_register:
                 showRegisterDialog();

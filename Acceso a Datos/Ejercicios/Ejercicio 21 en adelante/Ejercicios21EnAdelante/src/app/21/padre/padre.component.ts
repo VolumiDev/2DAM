@@ -30,6 +30,7 @@ export class PadreComponent {
 
   recibirDelHijo(numero: number) {
     this.numeroActual = numero + 1;
+    this.numeroInput = this.numeroActual
     this.mostrarBoton = true;
   }
 }
