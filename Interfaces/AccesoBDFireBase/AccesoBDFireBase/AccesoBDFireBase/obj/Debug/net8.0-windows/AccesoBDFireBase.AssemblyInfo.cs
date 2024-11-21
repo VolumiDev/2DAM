@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccesoBDFireBase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5813dbf221f8e1519d84747b050a6d4827fe7543")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80b5ac756515f885f71813b4576c0281d31d2ae1")]
 [assembly: System.Reflection.AssemblyProductAttribute("AccesoBDFireBase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccesoBDFireBase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

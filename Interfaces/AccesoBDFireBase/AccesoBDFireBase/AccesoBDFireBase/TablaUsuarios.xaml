@@ -13,7 +13,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Canvas>
-                <DataGrid x:Name="dataGrid_usuario" Height="366" Width="800" IsReadOnly="False"  CanUserAddRows="False" CanUserDeleteRows="False" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" AutoGenerateColumns="True" VerticalAlignment="Top" CellEditEnding="editorTabla"/>
+                <DataGrid x:Name="dataGrid_usuario" Height="366" Width="800" IsReadOnly="False"  CanUserAddRows="False" CanUserDeleteRows="False"
+                          d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" AutoGenerateColumns="True" 
+                          VerticalAlignment="Top" CellEditEnding="editorTabla"/>
             </Canvas>
             <Grid Grid.Row="1" Margin="0,149,0,0">
                 <Canvas>
