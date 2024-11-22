@@ -1,5 +1,6 @@
 package com.volumidev.videogameslib;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,13 +34,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        //Precargamos la info del SharedPreferences si tiene la opcion.
-        precargamosInput();
         //Inicializamos los elementos de la vista
         inputsSettings();
         //Asignamos los colores a los botones
         buttonsSettings();
-
+        //Precargamos la info del SharedPreferences si tiene la opcion.
+        precargamosInput();
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -122,16 +122,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String username = login_input_user.getText().toString();
         String password = login_input_pass.getText().toString();
 
-        user.getUsuarioFromDB(this, username);
+        String sql = "SELECT * FROM usuarios WHERE nombre LIKE '" + username + "'";
+        user.getUsuarioFromDB(this, sql);
 
-        String hashingPass = user.encriptarPass(password);
+        if (user.getNombre() != null && user.getPass() != null) {
+            String hashingPass = user.encriptarPass(password);
 
-        if (user.getNombre().equals(username) && user.getContraseña().equals(hashingPass) ) {
-            validamosRecordarUsuario();
-            Toast.makeText(this, "GUUUUUCCCHIIII", Toast.LENGTH_SHORT).show();
-
+            if (user.getNombre() != null && user.getPass().equals(hashingPass)) {
+                validamosRecordarUsuario();
+                //vamos a la pantalla de pefil
+                Intent i = new Intent(this, Profile_Activity.class);
+                i.putExtra("user", user.getNombre());
+                startActivity(i);
+            }
         } else {
             Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+
         }
 
     }
@@ -139,26 +145,29 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     /**
      * Comprobamos el estado del chek para ver si tenemos que almacenar los datos de usuario en el SharedPreferences
      */
-    private void validamosRecordarUsuario(){
+    private void validamosRecordarUsuario() {
         //Inicializamos el sharePreferences
         preferencias = getSharedPreferences("preferencias", MODE_PRIVATE);
+
         SharedPreferences.Editor editor = preferencias.edit();
-        if(login_recordarUser.isChecked()){
+        if (login_recordarUser.isChecked()) {
             editor.putString("usuario", login_input_user.getText().toString());
             editor.putString("contraseña", login_input_pass.getText().toString());
             editor.putBoolean("recordar", true);
-        }else {
+        } else {
             editor.putBoolean("recordar", false);
         }
+        //aplicamos cambios
+        editor.apply();
     }
 
     /**
      * Precargamos los input con los valores si tiene opcion de recordar
      */
-    private void precargamosInput(){
+    private void precargamosInput() {
         //Inicializamos el sharePreferences
         preferencias = getSharedPreferences("preferencias", MODE_PRIVATE);
-        if(preferencias.getBoolean("recodar",false)){
+        if (preferencias.getBoolean("recordar", false)) {
             login_input_user.setText(preferencias.getString("usuario", "no existe"));
             login_input_pass.setText(preferencias.getString("contraseña", "no existe"));
             login_recordarUser.setSelected(true);

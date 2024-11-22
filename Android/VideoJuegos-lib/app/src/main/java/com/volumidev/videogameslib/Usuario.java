@@ -1,5 +1,7 @@
 package com.volumidev.videogameslib;
 
+import static android.icu.text.DisplayContext.LENGTH_SHORT;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -8,14 +10,16 @@ import android.widget.Toast;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Usuario {
     private String nombre;
-    private String contraseña;
+    private String password;
 
     public Usuario(String nombre, String pass) {
         this.nombre = nombre;
-        this.contraseña = pass;
+        this.password = pass;
     }
 
     public Usuario() {
@@ -25,15 +29,16 @@ public class Usuario {
 
     /**
      * Metodo para insertar un usuario en la base de datos
+     *
      * @param context
      */
-    public void insertar(Context context){
+    public void insertar(Context context) {
         Conexion sqliteHelper = new Conexion(context, "videogameslib", null, 1);
         SQLiteDatabase db = sqliteHelper.getWritableDatabase();
         //alamacenamos los datos del usuario
         ContentValues values = new ContentValues();
         values.put("nombre", nombre);
-        values.put("contraseña", encriptarPass(contraseña));
+        values.put("contraseña", encriptarPass(password));
         //insertamos los datos en la base de datos y cerramos conexion
         db.insert("usuarios", null, values);
         db.close();
@@ -42,6 +47,7 @@ public class Usuario {
 
     /**
      * Metodo a el que le pasamos la contraseña que introduce el usuario la converticmos en un hash que es el que almacenamos.
+     *
      * @param pass
      * @return la contraseña hasheada
      */
@@ -67,17 +73,16 @@ public class Usuario {
     }
 
 
-    public Usuario getUsuarioFromDB(Context context, String username){
+    public Usuario getUsuarioFromDB(Context context, String sql) {
         Conexion sqliteHelper = new Conexion(context, "videogameslib", null, 1);
         SQLiteDatabase db = sqliteHelper.getReadableDatabase();
-        String sql = "SELECT * FROM usuarios WHERE nombre LIKE '" + username + "'";
         Cursor cursor = db.rawQuery(sql, null);
-        if(cursor.moveToFirst()){
+        if (cursor.moveToFirst()) {
             do {
                 this.nombre = cursor.getString(1);
-                this.contraseña = cursor.getString(2);
-            }while(cursor.moveToNext());
-        }else{
+                this.password = cursor.getString(2);
+            } while (cursor.moveToNext());
+        } else {
             this.nombre = null;
         }
         cursor.close();
@@ -86,8 +91,27 @@ public class Usuario {
     }
 
 
+    public List<Usuario> getUsuariosFromDB(Context context) {
+        List<Usuario> list = new ArrayList<>();
+        Conexion sqliteHelper = new Conexion(context, "videogameslib", null, 1);
+        SQLiteDatabase db = sqliteHelper.getReadableDatabase();
+        String sql = "SELECT * FROM usuarios";
+        Cursor cursor = db.rawQuery(sql, null);
 
+        if (cursor != null && cursor.moveToFirst()) {
+            while (cursor.moveToNext()) {
+                Usuario u = new Usuario(cursor.getString(1), null);
+                list.add(u);
+            }
 
+        }else {
+            Toast.makeText(context, "Base de datos vacia", Toast.LENGTH_SHORT).show();
+        }
+
+        cursor.close();
+        db.close();
+        return list;
+    }
 
 
     public String getNombre() {
@@ -98,11 +122,11 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getPass() {
+        return password;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
