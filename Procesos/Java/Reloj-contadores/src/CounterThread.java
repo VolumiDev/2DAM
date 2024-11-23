@@ -1,4 +1,14 @@
-package PACKAGE_NAME;
+public class CounterThread implements Runnable{
 
-public class CounterThread {
+    private ClockThread clockThreadM;
+
+    /**
+     * Runs this operation.
+     */
+    @Override
+    public void run() {
+        for (int i = 0; i < 100; i++) {
+            
+        }
+    }
 }

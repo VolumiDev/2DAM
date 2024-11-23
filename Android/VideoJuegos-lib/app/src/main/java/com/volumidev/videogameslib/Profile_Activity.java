@@ -82,17 +82,12 @@ public class Profile_Activity extends AppCompatActivity implements View.OnClickL
 
         list = u.getUsuariosFromDB(this);
 
-        for (Usuario i : list){
-            Log.i("perico", i.getNombre());
-        }
-
-        Register_Users_Adapter adapter = new Register_Users_Adapter(list);
+        Register_Users_Adapter adapter = new Register_Users_Adapter(list, this);
+        //adapter.setOnItemClickListener(new Register_Users_Adapter.OnItemClickListener());
         recycler.setAdapter(adapter);
 
         AlertDialog dialog = builder.create();
         dialog.show();
-
-
     }
 
 
