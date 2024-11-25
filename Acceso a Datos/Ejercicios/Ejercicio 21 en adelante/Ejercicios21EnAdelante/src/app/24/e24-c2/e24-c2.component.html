@@ -1,0 +1,9 @@
+<div
+  *ngIf="colorFondo"
+  style="width: 100px; height: 100px;"
+  [ngStyle]="{'background-color': colorFondo}">
+</div>
+<div *ngIf="colorFondo">
+  <input type="text" #colorHijo>
+  <button (click)="validaColor(colorHijo.value)">Mandar a Padre</button>
+</div>

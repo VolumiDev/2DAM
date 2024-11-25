@@ -1,0 +1,6 @@
+<div *ngIf="size">
+  <h3>{{ size }} elementos</h3>
+</div>
+<e26-c2
+  [array]="array1"
+  (notificarSize)="recibeSize($event)"></e26-c2>

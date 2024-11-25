@@ -1,0 +1,10 @@
+<button (click)="iniciaAlumno()"> Inicia Alumno</button>
+<div
+  *ngIf="mensaje">
+  <p>{{ mensaje }}</p>
+</div>
+
+<e23-hijo
+  [activo]="activo"
+  [alumnoRecibido]="alumno"
+  (notificacion)="recibeNotificacion($event)"></e23-hijo>

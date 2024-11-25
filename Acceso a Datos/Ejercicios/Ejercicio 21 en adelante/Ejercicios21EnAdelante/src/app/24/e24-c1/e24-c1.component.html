@@ -1,0 +1,10 @@
+<div>
+  <input type="text"
+    #inputColor
+    [(ngModel)]="color">
+  <button (click)="mandamosColor(inputColor.value)">Comenzar</button>
+  <h3 *ngIf="mensaje">{{ mensaje }}</h3>
+  <e24-c2 
+    [colorFondo]="colorCompara"
+    (mandarColorPadre)="recibeMensaje($event)"></e24-c2>
+</div>

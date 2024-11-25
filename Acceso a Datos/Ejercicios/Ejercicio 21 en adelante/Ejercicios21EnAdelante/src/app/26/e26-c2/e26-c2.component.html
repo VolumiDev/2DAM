@@ -1,0 +1,9 @@
+<button 
+  (click)="mostrarImpares()"
+  *ngIf="!visible">Mostrar Impares</button>
+
+<div>
+  <ul *ngIf="visible">
+    <li *ngFor="let n of impares">{{ n }}</li>
+  </ul>
+</div>

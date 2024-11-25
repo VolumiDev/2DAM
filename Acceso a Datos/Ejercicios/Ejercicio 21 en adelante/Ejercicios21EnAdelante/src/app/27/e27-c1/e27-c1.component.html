@@ -1,0 +1,7 @@
+<h4
+  *ngIf="visible"> 
+  El numero que más se repite es el {{ datos[0] }} y se repite {{ datos[1] }} veces.
+</h4>
+<e27-c2
+  [array1]="array1"
+  (mandaDatos)="recibeDatos($event)"></e27-c2>
