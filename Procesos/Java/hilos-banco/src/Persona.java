@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.Buffer;
+import java.util.Random;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Persona implements Runnable{
@@ -23,6 +24,7 @@ public class Persona implements Runnable{
     @Override
     public void run() {
 
+        Random rnd = new Random();
         boolean flag = false;
         int retira = 0;
         try {
@@ -30,6 +32,7 @@ public class Persona implements Runnable{
         BufferedReader br = new BufferedReader(fr);
         String linea = br.readLine();
         while(linea != null){
+            int rng = rnd.nextInt(1000)+500;
             lock.lock();
             flag = true;
 
@@ -39,12 +42,13 @@ public class Persona implements Runnable{
                 do{
                     if (retira <= Main.cuenta) {
                         Main.cuenta -= retira;
-                        Thread.sleep(500);
+                        Thread.sleep(rng);
                         System.out.println(Thread.currentThread().getName() + " retira " + retira + " Quedan " + Main.cuenta);
                         flag = false;
                     } else {
 
                         System.err.println("No puede retirar esa cantidad");
+                        lock.unlock();
                     }
                 }while(flag);
 
@@ -53,7 +57,7 @@ public class Persona implements Runnable{
                 retira = Integer.parseInt(linea.trim());
                 Main.cuenta += retira;
 
-                Thread.sleep(500);
+                Thread.sleep(rng);
                 System.out.println(Thread.currentThread().getName() + " ingresa " + retira + " Quedan " + Main.cuenta);
 
             }

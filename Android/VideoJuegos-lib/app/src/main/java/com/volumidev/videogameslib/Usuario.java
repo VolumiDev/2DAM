@@ -98,7 +98,7 @@ public class Usuario {
         String sql = "SELECT * FROM usuarios";
         Cursor cursor = db.rawQuery(sql, null);
 
-        if (cursor != null && cursor.moveToFirst()) {
+        if (cursor != null) {
             while (cursor.moveToNext()) {
                 Usuario u = new Usuario(cursor.getString(1), null);
                 list.add(u);
@@ -111,6 +111,21 @@ public class Usuario {
         cursor.close();
         db.close();
         return list;
+    }
+
+
+    /**
+     * Metodo para borrar un usuario de la base de datos
+     * @param context
+     * @param nombre
+     */
+    public void delete(Context context, String nombre) {
+        Conexion sqliteHelper = new Conexion(context, "videogameslib", null, 1);
+        SQLiteDatabase db = sqliteHelper.getWritableDatabase();
+
+        String sql = "DELETE FROM usuarios WHERE nombre = ?";
+        db.execSQL(sql, new String[]{nombre});
+        db.close();
     }
 
 
