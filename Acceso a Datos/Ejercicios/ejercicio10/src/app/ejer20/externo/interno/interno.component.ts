@@ -10,8 +10,8 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
 })
 export class InternoComponent {
   @Input() color: string ="";
+  @Input() visible?: boolean = false
   @Output() colorCambiado=new EventEmitter<string>();
-  visible: boolean = true;
 
   actualizarColor(nuevoColor: string){
     this.colorCambiado.emit(this.color);
@@ -19,8 +19,5 @@ export class InternoComponent {
     this.visible=false;
   }
 
-  ngOnChanges(){
-    this.visible = true;
-  }
 
 }
