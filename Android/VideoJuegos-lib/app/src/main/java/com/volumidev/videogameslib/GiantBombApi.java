@@ -1,16 +1,20 @@
 package com.volumidev.videogameslib;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface GiantBombApiService {
+public interface GiantBombApi {
+
     @GET("search/")
-    Call<SearchResponse> searchGames(
+    Call<ApiResponse<Game>> searchGames(
             @Query("query") String query,
+            @Query("resources") String resources,
             @Query("api_key") String apiKey,
             @Query("format") String format,
-            @Query("resources") String resources,
-            @Query("field_list") String fieldList
+            @Query("limit") int limit,
+            @Query("offset") int offset
     );
 }
+

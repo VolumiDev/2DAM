@@ -1,18 +1,13 @@
 package com.volumidev.videogameslib;
 import com.google.gson.annotations.SerializedName;
 
-public class Platform {
+public class ImageTag {
 
     @SerializedName("api_detail_url")
     private String apiDetailUrl;
 
-    private int id;
     private String name;
-
-    @SerializedName("site_detail_url")
-    private String siteDetailUrl;
-
-    private String abbreviation;
+    private int total;
 
     // Getters y Setters
 
@@ -20,22 +15,13 @@ public class Platform {
         return apiDetailUrl;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public String getSiteDetailUrl() {
-        return siteDetailUrl;
-    }
-
-    public String getAbbreviation() {
-        return abbreviation;
+    public int getTotal() {
+        return total;
     }
 
     // Setters omitidos por brevedad
-
 }

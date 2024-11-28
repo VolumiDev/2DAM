@@ -131,7 +131,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (user.getNombre() != null && user.getPass().equals(hashingPass)) {
                 validamosRecordarUsuario();
                 //vamos a la pantalla de pefil
-                Intent i = new Intent(this, Profile_Activity.class);
+                //Intent i = new Intent(this, Profile_Activity.class);
+                Intent i = new Intent(this, GameShearchActivity.class);
                 i.putExtra("user", user.getNombre());
                 startActivity(i);
             }

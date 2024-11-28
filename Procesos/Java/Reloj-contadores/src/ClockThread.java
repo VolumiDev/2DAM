@@ -1,13 +1,12 @@
 import java.time.LocalDateTime;
-import java.util.Date;
 
 public class ClockThread implements Runnable{
 
     private LocalDateTime date;
-    private String showClock;
+    static StringBuilder showClock;
 
-    public ClockThread(String clock) {
-
+    public ClockThread(StringBuilder showClock) {
+        this.showClock = showClock;
     }
 
     /**
@@ -16,10 +15,9 @@ public class ClockThread implements Runnable{
     @Override
     public void run() {
         while(true){
-
             date = LocalDateTime.now();
-
-             date.getHour() + ":" + date.getMinute() + ":" + date.getSecond();
+            showClock.setLength(0);
+            showClock.append(date.getHour() + ":" + date.getMinute() + ":" + date.getSecond() +" ");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

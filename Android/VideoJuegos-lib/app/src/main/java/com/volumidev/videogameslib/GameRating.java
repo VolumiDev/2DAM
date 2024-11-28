@@ -1,18 +1,13 @@
 package com.volumidev.videogameslib;
 import com.google.gson.annotations.SerializedName;
 
-public class Platform {
+public class GameRating {
 
     @SerializedName("api_detail_url")
     private String apiDetailUrl;
 
     private int id;
     private String name;
-
-    @SerializedName("site_detail_url")
-    private String siteDetailUrl;
-
-    private String abbreviation;
 
     // Getters y Setters
 
@@ -28,14 +23,6 @@ public class Platform {
         return name;
     }
 
-    public String getSiteDetailUrl() {
-        return siteDetailUrl;
-    }
-
-    public String getAbbreviation() {
-        return abbreviation;
-    }
-
     // Setters omitidos por brevedad
-
 }
+
