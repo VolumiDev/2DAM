@@ -1,19 +1,20 @@
 package com.volumidev.videogameslib;
 
-import static android.icu.text.DisplayContext.LENGTH_SHORT;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario {
+public class Usuario  implements Serializable {
+    //private Conexion con;
+    private int id;
     private String nombre;
     private String password;
 
@@ -23,7 +24,7 @@ public class Usuario {
     }
 
     public Usuario() {
-
+        //con=Conexion.getInstance();
     }
 
 
@@ -33,8 +34,8 @@ public class Usuario {
      * @param context
      */
     public void insertar(Context context) {
-        Conexion sqliteHelper = new Conexion(context, "videogameslib", null, 1);
-        SQLiteDatabase db = sqliteHelper.getWritableDatabase();
+        Conexion con = Conexion.getInstance();
+        SQLiteDatabase db = con.getWritableDatabase();
         //alamacenamos los datos del usuario
         ContentValues values = new ContentValues();
         values.put("nombre", nombre);
@@ -74,11 +75,12 @@ public class Usuario {
 
 
     public Usuario getUsuarioFromDB(Context context, String sql) {
-        Conexion sqliteHelper = new Conexion(context, "videogameslib", null, 1);
-        SQLiteDatabase db = sqliteHelper.getReadableDatabase();
+        Conexion con = Conexion.getInstance();
+        SQLiteDatabase db = con.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
         if (cursor.moveToFirst()) {
             do {
+                this.id = cursor.getInt(0);
                 this.nombre = cursor.getString(1);
                 this.password = cursor.getString(2);
             } while (cursor.moveToNext());
@@ -93,8 +95,9 @@ public class Usuario {
 
     public List<Usuario> getUsuariosFromDB(Context context) {
         List<Usuario> list = new ArrayList<>();
-        Conexion sqliteHelper = new Conexion(context, "videogameslib", null, 1);
-        SQLiteDatabase db = sqliteHelper.getReadableDatabase();
+
+        Conexion con = Conexion.getInstance();
+        SQLiteDatabase db = con.getReadableDatabase();
         String sql = "SELECT * FROM usuarios";
         Cursor cursor = db.rawQuery(sql, null);
 
@@ -120,8 +123,8 @@ public class Usuario {
      * @param nombre
      */
     public void delete(Context context, String nombre) {
-        Conexion sqliteHelper = new Conexion(context, "videogameslib", null, 1);
-        SQLiteDatabase db = sqliteHelper.getWritableDatabase();
+        Conexion con = Conexion.getInstance();
+        SQLiteDatabase db = con.getWritableDatabase();
 
         String sql = "DELETE FROM usuarios WHERE nombre = ?";
         db.execSQL(sql, new String[]{nombre});
@@ -143,5 +146,17 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }

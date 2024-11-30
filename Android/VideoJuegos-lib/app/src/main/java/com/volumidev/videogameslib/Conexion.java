@@ -15,21 +15,32 @@ public class Conexion extends SQLiteOpenHelper {
     private static final String CREATE_JUEGO_TABLE_QUERY = "CREATE TABLE IF NOT EXISTS videojuegos (" +
             "id INTEGER PRIMARY KEY AUTOINCREMENT ," +
             "titulo text NOT NULL, " +
-            "categoria TEXT NOT NULL, " +
+            "categoria TEXT, " +
             "puntuacion INTEGER, " +
             "comentario TEXT, " +
+            "url_img TEXT, " +
             "id_usuario INTEGER, " +
             "FOREIGN KEY (id_usuario) " +
             "REFERENCES usuarios(id) " +
             "ON DELETE CASCADE " +
             "ON UPDATE CASCADE );";
+    private static final String DATABASE_NAME = "videogameslib";
+    private static final int DATABASE_VERSION = 1;
+
+    private static Conexion instance;
 
 
+    private Conexion(@Nullable Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
 
 
-
-    public Conexion(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    // SINGLETON. INSTANCIA UNICA PARA TODA LA APP
+    public static synchronized Conexion getInstance(){
+        if (instance == null){
+            instance = new Conexion(MyApp.getAppContext());
+        }
+        return instance;
     }
 
     @Override

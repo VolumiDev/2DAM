@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Password..."
+            android:inputType="textPassword"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             tools:layout_editor_absoluteX="55dp"

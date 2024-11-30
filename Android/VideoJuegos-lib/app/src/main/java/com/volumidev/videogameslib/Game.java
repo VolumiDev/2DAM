@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Game {
 
+    private int favorite_id;
     private String aliases;
 
     @SerializedName("api_detail_url")
@@ -112,6 +113,10 @@ public class Game {
         return image;
     }
 
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
     public List<ImageTag> getImageTags() {
         return imageTags;
     }
@@ -119,6 +124,11 @@ public class Game {
     public String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     public int getNumberOfUserReviews() {
         return numberOfUserReviews;
@@ -144,4 +154,12 @@ public class Game {
         return resourceType;
     }
 
+
+    public int getFavorite_id() {
+        return favorite_id;
+    }
+
+    public void setFavorite_id(int favorite_id) {
+        this.favorite_id = favorite_id;
+    }
 }

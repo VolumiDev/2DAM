@@ -55,6 +55,10 @@ public class Image {
         return smallUrl;
     }
 
+    public void setSmallUrl(String smallUrl) {
+        this.smallUrl = smallUrl;
+    }
+
     public String getSuperUrl() {
         return superUrl;
     }

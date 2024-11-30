@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_gray"
+    android:background="@color/black"
     tools:context=".Profile_Activity">
     <!-- EditText para la búsqueda -->
 
@@ -13,69 +13,76 @@
 
     <!-- TextView para mostrar "No Hay Resultados" -->
 
+    <!-- RecyclerView para mostrar los juegos -->
+
     <EditText
         android:id="@+id/editTextSearch"
-        android:layout_width="329dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
+        android:layout_width="272dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="583dp"
         android:hint="Buscar juego..."
         android:imeOptions="actionSearch"
         android:inputType="text"
         android:padding="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerViewGames"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProfile"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.8" />
 
     <Button
         android:id="@+id/buttonSearch"
         android:layout_width="82dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="593dp"
         android:padding="12dp"
         android:text="Buscar"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextSearch"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/buttonProfile"
-        android:layout_width="0dp"
+        android:layout_width="82dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="664dp"
         android:padding="12dp"
         android:text="Perfil"
-        app:layout_constraintBottom_toTopOf="@+id/editTextSearch"
-        app:layout_constraintEnd_toEndOf="@+id/buttonSearch"
-        app:layout_constraintStart_toStartOf="@+id/buttonSearch"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.2" />
 
-    <TextView
-        android:id="@+id/textViewNoResults"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No se encontraron resultados."
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- RecyclerView para mostrar los juegos -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewGames"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="42dp"
+        android:layout_width="366dp"
+        android:layout_height="512dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="45dp"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSearch" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

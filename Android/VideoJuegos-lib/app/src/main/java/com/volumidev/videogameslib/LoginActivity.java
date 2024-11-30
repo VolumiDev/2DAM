@@ -2,8 +2,9 @@ package com.volumidev.videogameslib;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button btn_login, btn_register;
     CheckBox login_recordarUser;
     SharedPreferences preferencias;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,9 +104,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (register_et_usuario.getText().toString().trim().isEmpty() || register_et_pass.getText().toString().trim().isEmpty()) {
                 Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show();
             } else {
+                if( isRepeated(register_et_usuario.getText().toString().trim()) ){
+                    Toast.makeText(this, "El usuario ya existe", Toast.LENGTH_SHORT).show();
+                    register_et_pass.setText("");
+                    register_et_usuario.setText("");
+                }else{
                 Usuario nuevoUsuario = new Usuario(register_et_usuario.getText().toString(), register_et_pass.getText().toString());
                 nuevoUsuario.insertar(this);
                 alertDialog.dismiss();
+                }
             }
         });
 
@@ -132,8 +140,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 validamosRecordarUsuario();
                 //vamos a la pantalla de pefil
                 //Intent i = new Intent(this, Profile_Activity.class);
-                Intent i = new Intent(this, GameShearchActivity.class);
-                i.putExtra("user", user.getNombre());
+                Intent i = new Intent(this, GameSearchActivity.class);
+                i.putExtra("user", user);
                 startActivity(i);
             }
         } else {
@@ -171,8 +179,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (preferencias.getBoolean("recordar", false)) {
             login_input_user.setText(preferencias.getString("usuario", "no existe"));
             login_input_pass.setText(preferencias.getString("contraseña", "no existe"));
-            login_recordarUser.setSelected(true);
+            login_recordarUser.setChecked(true);
         }
+    }
+
+    private boolean isRepeated(String username){
+        boolean repeated = false;
+        Conexion con = Conexion.getInstance();
+        SQLiteDatabase db = con.getReadableDatabase();
+        String sql = "SELECT * FROM usuarios WHERE nombre LIKE '" + username + "'";
+        Cursor cursor = db.rawQuery(sql, null);
+        if(cursor.moveToFirst()){
+            repeated = true;
+        }
+        return repeated;
     }
 
 

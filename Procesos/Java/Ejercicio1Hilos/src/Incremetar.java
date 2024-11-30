@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
+public class Incremetar implements Runnable{
+    private
+    @Override
+    public void run() {
 
-public class Incremetar {
+    }
 }
