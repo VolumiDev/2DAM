@@ -12,21 +12,26 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Diego
+ */
 public class Usuario  implements Serializable {
-    //private Conexion con;
     private int id;
     private String nombre;
     private String password;
 
+    /**
+     * Constructor de la clase
+     * @param nombre
+     * @param pass
+     */
     public Usuario(String nombre, String pass) {
         this.nombre = nombre;
         this.password = pass;
     }
 
     public Usuario() {
-        //con=Conexion.getInstance();
     }
-
 
     /**
      * Metodo para insertar un usuario en la base de datos
@@ -73,7 +78,12 @@ public class Usuario  implements Serializable {
         }
     }
 
-
+    /**
+     * Metodo para obtener un usuario de la base de datos
+     * @param context
+     * @param sql
+     * @return
+     */
     public Usuario getUsuarioFromDB(Context context, String sql) {
         Conexion con = Conexion.getInstance();
         SQLiteDatabase db = con.getReadableDatabase();
@@ -92,7 +102,11 @@ public class Usuario  implements Serializable {
         return this;
     }
 
-
+    /**
+     * Metodo para obtener todos los usuarios de la base de datos
+     * @param context
+     * @return
+     */
     public List<Usuario> getUsuariosFromDB(Context context) {
         List<Usuario> list = new ArrayList<>();
 

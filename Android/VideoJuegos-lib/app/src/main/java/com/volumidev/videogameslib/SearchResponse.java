@@ -2,6 +2,10 @@ package com.volumidev.videogameslib;
 
 import java.util.List;
 
+/**
+ * @author Diego
+ * Clase que representa a las query de la API
+ */
 public class SearchResponse {
     private List<Game> results;
     private int number_of_total_results;

@@ -15,7 +15,9 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.bumptech.glide.Glide;
 
-
+/**
+ * Clase que representa el diálogo de detalles del juego.
+ */
 public class DetailsDialog implements View.OnClickListener{
     private Profile_Activity profile_activity;
     private AlertDialog dialog;
@@ -26,10 +28,18 @@ public class DetailsDialog implements View.OnClickListener{
 
     private Game game;
 
+    /**
+     * Constructor de la clase.
+     * @param profile_activity
+     */
     public DetailsDialog(Profile_Activity profile_activity) {
         this.profile_activity = profile_activity;
     }
 
+    /**
+     * Metodo que muestra el diálogo de detalles del juego.
+     * @param game
+     */
     public void showDialog(Game game){
         this.game = game;
         //INFLAMOS EL DISEÑO DEL CIADO EMERGENTE
@@ -79,6 +89,10 @@ public class DetailsDialog implements View.OnClickListener{
         dialog.show();
     }
 
+    /**
+     * Metodo que actualiza los datos del juego en la base de datos.
+     * @param game
+     */
     private void updateGame(@NonNull Game game){
         Conexion con = Conexion.getInstance();
         SQLiteDatabase db = con.getWritableDatabase();
@@ -87,6 +101,9 @@ public class DetailsDialog implements View.OnClickListener{
         db.execSQL(sql);
     }
 
+    /**
+     * Metodo que carga los datos del juego de la base de datos.
+     */
     private void loadingGameData(){
         Conexion con = Conexion.getInstance();
         SQLiteDatabase db = con.getReadableDatabase();
@@ -102,6 +119,10 @@ public class DetailsDialog implements View.OnClickListener{
 
     }
 
+    /**
+     * Metodo que se ejecuta cuando se hace clic en un elemento del diálogo.
+     * @param v The view that was clicked.
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()){

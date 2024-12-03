@@ -5,6 +5,9 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
+/**
+ * Interfaz que define las operaciones de la API de Giant Bomb.
+ */
 public interface GiantBombApi {
 
     @GET("search/")

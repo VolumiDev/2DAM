@@ -6,7 +6,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+/**
+ * Clase que representa la conexión a la base de datos. La instanciamos con Singleton y la usamos en toda la app.
+ */
 public class Conexion extends SQLiteOpenHelper {
+    //CREACION DE LAS TABLAS
     private static final String CREATE_USUARIOS_TABLE_QUERY = "CREATE TABLE IF NOT EXISTS usuarios (" +
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "+
             "nombre TEXT NOT NULL, " +

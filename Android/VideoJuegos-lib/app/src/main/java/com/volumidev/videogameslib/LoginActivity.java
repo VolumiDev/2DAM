@@ -183,6 +183,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    /**
+     * Comprobamos si el usuario ya existe
+     * @param username
+     * @return
+     */
     private boolean isRepeated(String username){
         boolean repeated = false;
         Conexion con = Conexion.getInstance();

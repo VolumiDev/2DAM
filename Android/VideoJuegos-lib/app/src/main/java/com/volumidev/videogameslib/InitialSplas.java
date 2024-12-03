@@ -16,6 +16,9 @@ import com.bumptech.glide.Glide;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * Clase que representa la pantalla de inicio.
+ */
 public class InitialSplas extends AppCompatActivity {
 
     private ImageView gifImageView;

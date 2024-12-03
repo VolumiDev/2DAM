@@ -1,6 +1,9 @@
 package com.volumidev.videogameslib;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Clase que representa una plataforma.
+ */
 public class Platform {
 
     @SerializedName("api_detail_url")

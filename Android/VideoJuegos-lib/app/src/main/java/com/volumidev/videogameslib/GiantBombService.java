@@ -2,11 +2,10 @@ package com.volumidev.videogameslib;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 
-import java.io.IOException;
-import java.util.List;
-
+/**
+ * Clase que representa el servicio de Giant Bomb.
+ */
 public class GiantBombService {
     private final GiantBombApi giantBombApi;
     private final String apiKey;

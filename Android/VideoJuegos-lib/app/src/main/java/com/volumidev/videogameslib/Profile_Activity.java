@@ -22,6 +22,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Diego
+ */
 public class Profile_Activity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn_register_list, btn_newGame;
@@ -94,7 +97,9 @@ public class Profile_Activity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-
+    /**
+     * Muestra la lista de usuarios registrados
+     */
     private void showUsersDialog(){
         Usuario u = new Usuario();
         //crear el dialog
@@ -117,7 +122,10 @@ public class Profile_Activity extends AppCompatActivity implements View.OnClickL
         dialog.show();
     }
 
-
+    /**
+     * Recogemos los juegos favoritos del usuario
+     * @return
+     */
     private List<Game> getFavGames(){
         List<Game> list_favGames = new ArrayList<>();
         Conexion con = Conexion.getInstance();

@@ -6,6 +6,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+/**
+ * Clase que representa el adaptador personalizado para el spinner de estrellas.
+ */
 public class CustomSpinnerAdapter extends BaseAdapter {
 
 

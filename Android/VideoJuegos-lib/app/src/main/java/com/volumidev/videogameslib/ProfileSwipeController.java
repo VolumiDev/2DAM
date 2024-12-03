@@ -17,6 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * @author Diego
+ */
 public class ProfileSwipeController extends ItemTouchHelper.SimpleCallback {
     private GameRecyclerAdapter adapter;
     private Usuario user;
@@ -29,6 +32,12 @@ public class ProfileSwipeController extends ItemTouchHelper.SimpleCallback {
 
     private Profile_Activity profileActivity;
 
+    /**
+     * Constructor de la clase
+     * @param adapter
+     * @param user
+     * @param profileActivity
+     */
     public ProfileSwipeController(GameRecyclerAdapter adapter, Usuario user, Profile_Activity profileActivity) {
         super(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
         this.profileActivity = profileActivity;
@@ -46,6 +55,7 @@ public class ProfileSwipeController extends ItemTouchHelper.SimpleCallback {
         return false;
     }
 
+
     @Override
     public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
         int position = viewHolder.getAdapterPosition(); //capturamos la posicion del elemento sobre el que estamos pulsando
@@ -62,7 +72,19 @@ public class ProfileSwipeController extends ItemTouchHelper.SimpleCallback {
     }
 
 
-
+    /**
+     * Dibuja los elementos de debajo del recilcerView cuando se desliza.
+     *
+     * @param c                 The canvas which RecyclerView is drawing its children
+     * @param recyclerView      The RecyclerView to which ItemTouchHelper is attached to
+     * @param viewHolder        The ViewHolder which is being interacted by the User or it was
+     *                          interacted and simply animating to its original position
+     * @param dX                The amount of horizontal displacement caused by user's action
+     * @param dY                The amount of vertical displacement caused by user's action
+     * @param actionState       The type of interaction on the View. Is either {@link
+     * @param isCurrentlyActive True if this view is currently being controlled by the user or
+     *                          false it is simply animating back to its original state.
+     */
     @Override
     public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView,
                             @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
@@ -112,12 +134,20 @@ public class ProfileSwipeController extends ItemTouchHelper.SimpleCallback {
         }
     }
 
+    /**
+     * Muestra los detalles del juego
+     * @param position
+     */
     private void showDetails(int position) {
         Game g = adapter.getGameList().get(position);
         DetailsDialog dialog = new DetailsDialog(profileActivity);
         dialog.showDialog(g);
     }
 
+    /**
+     * Elimina el juego de la lista
+     * @param position
+     */
     private void removeFromList(int position) {
         String title = adapter.getGameList().get(position).getName();
         int userid = user.getId();
@@ -129,6 +159,10 @@ public class ProfileSwipeController extends ItemTouchHelper.SimpleCallback {
         db.execSQL(sql);
     }
 
+    /**
+     * Muestra el dialogo personalizado
+     * @param position
+     */
     private void showCustomDialog(int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(profileActivity);
 

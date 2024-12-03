@@ -28,6 +28,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Clase que representa la Activity de búsqueda de juegos.
+ */
 public class GameSearchActivity extends AppCompatActivity implements View.OnClickListener {
     final String API_KEY = "53ee008e07ec26168a0585add2642001c68eb575";
     final String FORMAT = "json";
@@ -140,15 +143,15 @@ public class GameSearchActivity extends AppCompatActivity implements View.OnClic
                         Log.e("GiantBombSearch", "Error al convertir la respuesta a JSON", e);
                     }
 
+                    //CREAMOS LA LISTA DE LOS JUEGOS CON LOS ELEMENTOS QUE RECOJEMOS EN EL JSON DE LA API
                     List<Game> searchResults = response.body().getResults();
                     Log.d("GiantBombSearch", "Número de resultados: " + (searchResults != null ? searchResults.size() : "null"));
 
+                    //ASIGNAMOS LA LISTA DE JUEGOS AL ADAPTER
                     if (searchResults != null && !searchResults.isEmpty()) {
                         // Actualiza el adaptador con los nuevos datos
                         gamesAdapter.setGamesList(searchResults);
-                        // Ocultar el mensaje de "No Hay Resultados"
                     } else {
-                        // Mostrar el mensaje de "No Hay Resultados"
                         gamesAdapter.setGamesList(new ArrayList<>()); // Pasar una lista vacía
                     }
                 } else {

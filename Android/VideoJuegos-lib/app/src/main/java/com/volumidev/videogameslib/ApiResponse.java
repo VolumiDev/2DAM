@@ -3,6 +3,10 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * Clase generica que representa la respuesta de la API.
+ * @param <T>
+ */
 public class ApiResponse<T> {
 
     private String error;

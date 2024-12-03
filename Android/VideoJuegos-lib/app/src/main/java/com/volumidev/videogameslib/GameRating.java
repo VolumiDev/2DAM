@@ -1,6 +1,9 @@
 package com.volumidev.videogameslib;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Clase que representa el Rating de juego de la respuesta de la API
+ */
 public class GameRating {
 
     @SerializedName("api_detail_url")

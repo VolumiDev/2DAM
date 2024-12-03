@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -13,22 +12,40 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * @author Diego
+ */
 public class Register_Users_Adapter extends RecyclerView.Adapter<Register_Users_Adapter.UsersAdapterViewHolder> {
 
     private final List<Usuario> users_list;
     private OnItemClickListener onItemClickListener;
     private Context context;
 
+    /**
+     * Interfaz para el click en el item
+     */
     public interface  OnItemClickListener {
         void onItemClick(Usuario user);
     }
 
+    /**
+     * Constructor de la clase
+     * @param usersList
+     * @param context
+     */
     public Register_Users_Adapter(List<Usuario> usersList, Context context) {
         users_list = usersList;
         this.context = context;
     }
 
-
+    /**
+     * Crea el ViewHolder
+     * @param parent The ViewGroup into which the new View will be added after it is bound to
+     *               an adapter position.
+     * @param viewType The view type of the new View.
+     *
+     * @return
+     */
     @NonNull
     @Override
     public UsersAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,6 +55,12 @@ public class Register_Users_Adapter extends RecyclerView.Adapter<Register_Users_
         return new UsersAdapterViewHolder(view);
     }
 
+    /**
+     * Actualiza el ViewHolder
+     * @param holder The ViewHolder which should be updated to represent the contents of the
+     *        item at the given position in the data set.
+     * @param position The position of the item within the adapter's data set.
+     */
     @Override
     public void onBindViewHolder(@NonNull UsersAdapterViewHolder holder, int position) {
         Usuario user = users_list.get(position);
@@ -49,7 +72,10 @@ public class Register_Users_Adapter extends RecyclerView.Adapter<Register_Users_
         });
     }
 
-
+    /**
+     * Devuelve el numero de elementos de la lista
+     * @return
+     */
     @Override
     public int getItemCount() {
 
@@ -60,7 +86,11 @@ public class Register_Users_Adapter extends RecyclerView.Adapter<Register_Users_
         this.onItemClickListener= listener;
     }
 
-
+    /**
+     * Elimina el item de la lista
+     * @param position
+     * @param user
+     */
     public void removeItem(int position, Usuario user){
         user.delete(context, user.getNombre());
         //eliminamos de la lista para que no se muestre
@@ -71,8 +101,9 @@ public class Register_Users_Adapter extends RecyclerView.Adapter<Register_Users_
     }
 
 
-
-
+    /**
+     * ViewHolder personalizado
+     */
     public static class UsersAdapterViewHolder extends RecyclerView.ViewHolder{
 
         private TextView tv_card_user;

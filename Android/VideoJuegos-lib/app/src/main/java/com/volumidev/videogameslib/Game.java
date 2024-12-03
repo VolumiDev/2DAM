@@ -3,6 +3,10 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * Clase que representa un juego.
+ * Recoje todos los datos de la respuesta de la API
+ */
 public class Game {
 
     private int favorite_id;

@@ -16,6 +16,9 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase que representa el adaptador del RecyclerView de juegos.
+ */
 public class GameRecyclerAdapter extends  RecyclerView.Adapter<GameRecyclerAdapter.GameViewHolder> {
 
 
@@ -23,16 +26,31 @@ public class GameRecyclerAdapter extends  RecyclerView.Adapter<GameRecyclerAdapt
     private OnItemClickListener onItemClickListener;
     private Context context;
 
-
+    /**
+     * Interfaz que representa el click en un elemento del RecyclerView.
+     */
     public interface OnItemClickListener{
         void onItemClick(Game game);
     }
 
+    /**
+     * Constructor de la clase.
+     * @param list
+     * @param context
+     */
     public GameRecyclerAdapter(List<Game> list, Context context){
         gameList = list;
         this.context = context;
     }
 
+    /**
+     * Metodo que se ejecuta cuando se crea un nuevo ViewHolder.
+     * @param parent The ViewGroup into which the new View will be added after it is bound to
+     *               an adapter position.
+     * @param viewType The view type of the new View.
+     *
+     * @return
+     */
     @NonNull
     @Override
     public GameViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -41,23 +59,31 @@ public class GameRecyclerAdapter extends  RecyclerView.Adapter<GameRecyclerAdapt
         return new GameViewHolder(view);
     }
 
+    /**
+     * Metodo que se ejecuta cuando se necesita actualizar el contenido de un ViewHolder.
+     * @param holder The ViewHolder which should be updated to represent the contents of the
+     *        item at the given position in the data set.
+     * @param position The position of the item within the adapter's data set.
+     */
     @Override
     public void onBindViewHolder(@NonNull GameViewHolder holder, int position) {
         Game game = gameList.get(position);
-
-        //holder.tvGameName.setText(game.getName());
-        //holder.tvReleaseYear.setText(game.getExpectedReleaseYear());
-        //Glide.with(context).load(game.getImage().getSmallUrl()).into(holder.imgCover);
-
         holder.bind(game, onItemClickListener, this.context);
-
     }
 
+    /**
+     * Metodo que devuelve el número de elementos en la lista.
+     * @return
+     */
     @Override
     public int getItemCount() {
         return gameList.size();
     }
 
+    /**
+     * Metodo que actualiza la lista de juegos.
+     * @param games
+     */
     public void setGamesList(List<Game> games) {
         if (games != null) {
             this.gameList = games;
@@ -67,12 +93,19 @@ public class GameRecyclerAdapter extends  RecyclerView.Adapter<GameRecyclerAdapt
         notifyDataSetChanged();
     }
 
-    //METODOS DE ACCION  DEL ELEMENTO DEL RECYCLER
+    /**
+     * Metodo que muestra la información de un juego.
+     * @param position
+     */
     public void showInfo(int position) {
         Game game = this.gameList.get(position);
         Toast.makeText(null, "Nombre del juego: " + game.getName(), Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Metodo que elimina un juego de la lista.
+     * @param position
+     */
     public void removeItem(int position) {
         this.gameList.remove(position);
         notifyItemRemoved(position);
@@ -108,12 +141,18 @@ public class GameRecyclerAdapter extends  RecyclerView.Adapter<GameRecyclerAdapt
     }
 
 
-
+    /**
+     * Clase que representa el ViewHolder del RecyclerView.
+     */
     public class GameViewHolder extends RecyclerView.ViewHolder{
         private ImageView imgCover;
         private TextView tvGameName;
         private TextView tvReleaseYear;
 
+        /**
+         * Constructor de la clase.
+         * @param itemView
+         */
         public GameViewHolder(@NonNull View itemView) {
             super(itemView);
             imgCover = itemView.findViewById(R.id.img_game_cover);
@@ -121,6 +160,12 @@ public class GameRecyclerAdapter extends  RecyclerView.Adapter<GameRecyclerAdapt
             tvReleaseYear = itemView.findViewById(R.id.tv_release_year);
         }
 
+        /**
+         * Metodo que se ejecuta cuando se crea un nuevo ViewHolder.
+         * @param game
+         * @param onItemClickListener
+         * @param context
+         */
         public void bind(Game game, OnItemClickListener onItemClickListener, Context context){
             tvGameName.setText(game.getName());
             String releaseDate  = game.getOriginalReleaseDate();
