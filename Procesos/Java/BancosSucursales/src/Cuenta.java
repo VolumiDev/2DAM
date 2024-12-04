@@ -8,26 +8,27 @@ public class Cuenta {
 
     public void añadirSaldo() throws InterruptedException {
         synchronized (saldo) {
-            int cantidad = RandomGenerator.getDefault().nextInt(100,2000);
+            int cantidad = RandomGenerator.getDefault().nextInt(100, 2000);
             saldo.set(cantidad);
-            System.out.println(Thread.currentThread().getName() +  " ingreso "+ cantidad + " hay:-------"+ saldo + "€");
+            System.out.println(Thread.currentThread().getName() + " ingreso " + cantidad + " hay:-------" + saldo + "€");
             Main.getBanco().notifyAll();
         }
-        Thread.sleep(RandomGenerator.getDefault().nextInt(100,700));
+        Thread.sleep(RandomGenerator.getDefault().nextInt(100, 700));
     }
 
     public void retirarSaldo() throws InterruptedException {
-        int cantidad = RandomGenerator.getDefault().nextInt(20,1000);
-        synchronized (saldo){
+        int cantidad = RandomGenerator.getDefault().nextInt(20, 1000);
+        synchronized (saldo) {
             if (cantidad > saldo.get()) {
                 System.out.println(Thread.currentThread().getName() + " NO PUEDE SACAR SALDO INSUFICIENTE ##" + Thread.currentThread().getName() + "## ESPERA");
-                Main.getBanco().wait();
+                Main.getBanco().notifyAll();
+            } else {
+                saldo.set(saldo.get() - cantidad);
+                System.out.println(Thread.currentThread().getName() + " retiro " + cantidad + " quedan:-------" + saldo + "€");
+                Main.getBanco().notifyAll();
             }
-            saldo.set(saldo.get() - cantidad);
-            System.out.println(Thread.currentThread().getName() + " retiro "+ cantidad + " quedan:-------"+ saldo + "€");
-            Main.getBanco().notifyAll();
         }
-        Thread.sleep(RandomGenerator.getDefault().nextInt(100,700));
+        Thread.sleep(RandomGenerator.getDefault().nextInt(100, 700));
     }
 
     public AtomicInteger getSaldo() {
