@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center|top"
+    android:layout_marginTop="100dp"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/et_nombreServicio"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nombre del servicio"
+        android:layout_marginBottom="20dp"/>
+
+
+    <EditText
+        android:id="@+id/et_contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_añadirContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Añadir ccontraseña"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/btn_verContraseñas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver todas las contraseñas"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/btn_buscarContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar contraseña por servicio"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_salida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
+
+</LinearLayout>
