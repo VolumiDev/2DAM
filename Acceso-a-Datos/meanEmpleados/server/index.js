@@ -18,7 +18,7 @@ app.use(express.json());  //LE INDICAMOS QUE ENTIENDA LOS JSON QUE LE LLEGARAN D
 
 
 //SETTINGS
-app.set('port', process.env.PORT || 3000);  //ASIGNAMOS A LA VARIABLE PORT EL PUERTO ESTABLECIDO POR SO O POR DEFECTO CON EL 3000
+app.set('port', process.env.PORT || 3001);  //ASIGNAMOS A LA VARIABLE PORT EL PUERTO ESTABLECIDO POR SO O POR DEFECTO CON EL 3000
 app.listen(app.get('port'), () => {                             //HACEMOS QUE LA APP ESCUCHE EN EL EL PUERTO PORT QUE HEMOS ESTABLECIDO ARRIBA.
     console.log('server ejecutandose en', app.get('port'));
 }); 
