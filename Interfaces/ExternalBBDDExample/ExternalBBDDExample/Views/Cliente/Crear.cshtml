@@ -1,0 +1,24 @@
+﻿@model ExternalBBDDExample.Models.Clientes.Cliente
+
+<h2>Registrar Cliente</h2>
+
+<form asp-action="Crear" method="post">
+	<div style="margin:10px">
+		<input asp-for="dnicli" required placeholder="Introduce un DNI"/>
+	</div>
+	<div style="margin:10px">
+		<input asp-for="correocli"  type="email" required placeholder="Introduce un Email" />
+	</div>
+	<div style="margin:10px">
+		<input asp-for="nombrecli" required placeholder="Introduce un Nombre" />
+	</div>
+	<div style="margin:10px">
+		<input asp-for="paswordcli" type="password" required placeholder="Constraseña" />
+	</div>
+	<button type="submit"> Registrar</button>
+</form>
+
+@if (!string.IsNullOrEmpty(ViewBag.Mensaje))
+{
+	<p>@ViewBag.Mensaje</p>
+}
